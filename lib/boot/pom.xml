@@ -55,7 +55,7 @@
         <mysql.version>8.0.18</mysql.version>
 
         <velocity.version>2.1</velocity.version>
-        <hibernate-validator.version>6.1.0.Final</hibernate-validator.version>
+        <hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <javax-el.version>3.0.0</javax-el.version>
         <glassfish-el.version>2.2.6</glassfish-el.version>

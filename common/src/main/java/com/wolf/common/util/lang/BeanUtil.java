@@ -35,6 +35,14 @@ public class BeanUtil {
         throw new NullPointerException();
     }
 
+    public static boolean isTrue(Boolean data) {
+        return data != null && data;
+    }
+
+    public static boolean notTrue(Boolean data) {
+        return data == null || !data;
+    }
+
     public static boolean equals(Object a, Object b) {
         if (a == null) {
             return null == b;

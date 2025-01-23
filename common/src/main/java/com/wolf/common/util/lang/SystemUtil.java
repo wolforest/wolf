@@ -4,6 +4,12 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SystemUtil {
+    private static final int PROCESSOR_NUMBER = Runtime.getRuntime().availableProcessors();
+
+    public static int getProcessorNumber() {
+        return PROCESSOR_NUMBER;
+    }
+
     public static long getPID() {
         return ProcessHandle.current().pid();
     }

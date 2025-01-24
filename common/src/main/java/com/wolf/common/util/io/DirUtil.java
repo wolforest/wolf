@@ -36,7 +36,7 @@ public class DirUtil {
                     .map(Path::toString)
                     .collect(Collectors.toSet());
         } catch (IOException e) {
-            throw new com.wolf.common.lang.exception.io.IOException(e.getMessage());
+            throw new com.wolf.common.lang.exception.lang.IOException(e.getMessage());
         }
     }
 

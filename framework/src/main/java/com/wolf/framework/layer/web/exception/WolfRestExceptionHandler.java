@@ -1,7 +1,7 @@
 package com.wolf.framework.layer.web.exception;
 
 import com.wolf.common.lang.exception.BusinessException;
-import com.wolf.common.lang.exception.ExceptionUtil;
+import com.wolf.common.util.lang.ExceptionUtil;
 import com.wolf.common.lang.exception.SystemException;
 import com.wolf.common.lang.exception.api.NoPermissionException;
 import com.wolf.common.lang.exception.api.NotLoggedInException;

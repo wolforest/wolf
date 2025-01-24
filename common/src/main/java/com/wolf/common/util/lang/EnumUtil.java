@@ -1,7 +1,7 @@
 package com.wolf.common.util.lang;
 
 import com.wolf.common.lang.enums.CodeBasedEnum;
-import com.wolf.common.lang.exception.enums.UnsupportedEnumCodeException;
+import com.wolf.common.lang.exception.lang.UnsupportedEnumCodeException;
 
 import java.util.ArrayList;
 import java.util.HashMap;

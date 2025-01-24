@@ -1,4 +1,4 @@
-package com.wolf.common.lang.exception.enums;
+package com.wolf.common.lang.exception.lang;
 
 import com.wolf.common.lang.exception.SystemException;
 

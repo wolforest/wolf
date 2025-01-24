@@ -17,8 +17,6 @@ import com.wolf.common.util.lang.StringUtil;
 import java.io.*;
 import java.net.URL;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
@@ -65,7 +63,7 @@ public class FileUtil {
         try (OutputStream os = Files.newOutputStream(Path.of(file.getAbsolutePath()))) {
             os.write(content.getBytes(UTF_8));
         } catch (IOException e) {
-            throw new com.wolf.common.lang.exception.io.IOException(e.getMessage());
+            throw new com.wolf.common.lang.exception.lang.IOException(e.getMessage());
         }
     }
 
@@ -73,7 +71,7 @@ public class FileUtil {
         try (OutputStream os = Files.newOutputStream(Path.of(path))) {
             os.write(content.getBytes(UTF_8));
         } catch (IOException e) {
-            throw new com.wolf.common.lang.exception.io.IOException(e.getMessage());
+            throw new com.wolf.common.lang.exception.lang.IOException(e.getMessage());
         }
     }
 
@@ -112,7 +110,7 @@ public class FileUtil {
         try (Reader reader = new InputStreamReader(Files.newInputStream(Path.of(path)))) {
             return FileCopyUtils.copyToString(reader);
         } catch (IOException e) {
-            throw new com.wolf.common.lang.exception.io.IOException(e.getMessage());
+            throw new com.wolf.common.lang.exception.lang.IOException(e.getMessage());
         }
     }
 
@@ -149,12 +147,12 @@ public class FileUtil {
         File toFile = new File(to);
 
         if (!fromFile.exists() || toFile.exists()) {
-            throw new com.wolf.common.lang.exception.io.IOException("Can't rename file: " + from + " to " + to);
+            throw new com.wolf.common.lang.exception.lang.IOException("Can't rename file: " + from + " to " + to);
         }
 
         boolean result = fromFile.renameTo(toFile);
         if (!result) {
-            throw new com.wolf.common.lang.exception.io.IOException("Can't rename file: " + from + " to " + to);
+            throw new com.wolf.common.lang.exception.lang.IOException("Can't rename file: " + from + " to " + to);
         }
     }
 
@@ -170,7 +168,7 @@ public class FileUtil {
 
         boolean result = file.delete();
         if (!result) {
-            throw new com.wolf.common.lang.exception.io.IOException("Can't delete file: " + file.getName());
+            throw new com.wolf.common.lang.exception.lang.IOException("Can't delete file: " + file.getName());
         }
     }
 

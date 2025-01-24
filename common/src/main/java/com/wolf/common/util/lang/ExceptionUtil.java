@@ -1,4 +1,4 @@
-package com.wolf.common.lang.exception;
+package com.wolf.common.util.lang;
 
 public class ExceptionUtil {
 

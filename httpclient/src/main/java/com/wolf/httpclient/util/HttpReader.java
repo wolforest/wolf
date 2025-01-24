@@ -103,7 +103,7 @@ public class HttpReader {
                 line = reader.readLine();
             }
         } catch (IOException e) {
-            throw new com.wolf.common.lang.exception.io.IOException(e.getMessage());
+            throw new com.wolf.common.lang.exception.lang.IOException(e.getMessage());
         }
 
         return lines;

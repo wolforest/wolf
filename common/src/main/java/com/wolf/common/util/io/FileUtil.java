@@ -3,6 +3,7 @@ package com.wolf.common.util.io;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.JSONReader;
+import com.wolf.common.lang.exception.SystemException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +12,6 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.core.io.Resource;
 import org.springframework.util.FileCopyUtils;
 import com.wolf.common.lang.exception.lang.FileNotFoundException;
-import com.wolf.common.lang.exception.method.MethodExecuteFailException;
 import com.wolf.common.util.lang.StringUtil;
 
 import java.io.*;
@@ -94,7 +94,7 @@ public class FileUtil {
             return JSON.parseObject(inputStream, JSONObject.class, JSONReader.Feature.ErrorOnEnumNotMatch);
         } catch (Exception e) {
             log.error(e.getMessage(), e);
-            throw new MethodExecuteFailException("read file failed : " + path);
+            throw new SystemException("read file failed : " + path);
         }
     }
 
@@ -120,7 +120,7 @@ public class FileUtil {
             return IOUtils.toByteArray(inputStream);
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            throw new MethodExecuteFailException("fail to convert inputSteam to byte array : " + path);
+            throw new SystemException("fail to convert inputSteam to byte array : " + path);
         }
     }
 

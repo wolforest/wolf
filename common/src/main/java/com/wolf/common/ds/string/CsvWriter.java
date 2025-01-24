@@ -1,7 +1,6 @@
 package com.wolf.common.ds.string;
 
 import lombok.extern.slf4j.Slf4j;
-import com.wolf.common.lang.exception.io.WolfIOException;
 import com.wolf.common.util.collection.CollectionUtil;
 
 import java.io.File;
@@ -74,7 +73,7 @@ public class CsvWriter {
             buffer.clear();
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            throw new WolfIOException(fileName);
+            throw new com.wolf.common.lang.exception.lang.IOException(fileName);
         }
     }
 
@@ -88,7 +87,7 @@ public class CsvWriter {
             fileWriter.close();
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            throw new WolfIOException(fileName);
+            throw new com.wolf.common.lang.exception.lang.IOException(fileName);
         }
     }
 
@@ -146,7 +145,7 @@ public class CsvWriter {
             fileWriter.flush();
         } catch (IOException e) {
             log.error(e.getMessage(), e);
-            throw new WolfIOException(fileName);
+            throw new com.wolf.common.lang.exception.lang.IOException(fileName);
         }
 
     }

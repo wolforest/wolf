@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.httpclient.HttpRequestBuilder;
 import com.wolf.httpclient.Response;
 

@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.httpclient.cookie.Cookie;
 import com.wolf.httpclient.exception.HttpRequestFailException;

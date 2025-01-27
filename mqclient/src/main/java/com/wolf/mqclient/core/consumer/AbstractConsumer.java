@@ -1,6 +1,6 @@
 package com.wolf.mqclient.core.consumer;
 
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.mqclient.core.message.Message;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,6 @@
 package com.wolf.mqclient.vendor.rocketmq5.converter;
 
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.mqclient.config.MQDefaultConst;
 import com.wolf.mqclient.core.message.MessageContext;

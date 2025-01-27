@@ -1,10 +1,11 @@
-package com.wolf.common.util.lang;
+package com.wolf.common.util.lang.string;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;
+import com.wolf.common.util.lang.StringUtil;
 import lombok.NonNull;
-import com.wolf.common.util.collection.ArrayUtil;
+import com.wolf.common.util.lang.collection.ArrayUtil;
 
 import java.util.HashMap;
 import java.util.List;

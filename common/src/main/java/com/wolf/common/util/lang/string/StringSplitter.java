@@ -1,4 +1,4 @@
-package com.wolf.common.util.lang;
+package com.wolf.common.util.lang.string;
 
 import com.google.common.base.Splitter;
 

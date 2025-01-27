@@ -3,7 +3,7 @@ package com.wolf.httpclient.vendor.netty;
 import io.netty.handler.codec.http.cookie.CookieHeaderNames;
 import io.netty.handler.codec.http.cookie.DefaultCookie;
 import org.springframework.beans.BeanUtils;
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.httpclient.cookie.Cookie;
 import com.wolf.httpclient.cookie.InvalidCookieException;
 import com.wolf.httpclient.cookie.SameSiteEnum;

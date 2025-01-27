@@ -3,14 +3,13 @@ package com.wolf.common.util.lang;
 import com.google.common.base.CaseFormat;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
-import com.google.common.collect.Iterators;
 import com.google.common.html.HtmlEscapers;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.NonNull;
 import org.apache.commons.lang3.StringUtils;
-import com.wolf.common.util.collection.CollectionUtil;
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;

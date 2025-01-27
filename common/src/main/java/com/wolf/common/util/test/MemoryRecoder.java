@@ -1,4 +1,4 @@
-package com.wolf.common.lang.system;
+package com.wolf.common.util.test;
 
 import com.wolf.common.lang.enums.unit.DigitalUnitEnum;
 import java.util.LinkedHashMap;

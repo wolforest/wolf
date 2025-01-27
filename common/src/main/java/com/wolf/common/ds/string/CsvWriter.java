@@ -1,7 +1,7 @@
 package com.wolf.common.ds.string;
 
 import lombok.extern.slf4j.Slf4j;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 
 import java.io.File;
 import java.io.FileWriter;

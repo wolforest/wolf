@@ -1,4 +1,4 @@
-package com.wolf.common.util.collection;
+package com.wolf.common.util.lang.collection;
 
 import java.util.HashSet;
 import java.util.Iterator;

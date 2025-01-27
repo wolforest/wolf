@@ -1,8 +1,8 @@
-package com.wolf.common.util.collection.joiner;
+package com.wolf.common.util.lang.collection.joiner;
 
+import com.wolf.common.util.lang.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.joiner.exception.InvalidGetterException;
 import lombok.Getter;
-import com.wolf.common.util.collection.CollectionUtil;
-import com.wolf.common.util.collection.joiner.exception.InvalidGetterException;
 
 import java.util.Collection;
 import java.util.HashMap;

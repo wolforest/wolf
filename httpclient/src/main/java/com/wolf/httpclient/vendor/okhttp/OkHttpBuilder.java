@@ -6,9 +6,9 @@ import okhttp3.FormBody;
 import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.common.util.lang.BeanUtil;
-import com.wolf.common.util.lang.JSONUtil;
+import com.wolf.common.util.lang.string.JSONUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.httpclient.HttpRequestBuilder;
 

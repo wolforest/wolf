@@ -1,5 +1,6 @@
 package com.wolf.common.util.collection;
 
+import com.wolf.common.util.lang.collection.MapUtil;
 import lombok.Data;
 import org.junit.Test;
 

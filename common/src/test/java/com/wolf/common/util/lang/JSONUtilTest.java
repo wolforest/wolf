@@ -2,6 +2,7 @@ package com.wolf.common.util.lang;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
+import com.wolf.common.util.lang.string.JSONUtil;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,4 +1,4 @@
-package com.wolf.common.util.collection.joiner;
+package com.wolf.common.util.lang.collection.joiner;
 
 import java.util.Collection;
 import java.util.function.BiConsumer;

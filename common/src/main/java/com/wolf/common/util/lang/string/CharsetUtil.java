@@ -1,6 +1,7 @@
-package com.wolf.common.util.lang;
+package com.wolf.common.util.lang.string;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * com.wolf.common.util.lang
@@ -9,5 +10,5 @@ import java.nio.charset.Charset;
  * @since 2020/4/28 7:34 下午
  **/
 public class CharsetUtil {
-    public static final Charset UTF_8 = Charset.forName("UTF-8");
+    public static final Charset UTF_8 = StandardCharsets.UTF_8;
 }

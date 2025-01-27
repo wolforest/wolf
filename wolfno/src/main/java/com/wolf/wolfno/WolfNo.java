@@ -1,6 +1,6 @@
 package com.wolf.wolfno;
 
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.wolfno.config.WolfNoConfig;
 import com.wolf.wolfno.factory.WolfNoBuilder;
 import com.wolf.wolfno.model.WolfNoStyleEnum;

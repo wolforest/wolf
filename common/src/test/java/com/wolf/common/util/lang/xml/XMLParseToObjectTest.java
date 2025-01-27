@@ -2,7 +2,7 @@ package com.wolf.common.util.lang.xml;
 
 
 import org.junit.Test;
-import com.wolf.common.util.lang.XMLUtil;
+import com.wolf.common.util.lang.string.XMLUtil;
 
 import java.math.BigDecimal;
 

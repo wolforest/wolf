@@ -2,7 +2,7 @@ package com.wolf.framework.layer.web.auth.auth;
 
 import com.wolf.common.lang.exception.api.NoPermissionException;
 import com.wolf.common.lang.exception.api.NotLoggedInException;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.common.util.net.AntPathUtil;
 import com.wolf.framework.layer.web.auth.model.Space;
 import com.wolf.framework.layer.web.auth.model.User;

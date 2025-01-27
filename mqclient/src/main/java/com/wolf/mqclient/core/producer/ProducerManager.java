@@ -1,6 +1,6 @@
 package com.wolf.mqclient.core.producer;
 
-import com.wolf.common.util.collection.ListUtil;
+import com.wolf.common.util.lang.collection.ListUtil;
 import com.wolf.mqclient.config.MQConfig;
 import com.wolf.mqclient.config.MQProducerConfig;
 import com.wolf.mqclient.config.MQVendorConfig;

@@ -1,7 +1,7 @@
 package com.wolf.mqclient.vendor.rocketmq.converter;
 
-import com.wolf.common.util.collection.CollectionUtil;
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.mqclient.core.message.MessageContext;
 import com.wolf.mqclient.core.producer.ProduceRequest;

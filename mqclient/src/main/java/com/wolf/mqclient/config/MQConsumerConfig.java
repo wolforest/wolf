@@ -1,7 +1,7 @@
 package com.wolf.mqclient.config;
 
-import com.wolf.common.util.collection.CollectionUtil;
-import com.wolf.common.util.collection.SetUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.SetUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.mqclient.MQTemplate;
 import com.wolf.mqclient.config.exception.MQConfigException;

@@ -1,4 +1,4 @@
-package com.wolf.common.util.time;
+package com.wolf.common.util.test;
 
 import java.util.LinkedHashMap;
 import lombok.Getter;
@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * com.wolf.common.util.time
- *
  * not threadSafe current
+ *
  * @author Wingle
  * @since 2022/1/17 下午1:03
  **/

@@ -1,7 +1,7 @@
 package com.wolf.framework.layer.web.auth.session;
 
 import com.wolf.common.ds.map.ObjectMap;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.framework.layer.web.auth.auth.AuthConfig;
 import jakarta.servlet.http.HttpServletRequest;

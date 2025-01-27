@@ -2,7 +2,7 @@ package com.wolf.common.convention.pattern.pipeline;
 
 import lombok.Getter;
 import lombok.Setter;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 
 import java.util.LinkedList;
 

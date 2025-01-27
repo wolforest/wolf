@@ -1,6 +1,6 @@
 package com.wolf.mqclient.core.consumer;
 
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.mqclient.annotation.MQConsumer;
 import com.wolf.mqclient.config.MQConfig;
 import com.wolf.mqclient.config.MQConsumerConfig;

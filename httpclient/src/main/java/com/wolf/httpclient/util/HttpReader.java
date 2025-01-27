@@ -4,7 +4,7 @@ import com.wolf.common.util.io.FileUtil;
 import lombok.Getter;
 import lombok.NonNull;
 import com.wolf.common.lang.exception.lang.IllegalArgumentException;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.common.util.lang.StringUtil;
 
 import java.io.BufferedReader;

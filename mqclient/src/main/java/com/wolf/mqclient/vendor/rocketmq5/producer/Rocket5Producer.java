@@ -2,7 +2,7 @@ package com.wolf.mqclient.vendor.rocketmq5.producer;
 
 import com.wolf.common.lang.exception.SystemException;
 import com.wolf.common.util.lang.StringUtil;
-import com.wolf.common.util.time.DateUtil;
+import com.wolf.common.util.lang.time.DateUtil;
 import com.wolf.mqclient.config.MQProducerConfig;
 import com.wolf.mqclient.core.MQVendor;
 import com.wolf.mqclient.core.message.MessageSendTypeEnum;

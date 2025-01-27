@@ -1,6 +1,6 @@
 package com.wolf.mqclient.vendor.rocketmq.producer;
 
-import com.wolf.common.util.time.DateUtil;
+import com.wolf.common.util.lang.time.DateUtil;
 import com.wolf.mqclient.config.MQProducerConfig;
 import com.wolf.mqclient.core.MQVendor;
 import com.wolf.mqclient.core.message.MessageSendTypeEnum;

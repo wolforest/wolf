@@ -1,6 +1,6 @@
 package com.wolf.common.util.lang;
 
-import lombok.NonNull;
+import com.wolf.common.util.test.Assert;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

@@ -1,4 +1,4 @@
-package com.wolf.common.util.collection;
+package com.wolf.common.util.lang.collection;
 
 import com.google.common.base.Joiner;
 import lombok.NonNull;

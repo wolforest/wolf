@@ -1,7 +1,7 @@
 package com.wolf.mqclient.core.consumer;
 
-import com.wolf.common.util.collection.MapUtil;
-import com.wolf.common.util.collection.SetUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
+import com.wolf.common.util.lang.collection.SetUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.mqclient.config.MQConsumerConfig;
 import com.wolf.mqclient.config.exception.MQConfigException;

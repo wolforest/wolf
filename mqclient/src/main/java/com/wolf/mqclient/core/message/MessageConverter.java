@@ -1,6 +1,6 @@
 package com.wolf.mqclient.core.message;
 
-import com.wolf.common.util.lang.JSONUtil;
+import com.wolf.common.util.lang.string.JSONUtil;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 

@@ -1,6 +1,6 @@
 package com.wolf.mqclient.vendor.rocketmq.converter;
 
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.mqclient.config.MQConsumerConfig;
 import com.wolf.mqclient.config.MQDefaultConst;

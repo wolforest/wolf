@@ -1,4 +1,4 @@
-package com.wolf.common.util.collection.lb;
+package com.wolf.common.util.lang.collection.lb;
 
 import lombok.Data;
 import lombok.NonNull;

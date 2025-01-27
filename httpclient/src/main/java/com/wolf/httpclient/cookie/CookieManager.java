@@ -1,7 +1,7 @@
 package com.wolf.httpclient.cookie;
 
 import lombok.Data;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.httpclient.HttpClientConfig;
 import com.wolf.httpclient.HttpRequestBuilder;
 import com.wolf.httpclient.Response;

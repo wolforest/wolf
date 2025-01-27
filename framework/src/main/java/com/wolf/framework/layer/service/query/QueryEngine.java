@@ -2,8 +2,8 @@ package com.wolf.framework.layer.service.query;
 
 import com.wolf.common.convention.container.Context;
 import com.wolf.common.lang.exception.lang.IllegalArgumentException;
-import com.wolf.common.util.collection.CollectionUtil;
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.common.util.lang.BeanUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.framework.layer.api.dto.PageRequest;

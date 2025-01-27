@@ -8,7 +8,7 @@ import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 import com.wolf.common.lang.exception.lang.ClassNotFoundException;
 import com.wolf.common.lang.exception.lang.NullPointerException;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 
 import java.beans.FeatureDescriptor;
 import java.beans.PropertyDescriptor;

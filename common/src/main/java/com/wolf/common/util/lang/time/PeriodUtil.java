@@ -1,4 +1,4 @@
-package com.wolf.common.util.time;
+package com.wolf.common.util.lang.time;
 
 import com.wolf.common.lang.enums.unit.PeriodStrategyEnum;
 import com.wolf.common.lang.exception.lang.EnumNotFoundException;
@@ -29,17 +29,11 @@ public class PeriodUtil {
             return start;
         }
 
-        int plusDays;
-        switch (strategy) {
-            case OPEN_OPEN:
-                plusDays = 1;
-                break;
-            case CLOSE_CLOSE:
-                plusDays = -1;
-                break;
-            default:
-                plusDays = 0;
-        }
+        int plusDays = switch (strategy) {
+            case OPEN_OPEN -> 1;
+            case CLOSE_CLOSE -> -1;
+            default -> 0;
+        };
 
         if (days > 0) {
             days = days + plusDays;
@@ -56,17 +50,11 @@ public class PeriodUtil {
             return sameDayCount(strategy);
         }
 
-        int extraDays;
-        switch (strategy) {
-            case OPEN_OPEN:
-                extraDays = -1;
-                break;
-            case CLOSE_CLOSE:
-                extraDays = 1;
-                break;
-            default:
-                extraDays = 0;
-        }
+        int extraDays = switch (strategy) {
+            case OPEN_OPEN -> -1;
+            case CLOSE_CLOSE -> 1;
+            default -> 0;
+        };
 
         if (days < 0) {
             extraDays = -1 * extraDays;
@@ -77,21 +65,11 @@ public class PeriodUtil {
     }
 
     private static int sameDayCount(PeriodStrategyEnum strategy) {
-        int days;
-        switch (strategy) {
-            case OPEN_OPEN:
-                days = 0;
-                break;
-            case OPEN_CLOSE:
-            case CLOSE_OPEN:
-            case CLOSE_CLOSE:
-                days = 1;
-                break;
-            default:
-                throw new EnumNotFoundException("Unsupported PeriodStrategyEnum:" + strategy.getName());
-        }
-
-        return days;
+        return switch (strategy) {
+            case OPEN_OPEN -> 0;
+            case OPEN_CLOSE, CLOSE_OPEN, CLOSE_CLOSE -> 1;
+            default -> throw new EnumNotFoundException("Unsupported PeriodStrategyEnum:" + strategy.getName());
+        };
     }
 
     public static List<LocalDateTime> buildDateList(LocalDateTime start, LocalDateTime end, boolean boundary) {

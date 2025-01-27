@@ -1,4 +1,4 @@
-package com.wolf.common.util.collection;
+package com.wolf.common.util.lang.collection;
 
 import com.wolf.common.lang.exception.BusinessException;
 

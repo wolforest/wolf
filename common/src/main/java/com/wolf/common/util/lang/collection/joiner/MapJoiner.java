@@ -1,4 +1,4 @@
-package com.wolf.common.util.collection.joiner;
+package com.wolf.common.util.lang.collection.joiner;
 
 /**
  * com.wolf.common.util.collection.joiner

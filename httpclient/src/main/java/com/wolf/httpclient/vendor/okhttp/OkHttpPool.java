@@ -7,7 +7,7 @@ import okhttp3.Dispatcher;
 import okhttp3.OkHttpClient;
 import okhttp3.tls.Certificates;
 import okhttp3.tls.HandshakeCertificates;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.httpclient.HttpRequestBuilder;
 import com.wolf.httpclient.util.HttpLoggingInterceptor;

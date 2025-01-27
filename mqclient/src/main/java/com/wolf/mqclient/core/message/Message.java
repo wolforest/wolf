@@ -1,6 +1,6 @@
 package com.wolf.mqclient.core.message;
 
-import com.wolf.common.util.collection.MapUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
 import com.wolf.common.util.lang.StringUtil;
 import java.util.Arrays;
 import java.util.HashMap;

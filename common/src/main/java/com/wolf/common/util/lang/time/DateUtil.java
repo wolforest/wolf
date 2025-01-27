@@ -1,4 +1,4 @@
-package com.wolf.common.util.time;
+package com.wolf.common.util.lang.time;
 
 import java.time.temporal.ChronoUnit;
 import lombok.NonNull;
@@ -86,7 +86,7 @@ public class DateUtil {
         try {
             // for "2007-12-03T10:15:30"
             result = LocalDateTime.parse(str);
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
         if (result != null) {
             return result;
@@ -101,7 +101,7 @@ public class DateUtil {
             }
             // for "2007-12-03 10:15:30"
             result = DateUtil.asLocalDateTime(tmpS);
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
 
         return result;
@@ -310,7 +310,7 @@ public class DateUtil {
 
     public static boolean isDaysBefore(@NonNull LocalDate time, int days, @NonNull LocalDate vsTime) {
         LocalDate daysBefore = vsTime.minusDays(days);
-        return daysBefore.compareTo(time) >= 0;
+        return !daysBefore.isBefore(time);
     }
 
     public static boolean isDaysAfter(@NonNull LocalDate time, int days) {
@@ -320,7 +320,7 @@ public class DateUtil {
 
     public static boolean isDaysAfter(@NonNull LocalDate time, int days, @NonNull LocalDate vsTime) {
         LocalDate daysAfter = vsTime.plusDays(days);
-        return daysAfter.compareTo(time) <= 0;
+        return !daysAfter.isAfter(time);
     }
 
     public static int weekOfMonth(@NonNull LocalDate date) {

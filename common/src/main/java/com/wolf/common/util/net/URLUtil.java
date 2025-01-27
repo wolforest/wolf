@@ -1,8 +1,8 @@
 package com.wolf.common.util.net;
 
 import lombok.extern.slf4j.Slf4j;
-import com.wolf.common.util.collection.MapUtil;
-import com.wolf.common.util.lang.CharsetUtil;
+import com.wolf.common.util.lang.collection.MapUtil;
+import com.wolf.common.util.lang.string.CharsetUtil;
 import com.wolf.common.util.lang.StringUtil;
 
 import java.io.UnsupportedEncodingException;

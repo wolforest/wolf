@@ -1,6 +1,6 @@
 package com.wolf.mqclient.core.transaction;
 
-import com.wolf.common.util.collection.ListUtil;
+import com.wolf.common.util.lang.collection.ListUtil;
 import com.wolf.mqclient.annotation.MQTransaction;
 import com.wolf.mqclient.config.MQConfig;
 import com.wolf.mqclient.config.MQTransactionProducerConfig;

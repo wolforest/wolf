@@ -1,5 +1,6 @@
 package com.wolf.common.util.collection;
 
+import com.wolf.common.util.lang.collection.ListUtil;
 import org.junit.Test;
 
 import java.util.Arrays;

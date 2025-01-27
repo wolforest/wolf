@@ -1,9 +1,9 @@
-package com.wolf.common.util.collection.lb;
+package com.wolf.common.util.lang.collection.lb;
 
 import lombok.NonNull;
 import com.wolf.common.lang.exception.BusinessException;
 import com.wolf.common.lang.exception.SystemException;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.common.util.lang.StringUtil;
 
 import java.util.ArrayList;

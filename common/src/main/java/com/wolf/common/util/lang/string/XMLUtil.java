@@ -1,4 +1,4 @@
-package com.wolf.common.util.lang;
+package com.wolf.common.util.lang.string;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;

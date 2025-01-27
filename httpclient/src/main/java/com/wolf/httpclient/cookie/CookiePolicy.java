@@ -2,8 +2,8 @@ package com.wolf.httpclient.cookie;
 
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
-import com.wolf.common.util.collection.CollectionUtil;
-import com.wolf.common.util.collection.ListUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.ListUtil;
 import com.wolf.common.util.lang.StringUtil;
 import com.wolf.httpclient.HttpRequestBuilder;
 

@@ -1,4 +1,4 @@
-package com.wolf.common.util.collection.joiner.exception;
+package com.wolf.common.util.lang.collection.joiner.exception;
 
 import lombok.Getter;
 import com.wolf.common.lang.exception.SystemException;

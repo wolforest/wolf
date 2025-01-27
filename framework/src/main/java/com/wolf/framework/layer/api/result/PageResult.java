@@ -1,7 +1,7 @@
 package com.wolf.framework.layer.api.result;
 
 import com.github.pagehelper.Page;
-import com.wolf.common.util.collection.CollectionUtil;
+import com.wolf.common.util.lang.collection.CollectionUtil;
 import com.wolf.common.util.lang.BeanUtil;
 import java.io.Serializable;
 import java.util.ArrayList;

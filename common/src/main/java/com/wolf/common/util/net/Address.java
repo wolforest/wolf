@@ -25,8 +25,8 @@ public class Address implements Serializable {
     private static final AddressSchemaEnum DEFAULT_SCHEME = AddressSchemaEnum.IPv4;
 
     @Getter
-    private AddressSchemaEnum scheme;
-    private HostAndPort hostAndPort;
+    private final AddressSchemaEnum scheme;
+    private final HostAndPort hostAndPort;
 
     public static Address of(String host, int port) {
         return new Address(DEFAULT_SCHEME, host, port);

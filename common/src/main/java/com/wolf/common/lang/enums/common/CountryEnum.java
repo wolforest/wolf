@@ -1,4 +1,4 @@
-package com.wolf.common.lang.enums.country;
+package com.wolf.common.lang.enums.common;
 
 import lombok.Getter;
 import com.wolf.common.lang.enums.CodeBasedEnum;

@@ -1,26 +1,20 @@
-package com.wolf.common.lang.enums.currency;
+package com.wolf.common.lang.enums.common;
 
 import com.wolf.common.lang.enums.CodeBasedEnum;
 import com.wolf.common.util.lang.EnumUtil;
 import com.wolf.common.util.lang.StringUtil;
 
-/**
- * com.wolf.common.lang.enums.currency
- *
- * @author Wingle
- * @since 2020/9/1 4:18 下午
- **/
-public class CurrencyUtil {
-    public static CurrencyEnum parse(String name) {
+public class CountryUtil {
+    public static CountryEnum parse(String name) {
         return parse(name, null);
     }
 
-    public static CurrencyEnum parse(String name, CurrencyEnum defaultCurrency) {
+    public static CountryEnum parse(String name, CountryEnum defaultCountry) {
         if (StringUtil.isBlank(name)) {
-            return defaultCurrency;
+            return defaultCountry;
         }
 
-        return EnumUtil.nameOf(name, CurrencyEnum.class, true);
+        return EnumUtil.nameOf(name, CountryEnum.class, true);
     }
 
     public static CodeBasedEnum codeOf(Integer code) {
@@ -28,7 +22,7 @@ public class CurrencyUtil {
             return null;
         }
 
-        return EnumUtil.codeOf(code, CurrencyEnum.class);
+        return EnumUtil.codeOf(code, CountryEnum.class);
     }
 
     public static String getCurrencyCode(Integer code) {
@@ -36,11 +30,11 @@ public class CurrencyUtil {
             return "";
         }
 
-        CodeBasedEnum currency = EnumUtil.codeOf(code, CurrencyEnum.class);
+        CodeBasedEnum currency = EnumUtil.codeOf(code, CountryEnum.class);
         return currency.getName();
     }
 
-    public static String getCurrencyCode(CurrencyEnum currency) {
+    public static String getCurrencyCode(CountryEnum currency) {
         if (currency == null) {
             return "";
         }

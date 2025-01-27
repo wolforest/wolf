@@ -1,5 +1,6 @@
-package com.wolf.common.lang.enums;
+package com.wolf.common.lang.enums.unit;
 
+import com.wolf.common.lang.enums.CodeBasedEnum;
 import lombok.Getter;
 
 /**

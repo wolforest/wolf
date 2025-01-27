@@ -1,7 +1,7 @@
 package com.wolf.common.util.time;
 
 import org.junit.Test;
-import com.wolf.common.lang.enums.PeriodStrategyEnum;
+import com.wolf.common.lang.enums.unit.PeriodStrategyEnum;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -22,7 +22,7 @@ public class PeriodUtilTest {
         LocalDate start, end;
         int days, expected;
 
-        //case 1 
+        //case 1
         start = LocalDate.of(2019, 1, 1);
         end = LocalDate.of(2019, 1, 1);
 

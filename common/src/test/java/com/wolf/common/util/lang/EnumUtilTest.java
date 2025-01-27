@@ -1,7 +1,7 @@
 package com.wolf.common.util.lang;
 
 import org.junit.Test;
-import com.wolf.common.lang.enums.GenderEnum;
+import com.wolf.common.lang.enums.common.GenderEnum;
 import com.wolf.common.lang.exception.lang.UnsupportedEnumCodeException;
 
 import java.util.List;

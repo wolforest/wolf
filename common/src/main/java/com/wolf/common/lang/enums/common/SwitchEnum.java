@@ -1,5 +1,6 @@
-package com.wolf.common.lang.enums;
+package com.wolf.common.lang.enums.common;
 
+import com.wolf.common.lang.enums.CodeBasedEnum;
 import lombok.Getter;
 
 /**
@@ -9,16 +10,14 @@ import lombok.Getter;
  * @since 2019/9/29 4:51 PM
  **/
 @Getter
-public enum GenderEnum implements CodeBasedEnum {
-    UNKNOWN(0, "未知"),
-    MALE(1, "男"),
-    FEMALE(2, "女")
-    ;
+public enum SwitchEnum implements CodeBasedEnum {
+    OFF(2, "OFF"),
+    ON(1, "ON");
 
     private final int code;
     private final String name;
 
-    GenderEnum(int code, String name) {
+    SwitchEnum(int code, String name) {
         this.code = code;
         this.name = name;
     }

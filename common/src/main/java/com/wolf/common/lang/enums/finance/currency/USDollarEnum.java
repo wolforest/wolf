@@ -1,4 +1,4 @@
-package com.wolf.common.lang.enums.currency;
+package com.wolf.common.lang.enums.finance.currency;
 
 import lombok.Getter;
 import com.wolf.common.lang.enums.CodeBasedEnum;

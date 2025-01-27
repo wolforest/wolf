@@ -1,6 +1,6 @@
 package com.wolf.common.util.time;
 
-import com.wolf.common.lang.enums.PeriodStrategyEnum;
+import com.wolf.common.lang.enums.unit.PeriodStrategyEnum;
 import com.wolf.common.lang.exception.lang.EnumNotFoundException;
 
 import java.time.LocalDate;

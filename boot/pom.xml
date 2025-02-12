@@ -8,7 +8,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wolf</groupId>
+    <groupId>cn.coderule</groupId>
     <artifactId>wolf-boot-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -48,7 +48,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.wolf</groupId>
+                <groupId>cn.coderule</groupId>
                 <artifactId>wolf-framework-dependencies</artifactId>
                 <type>pom</type>
                 <version>${wolf-dependencies.version}</version>
@@ -56,7 +56,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.wolf</groupId>
+                <groupId>cn.coderule</groupId>
                 <artifactId>wolf-utils-dependencies</artifactId>
                 <type>pom</type>
                 <version>${wolf-utils-dependencies.version}</version>
@@ -64,7 +64,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.wolf</groupId>
+                <groupId>cn.coderule</groupId>
                 <artifactId>wolf-net-dependencies</artifactId>
                 <type>pom</type>
                 <version>${wolf-net-dependencies.version}</version>
@@ -72,7 +72,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.wolf</groupId>
+                <groupId>cn.coderule</groupId>
                 <artifactId>wolf-middleware-dependencies</artifactId>
                 <type>pom</type>
                 <version>${wolf-middleware-dependencies.version}</version>
@@ -80,7 +80,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.wolf</groupId>
+                <groupId>cn.coderule</groupId>
                 <artifactId>wolf-db-dependencies</artifactId>
                 <type>pom</type>
                 <version>${wolf-db-dependencies.version}</version>
@@ -88,7 +88,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.wolf</groupId>
+                <groupId>cn.coderule</groupId>
                 <artifactId>wolf-dubbo-dependencies</artifactId>
                 <type>pom</type>
                 <version>${wolf-dubbo-dependencies.version}</version>
@@ -96,7 +96,7 @@
             </dependency>
 
             <dependency>
-                <groupId>com.wolf</groupId>
+                <groupId>cn.coderule</groupId>
                 <artifactId>wolf-sdk-dependencies</artifactId>
                 <type>pom</type>
                 <version>${wolf-sdk-dependencies.version}</version>

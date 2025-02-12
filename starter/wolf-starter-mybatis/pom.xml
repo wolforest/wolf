@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>wolf-boot-parent</artifactId>
-        <groupId>com.wolf</groupId>
+        <groupId>cn.coderule</groupId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../boot/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wolf.starter</groupId>
+    <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-starter-mybatis</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>

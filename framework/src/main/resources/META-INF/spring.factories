@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.wolf.framework.config.WolfAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=cn.coderule.framework.config.WolfAutoConfiguration

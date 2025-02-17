@@ -16,6 +16,8 @@
         <grpc.version>1.70.0</grpc.version>
         <protobuf-util.version>4.29.3</protobuf-util.version>
         <okhttp.version>4.12.0</okhttp.version>
+
+        <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -75,4 +77,17 @@
         </dependencies>
 
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.xolstice.maven.plugins</groupId>
+                    <artifactId>protobuf-maven-plugin</artifactId>
+                    <version>${protobuf-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 </project>

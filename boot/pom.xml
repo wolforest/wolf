@@ -16,6 +16,7 @@
     <description>wolf framework boot pom</description>
 
     <modules>
+        <module>wolf-maven-dependencies</module>
         <module>wolf-dependencies-parent</module>
         <module>wolf-utils-dependencies</module>
         <module>wolf-middleware-dependencies</module>
@@ -50,6 +51,8 @@
 
     <dependencyManagement>
         <dependencies>
+
+
             <dependency>
                 <groupId>cn.coderule</groupId>
                 <artifactId>wolf-framework-dependencies</artifactId>
@@ -117,6 +120,18 @@
 <!--        </dependency>-->
     </dependencies>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>cn.coderule</groupId>
+                    <artifactId>wolf-maven-dependencies</artifactId>
+                    <version>${wolf-dependencies.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 <!--    <distributionManagement>-->
 <!--        <snapshotRepository>-->
 <!--            <id>ossrh</id>-->
@@ -127,6 +142,7 @@
 <!--            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
 <!--        </repository>-->
 <!--    </distributionManagement>-->
+
 
 <!--    <build>-->
 <!--        <plugins>-->

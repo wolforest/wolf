@@ -10,12 +10,12 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
-        <netty-http.version>1.2.1</netty-http.version>
-        <netty.version>4.1.116.Final</netty.version>
+        <netty-http.version>1.2.3</netty-http.version>
+        <netty.version>4.1.118.Final</netty.version>
 
-        <grpc.version>1.50.0</grpc.version>
+        <grpc.version>1.70.0</grpc.version>
         <protobuf-util.version>4.29.3</protobuf-util.version>
-<!--        <okhttp.version>4.12.0</okhttp.version>-->
+        <okhttp.version>4.12.0</okhttp.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -24,6 +24,17 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <version>${netty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp-tls</artifactId>
+                <version>${okhttp.version}</version>
             </dependency>
 
 

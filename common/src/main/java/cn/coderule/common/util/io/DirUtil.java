@@ -2,6 +2,7 @@ package cn.coderule.common.util.io;
 
 import cn.coderule.common.util.lang.StringUtil;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,6 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * com.wolf.framework.util.file
@@ -17,6 +19,7 @@ import java.util.stream.Stream;
  * @author Wingle
  * @since 2022/1/19 上午8:33
  **/
+@Slf4j
 public class DirUtil {
     public static final String MULTI_PATH_SEPARATOR = ",";
 
@@ -46,7 +49,15 @@ public class DirUtil {
         }
 
         if (!dir.contains(MULTI_PATH_SEPARATOR)) {
-            createIfNotExists(dir);
+            File file = new File(dir);
+            if (file.exists()) {
+                return;
+            }
+
+            boolean result = file.mkdirs();
+            if (!result) {
+                log.error("create dir fail, dir:{}", dir);
+            }
             return;
         }
 

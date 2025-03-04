@@ -13,14 +13,17 @@ public class SemaphoreGuard {
         this.semaphore = semaphore;
     }
 
-    public void release() {
+    public boolean release() {
         if (null == semaphore) {
-            return;
+            return false;
         }
 
         if (locked.compareAndSet(false, true)) {
             semaphore.release();
+            return true;
         }
+
+        return false;
     }
 
     public void reset() {

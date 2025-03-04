@@ -1,5 +1,6 @@
 package cn.coderule.common.ds;
 
+import java.io.Serializable;
 import lombok.Data;
 
 /**
@@ -9,11 +10,11 @@ import lombok.Data;
  * @since 2020/12/2 11:58 上午
  **/
 @Data
-public class Pair<L, R> {
+public class Pair<L, R> implements Serializable {
     private final L left;
     private final R right;
 
-    public static <L, R> Pair<L, R> create(L left, R right) {
+    public static <L, R> Pair<L, R> of(L left, R right) {
         return new Pair<>(left, right);
     }
 

@@ -4,7 +4,9 @@ import cn.coderule.common.util.lang.SystemUtil;
 import java.io.File;
 import java.net.Inet6Address;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.NetworkInterface;
+import java.net.SocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
@@ -101,4 +103,23 @@ public class NetworkUtil {
         }
         return false;
     }
+
+    public static SocketAddress toSocketAddress(final String addr) {
+        int split = addr.lastIndexOf(":");
+        String host = addr.substring(0, split);
+        String port = addr.substring(split + 1);
+        return new InetSocketAddress(host, Integer.parseInt(port));
+    }
+
+    public static String toString(final SocketAddress addr) {
+        InetSocketAddress inetSocketAddress = (InetSocketAddress) addr;
+        return inetSocketAddress.getAddress().getHostAddress() +
+            ":" +
+            inetSocketAddress.getPort();
+    }
+
+    public static String toIpString(final String addr) {
+        return toString(toSocketAddress(addr));
+    }
+
 }

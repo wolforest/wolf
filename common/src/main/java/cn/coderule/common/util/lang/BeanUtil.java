@@ -353,7 +353,7 @@ public class BeanUtil {
                 map.put(fieldName, value);
             }
         } catch (Throwable throwable) {
-            log.warn("BeanUtil toNestedMap error; e: {}", throwable);
+            log.warn("BeanUtil toNestedMap error; ", throwable);
         }
 
         return map;

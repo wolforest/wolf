@@ -572,7 +572,7 @@ public class StringUtil {
     }
 
     public static String remove(String s, String... subs) {
-        if (subs.length <= 0) {
+        if (subs.length == 0) {
             throw new IllegalArgumentException("StringUtil.remove subs can't be empty");
         }
 
@@ -739,5 +739,17 @@ public class StringUtil {
             }
         }
         return sb.toString();
+    }
+
+    public static boolean isAscii(byte[] subject) {
+        if (subject == null) {
+            return false;
+        }
+        for (byte b : subject) {
+            if (b < 32 || b > 126) {
+                return false;
+            }
+        }
+        return true;
     }
 }

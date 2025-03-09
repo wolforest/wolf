@@ -649,9 +649,7 @@ public class StringUtil {
         }
 
         StringBuilder mask = new StringBuilder(maskLength);
-        for (int i = 0; i <= maskLength; i++) {
-            mask.append(maskChar);
-        }
+        mask.append(String.valueOf(maskChar).repeat(Math.max(0, maskLength + 1)));
 
         int len = str.length();
         if (len <= maskLength) {

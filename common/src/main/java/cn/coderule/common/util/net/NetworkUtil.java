@@ -172,6 +172,13 @@ public class NetworkUtil {
         return addressSplits[0];
     }
 
+    public static String[] getHostAndPort(String address) {
+        int split = address.lastIndexOf(":");
+        return split < 0
+            ? new String[]{address}
+            : new String[]{address.substring(0, split), address.substring(split + 1)};
+    }
+
     public static String getLocalAddr(final Channel channel) {
         SocketAddress remote = channel.localAddress();
         final String addr = remote != null ? remote.toString() : "";

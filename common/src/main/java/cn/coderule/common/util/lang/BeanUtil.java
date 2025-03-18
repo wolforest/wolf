@@ -97,16 +97,6 @@ public class BeanUtil {
         return false;
     }
 
-    public static <T> boolean inList(Object target, List<T> list) {
-        for (T o : list) {
-            if (equals(target, o)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     public static int hashCode(Object... objects) {
         return Arrays.hashCode(objects);
     }
@@ -290,7 +280,6 @@ public class BeanUtil {
         return map;
     }
 
-
     public static <T> ArrayList<String> getPropertyNames(@NonNull Class<T> clazz) {
         ArrayList<String> properties = new ArrayList<>();
         Field[] fields = clazz.getDeclaredFields();
@@ -363,11 +352,7 @@ public class BeanUtil {
         Class<?> clazz = obj.getClass();
 
         // 排除基础类型和标准类
-        if (clazz.isPrimitive() || clazz.getName().startsWith("java.")) {
-            return false;
-        }
-
-        return true;
+        return !clazz.isPrimitive() && !clazz.getName().startsWith("java.");
     }
 
     @SneakyThrows
@@ -441,4 +426,7 @@ public class BeanUtil {
             return true;
         }
     }
+
+
+
 }

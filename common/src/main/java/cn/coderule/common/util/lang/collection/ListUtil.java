@@ -2,6 +2,7 @@ package cn.coderule.common.util.lang.collection;
 
 import cn.coderule.common.lang.exception.BusinessException;
 
+import cn.coderule.common.util.lang.BeanUtil;
 import java.security.SecureRandom;
 import java.util.*;
 
@@ -29,7 +30,7 @@ public class ListUtil {
             return null;
         }
 
-        return list.get(0);
+        return list.getFirst();
     }
 
     public static <E> E last(List<E> list) {
@@ -39,6 +40,16 @@ public class ListUtil {
 
         int lastIndex = list.size() - 1;
         return list.get(lastIndex);
+    }
+
+    public static <T> boolean inList(Object target, List<T> list) {
+        for (T o : list) {
+            if (BeanUtil.equals(target, o)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 

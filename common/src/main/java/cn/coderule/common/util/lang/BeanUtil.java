@@ -1,5 +1,9 @@
 package cn.coderule.common.util.lang;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.function.Predicate;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -428,5 +432,156 @@ public class BeanUtil {
     }
 
 
+    public static String toString(final Properties properties) {
+        return toString(properties, false);
+    }
+
+    public static String toString(final Properties properties, final boolean isSort) {
+        StringBuilder sb = new StringBuilder();
+        Set<Map.Entry<Object, Object>> entrySet = isSort ? new TreeMap<>(properties).entrySet() : properties.entrySet();
+        for (Map.Entry<Object, Object> entry : entrySet) {
+            if (entry.getValue() == null) {
+                continue;
+            }
+
+            sb.append(entry.getKey().toString())
+                .append("=")
+                .append(entry.getValue().toString())
+                .append("\n");
+        }
+        return sb.toString();
+    }
+
+    public static Properties toProperties(final String str) {
+        Properties properties = new Properties();
+        try {
+            InputStream in = new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8));
+            properties.load(in);
+        } catch (Exception e) {
+            log.error("Failed to handle properties", e);
+            return null;
+        }
+
+        return properties;
+    }
+
+    public static Properties toProperties(final Object object) {
+        Properties properties = new Properties();
+
+        Class<?> objectClass = object.getClass();
+        while (true) {
+            toProperties(object, objectClass, properties);
+
+            if (objectClass == Object.class || objectClass.getSuperclass() == Object.class) {
+                break;
+            }
+            objectClass = objectClass.getSuperclass();
+        }
+
+        return properties;
+    }
+
+    private static void toProperties(final Object object, final Class<?> objectClass, Properties properties) {
+        Field[] fields = objectClass.getDeclaredFields();
+        for (Field field : fields) {
+            if (Modifier.isStatic(field.getModifiers())) {
+                continue;
+            }
+
+            String name = field.getName();
+            if (name.startsWith("this")) {
+                continue;
+            }
+
+            Object value = null;
+            try {
+                field.setAccessible(true);
+                value = field.get(object);
+            } catch (IllegalAccessException e) {
+                log.error("Failed to handle properties", e);
+            }
+
+            if (value != null) {
+                properties.setProperty(name, value.toString());
+            }
+        }
+    }
+
+    public static void toObject(final Properties p, final Object object) {
+        Method[] methods = object.getClass().getMethods();
+        for (Method method : methods) {
+            String mn = method.getName();
+            if (!mn.startsWith("set")) {
+                continue;
+            }
+
+            try {
+                String tmp = mn.substring(4);
+                String first = mn.substring(3, 4);
+
+                String key = first.toLowerCase() + tmp;
+                String property = p.getProperty(key);
+                if (property == null) {
+                    continue;
+                }
+
+                Class<?>[] pt = method.getParameterTypes();
+                if (pt.length <= 0) {
+                    continue;
+                }
+
+                String cn = pt[0].getSimpleName();
+                Object arg = getArg(cn, property);
+                if (arg == null) {
+                    continue;
+                }
+
+                method.invoke(object, arg);
+            } catch (Throwable ignored) {
+            }
+        }
+    }
+
+    private static Object getArg(String cn, String property) {
+        Object arg;
+        switch (cn) {
+            case "int":
+            case "Integer":
+                arg = Integer.parseInt(property);
+                break;
+            case "long":
+            case "Long":
+                arg = Long.parseLong(property);
+                break;
+            case "double":
+            case "Double":
+                arg = Double.parseDouble(property);
+                break;
+            case "boolean":
+            case "Boolean":
+                arg = Boolean.parseBoolean(property);
+                break;
+            case "float":
+            case "Float":
+                arg = Float.parseFloat(property);
+                break;
+            case "String":
+                property = property.trim();
+                arg = property;
+                break;
+            default:
+                return null;
+        }
+
+        return arg;
+    }
+
+    public static boolean isPropertiesEqual(final Properties p1, final Properties p2) {
+        return p1.equals(p2);
+    }
+
+    public static boolean isPropertyValid(Properties props, String key, Predicate<String> validator) {
+        return validator.test(props.getProperty(key));
+    }
 
 }

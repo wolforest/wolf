@@ -1,4 +1,4 @@
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.lock;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;

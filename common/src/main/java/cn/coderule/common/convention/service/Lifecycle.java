@@ -7,14 +7,16 @@ public interface Lifecycle {
     /**
      * Initialization, it will be called before start
      */
-    void initialize();
+    default void initialize() {}
 
     /**
      * cleanup, it will be called before shutdown
      */
-    void cleanup();
+    default void cleanup() {}
 
-    State getState();
+    default State getState() {
+        return State.RUNNING;
+    }
 
     default boolean isRunning() {
         return State.RUNNING.equals(getState());

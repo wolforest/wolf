@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.coderule</groupId>
+    <artifactId>wolf-sdk-dependencies</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <version.snapshot>1.0.0-SNAPSHOT</version.snapshot>
+        <oapi-sdk.version>2.0.16</oapi-sdk.version>
+        <oapi-sdk-servlet-ext.version>1.0.0-rc3</oapi-sdk-servlet-ext.version>
+        <arms.version>1.7.3</arms.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.larksuite.oapi</groupId>
+                <artifactId>oapi-sdk</artifactId>
+                <version>${oapi-sdk.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.larksuite.oapi</groupId>
+                <artifactId>oapi-sdk-servlet-ext</artifactId>
+                <version>${oapi-sdk-servlet-ext.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>com.larksuite.oapi</groupId>
+                        <artifactId>oapi-sdk</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.arms.apm</groupId>
+                <artifactId>arms-sdk</artifactId>
+                <version>${arms.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

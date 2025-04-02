@@ -1,0 +1,269 @@
+#!/bin/bash
+CURRENT_PATH=$(cd `dirname $0`; pwd)
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+DATE_STRING=$(date '+%Y%m%d')
+RELEASE_PREFIX="release/release_"
+FEATURE_PREFIX="feature/"
+
+if [ -n "$1" ]; then
+    command=$1
+else
+    command="help"
+fi
+
+if [ -n "$2" ]; then
+    branch=$2
+else
+    branch=""
+fi
+
+. ${CURRENT_PATH}/core/string.sh
+
+function help() {
+  echo "usage: gitflow <subcommand> <branch/version>"
+  echo ""
+
+  echo "Available subcommands are:"
+  echo "  help              show this doc"
+  echo "  pull:main         pull main branch and switch back"
+  echo "  merge:main        merge latest main branch"
+  echo ""
+
+  echo "  feature           create create feature branch"
+  echo "  feature:create    create create feature branch"
+  echo "  feature:release   merge current branch to release<branch/version>"
+  echo "  feature:finish    delete feature branch"
+
+  echo "  release           create daily release branch"
+  echo "  release:daily     create daily release branch"
+  echo "  release:create    create create release branch"
+  echo "  release:finish    merge release branch to main and delete the release branch"
+  echo ""
+  echo ""
+
+  echo "use cases:"
+  echo "  # create feature branch"
+  echo "  gitflow feature <feature_branch_name>"
+  echo ""
+  echo "  # merge feature branch(your current branch) to release <branch/version> "
+  echo "  gitflow feature:release <release_branch_name>"
+  echo ""
+  echo "  # create release branch without version"
+  echo "  gitflow release"
+  echo "  gitflow release:daily"
+  echo ""
+  echo "  # create release branch with version"
+  echo "  gitflow release 1"
+  echo "  gitflow release:daily 1"
+  echo ""
+  echo "  # merge current release branch to main"
+  echo "  gitflow release:finish"
+  echo ""
+  echo "  # merge release branch to main"
+  echo "  gitflow release:finish <release_branch_name>"
+  echo ""
+
+  echo "current branch: ${CURRENT_BRANCH}"
+  echo "current path: ${CURRENT_PATH}"
+  echo ""
+}
+
+function pull_main() {
+  switch_and_pull_main
+
+  git checkout -
+}
+
+function merge_main() {
+  switch_and_pull_main
+
+  git checkout -
+  git merge main
+}
+
+function create_feature() {
+  switch_and_pull_main
+
+  if [ -z "$branch" ]; then
+    echo "feature name can't be blank"
+    exit 1
+  fi
+
+  branch="${FEATURE_PREFIX}${branch}_${DATE_STRING}"
+  git checkout -b $branch
+  echo "create feature ${branch}"
+
+  git push -u origin ${branch}
+  echo "echo create origin feature ${branch}"
+}
+
+function release_feature() {
+  if [ -z "$branch" ]; then
+      echo "release branch name can't be blank"
+      exit 1
+  fi
+
+  feature_branch=$CURRENT_BRANCH
+  release_branch=$branch
+
+  if [[ "FALSE" == $(has_prefix $feature_branch $FEATURE_PREFIX) ]]; then
+        echo "$feature_branch is not a feature branch"
+        return
+  fi
+
+   if [[ "FALSE" == $(has_prefix $release_branch $RELEASE_PREFIX) ]]; then
+        echo "$release_branch is not a release branch"
+        return
+  fi
+
+  git pull || exit 0
+  git push || exit 0
+
+  switch_and_pull_branch $release_branch
+
+  git merge $feature_branch || exit 0
+  echo "merge feature branch: ${feature_branch} to release branch: ${release_branch}"
+
+  git branch -d $feature_branch
+  echo "delete local feature branch: ${feature_branch}"
+}
+
+function finish_feature() {
+  feature_branch=$CURRENT_BRANCH
+
+  if [[ "TRUE" == $(is_blank $branch) ]]; then
+      feature_branch=$branch
+  fi
+
+  if [[ "FALSE" == $(has_prefix $feature_branch $FEATURE_PREFIX) ]]; then
+      echo "$feature_branch is not a feature branch"
+      return
+  fi
+
+  git pull
+  git push
+
+  switch_and_pull_main
+
+  git branch -d $feature_branch
+  echo "delete local feature branch: ${feature_branch}"
+}
+
+function create_release() {
+  switch_and_pull_main
+
+  if [ -z "$branch" ]; then
+    echo "release name can't be blank"
+    exit 1
+  fi
+
+  release_branch="${RELEASE_PREFIX}${branch}"
+  git checkout -b $release_branch
+  echo "create release ${release_branch}"
+
+  git push -u origin ${release_branch}
+  echo "echo create origin release ${release_branch}"
+}
+
+function release_ci() {
+  echo "deploy to ci env"
+}
+
+
+function create_daily_release() {
+  switch_and_pull_main
+
+  if [ -n "$branch" ]; then
+      branch="${DATE_STRING}_${branch}"
+  else
+      branch=$DATE_STRING
+  fi
+
+  release_name="${RELEASE_PREFIX}$branch"
+  git checkout -b ${release_name}
+  echo "echo create release ${release_name}"
+
+  git push -u origin ${release_name}
+  echo "echo create origin release ${release_name}"
+}
+
+function finish_release() {
+  release_branch=$CURRENT_BRANCH
+
+  if [ -n "$branch" ]; then
+      release_branch=$branch
+      git pull
+      git checkout ${release_branch}
+  fi
+
+  if [[ "FALSE" == $(has_prefix $release_branch $RELEASE_PREFIX) ]]; then
+      echo "$release_branch is not a release branch"
+      return
+  fi
+
+  git pull || exit 0
+  git push || exit 0
+  switch_and_pull_main
+
+  git merge $release_branch --no-ff || exit 0
+  echo "merge release branch: ${release_branch} to main"
+
+  git branch -d $release_branch || exit 0
+  echo "delete release branch: ${release_branch}"
+}
+
+function switch_and_pull_branch() {
+   branch_to_switch=$1
+
+   if [ -z "$branch_to_switch" ]; then
+        echo "branch to switch can't be blank"
+        exit 1
+    fi
+
+   git pull || exit 0
+   git checkout $branch_to_switch || exit 0
+
+   echo "switch to branch ${branch_to_switch}"
+   git pull || exit 0
+   echo "pull latest code"
+}
+
+function switch_and_pull_main() {
+   git checkout main
+   echo "switch to branch main"
+   git pull || exit 0
+   echo "pull latest main code"
+}
+
+
+
+case "$command" in
+  help)
+      help ;;
+
+  merge:main)
+      merge_main ;;
+  pull:main)
+      pull_main ;;
+
+  feature)
+      create_feature ;;
+  feature:create)
+      create_feature ;;
+  feature:release)
+      release_feature ;;
+  feature:finish)
+      finish_feature ;;
+
+  release)
+      create_daily_release ;;
+  release:daily)
+      create_daily_release ;;
+  release:create)
+      create_release ;;
+  release:ci)
+      release_ci ;;
+  release:finish)
+      finish_release ;;
+
+esac

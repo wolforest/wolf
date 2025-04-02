@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.coderule</groupId>
+    <artifactId>wolf</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>wolf-framework</name>
+    <description>wolf framework</description>
+
+    <modules>
+        <module>boot</module>
+        <module>starter</module>
+        <module>common</module>
+        <module>principle</module>
+        <module>framework</module>
+        <module>mqclient</module>
+        <module>wolfno</module>
+        <module>dbclient</module>
+        <module>httpclient</module>
+        <module>starter/wolf-boot-starter</module>
+        <module>starter/wolf-framework-starter</module>
+        <module>dts</module>
+    </modules>
+
+    <properties>
+    </properties>
+
+    <dependencies>
+    </dependencies>
+
+
+</project>

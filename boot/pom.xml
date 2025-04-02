@@ -1,0 +1,108 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.3</version>
+        <relativePath />
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.wolf</groupId>
+    <artifactId>wolf-boot-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>wolf-framework-boot</name>
+    <description>wolf framework boot pom</description>
+
+    <modules>
+        <module>wolf-utils-dependencies</module>
+        <module>wolf-middleware-dependencies</module>
+        <module>wolf-framework-dependencies</module>
+        <module>wolf-db-dependencies</module>
+        <module>wolf-dubbo-dependencies</module>
+        <module>wolf-sdk-dependencies</module>
+        <module>wolf-net-dependencies</module>
+    </modules>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+
+        <wolf-dependencies.version>1.0.0-SNAPSHOT</wolf-dependencies.version>
+        <wolf-utils-dependencies.version>1.0.0-SNAPSHOT</wolf-utils-dependencies.version>
+        <wolf-middleware-dependencies.version>1.0.0-SNAPSHOT</wolf-middleware-dependencies.version>
+        <wolf-db-dependencies.version>1.0.0-SNAPSHOT</wolf-db-dependencies.version>
+        <wolf-dubbo-dependencies.version>1.0.0-SNAPSHOT</wolf-dubbo-dependencies.version>
+        <wolf-sdk-dependencies.version>1.0.0-SNAPSHOT</wolf-sdk-dependencies.version>
+        <wolf-net-dependencies.version>1.0.0-SNAPSHOT</wolf-net-dependencies.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.wolf</groupId>
+                <artifactId>wolf-framework-dependencies</artifactId>
+                <type>pom</type>
+                <version>${wolf-dependencies.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wolf</groupId>
+                <artifactId>wolf-utils-dependencies</artifactId>
+                <type>pom</type>
+                <version>${wolf-utils-dependencies.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wolf</groupId>
+                <artifactId>wolf-net-dependencies</artifactId>
+                <type>pom</type>
+                <version>${wolf-net-dependencies.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wolf</groupId>
+                <artifactId>wolf-middleware-dependencies</artifactId>
+                <type>pom</type>
+                <version>${wolf-middleware-dependencies.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wolf</groupId>
+                <artifactId>wolf-db-dependencies</artifactId>
+                <type>pom</type>
+                <version>${wolf-db-dependencies.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wolf</groupId>
+                <artifactId>wolf-dubbo-dependencies</artifactId>
+                <type>pom</type>
+                <version>${wolf-dubbo-dependencies.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.wolf</groupId>
+                <artifactId>wolf-sdk-dependencies</artifactId>
+                <type>pom</type>
+                <version>${wolf-sdk-dependencies.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>

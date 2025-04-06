@@ -7,6 +7,8 @@ import java.util.function.Predicate;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
@@ -584,4 +586,15 @@ public class BeanUtil {
         return validator.test(props.getProperty(key));
     }
 
+    public static EqualsBuilder equalsBuilder() {
+        return new EqualsBuilder();
+    }
+
+    public static HashCodeBuilder hashCodeBuilder() {
+        return new HashCodeBuilder();
+    }
+
+    public static HashCodeBuilder hashCodeBuilder( int initialOddNumber, int multiplierOddNumber) {
+        return new HashCodeBuilder(initialOddNumber, multiplierOddNumber);
+    }
 }

@@ -33,7 +33,7 @@
         <nv-i18n.version>1.29</nv-i18n.version>
         <javax-el.version>3.0.0</javax-el.version>
         <servlet-api.version>4.0.1</servlet-api.version>
-
+        <testng.version>7.11.0</testng.version>
 
     </properties>
 
@@ -111,6 +111,11 @@
                 <version>${jna.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

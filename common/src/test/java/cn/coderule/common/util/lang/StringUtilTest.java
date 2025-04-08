@@ -1,6 +1,5 @@
 package cn.coderule.common.util.lang;
 
-import cn.coderule.common.util.lang.StringUtil;
 import org.junit.Test;
 
 import java.util.Arrays;

@@ -20,28 +20,39 @@ package cn.coderule.common.lang.concurrent;
 import java.util.Random;
 
 public class ThreadLocalCounter {
-    private final ThreadLocal<Integer> threadLocalIndex = new ThreadLocal<>();
-    private final Random random = new Random();
     private final static int POSITIVE_MASK = 0x7FFFFFFF;
 
+    private final ThreadLocal<Integer> index;
+    private final Random random;
+
+    public ThreadLocalCounter() {
+        this.random = new Random();
+        this.index = ThreadLocal.withInitial(() -> {
+            int index = this.random.nextInt();
+           return index & POSITIVE_MASK;
+        });
+    }
+
     public int incrementAndGet() {
-        Integer index = this.threadLocalIndex.get();
+        Integer index = this.index.get();
         if (null == index) {
             index = random.nextInt();
         }
-        this.threadLocalIndex.set(++index);
-        return index & POSITIVE_MASK;
+
+        index = index & POSITIVE_MASK;
+        this.index.set(++index);
+        return index;
     }
 
     public void reset() {
         int index = Math.abs(random.nextInt(Integer.MAX_VALUE));
-        this.threadLocalIndex.set(index);
+        this.index.set(index);
     }
 
     @Override
     public String toString() {
         return "ThreadLocalIndex{" +
-            "threadLocalIndex=" + threadLocalIndex.get() +
+            "threadLocalIndex=" + index.get() +
             '}';
     }
 }

@@ -19,13 +19,13 @@ package cn.coderule.common.lang.concurrent.thread;
 
 import java.util.Random;
 
-public class ThreadLocalCounter {
+public class ThreadLocalSequence {
     private final static int POSITIVE_MASK = 0x7FFFFFFF;
 
     private final ThreadLocal<Integer> index;
     private final Random random;
 
-    public ThreadLocalCounter() {
+    public ThreadLocalSequence() {
         this.random = new Random();
         this.index = ThreadLocal.withInitial(() -> {
             int index = this.random.nextInt();

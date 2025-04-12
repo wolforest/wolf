@@ -14,8 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.thread;
 
+import cn.coderule.common.lang.concurrent.sync.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import lombok.Getter;

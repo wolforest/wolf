@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.sync;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;

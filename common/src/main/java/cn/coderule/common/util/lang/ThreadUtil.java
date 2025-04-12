@@ -1,7 +1,7 @@
 package cn.coderule.common.util.lang;
 
-import cn.coderule.common.lang.concurrent.DefaultThreadFactory;
-import cn.coderule.common.lang.concurrent.FutureThreadPoolExecutor;
+import cn.coderule.common.lang.concurrent.thread.DefaultThreadFactory;
+import cn.coderule.common.lang.concurrent.thread.future.FutureThreadPoolExecutor;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;

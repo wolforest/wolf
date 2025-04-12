@@ -1,4 +1,4 @@
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.sync;
 
 public class Semaphore {
     private final java.util.concurrent.Semaphore semaphore;

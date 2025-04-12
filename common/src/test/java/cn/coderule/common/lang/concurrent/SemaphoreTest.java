@@ -1,5 +1,7 @@
 package cn.coderule.common.lang.concurrent;
 
+import cn.coderule.common.lang.concurrent.sync.Semaphore;
+import cn.coderule.common.lang.concurrent.sync.SemaphoreGuard;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

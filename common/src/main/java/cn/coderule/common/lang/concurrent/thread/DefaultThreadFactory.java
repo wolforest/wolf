@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.thread;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicLong;

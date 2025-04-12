@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package cn.coderule.common.lang.concurrent.thread;
+package cn.coderule.common.lang.concurrent.thread.local;
 
 import java.util.Random;
 

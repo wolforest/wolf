@@ -15,15 +15,24 @@
  * limitations under the License.
  */
 
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.thread.future;
 
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.Callable;
 
-public interface ThreadPoolMonitor {
+public class FutureTask<V> extends java.util.concurrent.FutureTask<V> {
+    private final Runnable runnable;
 
-    String getDescription();
+    public FutureTask(final Callable<V> callable) {
+        super(callable);
+        this.runnable = null;
+    }
 
-    double calculateMetric(ThreadPoolExecutor executor);
+    public FutureTask(final Runnable runnable, final V result) {
+        super(runnable, result);
+        this.runnable = runnable;
+    }
 
-    boolean shouldLogJstack(ThreadPoolExecutor executor, double value);
+    public Runnable getRunnable() {
+        return runnable;
+    }
 }

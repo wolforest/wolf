@@ -1,4 +1,4 @@
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.sync;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicBoolean;

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package cn.coderule.common.lang.concurrent;
+package cn.coderule.common.lang.concurrent.thread.monitor;
 
 import java.util.concurrent.ThreadPoolExecutor;
 

@@ -31,7 +31,7 @@
         <java.version>21</java.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-        <gpg.keyname>2544FD3E6731F39D7922498B788799C4A8A0EF2E</gpg.keyname>
+<!--        <gpg.keyname>2544FD3E6731F39D7922498B788799C4A8A0EF2E</gpg.keyname>-->
 
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

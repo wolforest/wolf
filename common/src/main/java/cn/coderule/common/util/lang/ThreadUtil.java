@@ -237,7 +237,7 @@ public class ThreadUtil {
                 }
 
                 String threadName = entry.getKey().getName();
-                result.append(String.format("%-40sTID: %d STATE: %s%n", threadName, thread.threadId(), thread.getState()));
+                result.append(String.format("%-40sTID: %d STATE: %s%n", threadName, thread.getId(), thread.getState()));
                 for (StackTraceElement el : elements) {
                     result.append(String.format("%-40s%s%n", threadName, el.toString()));
                 }

@@ -26,11 +26,11 @@ public class ListUtil {
     }
 
     public static <E> E first(List<E> list) {
-        if (!notEmpty(list)) {
+        if (isEmpty(list)) {
             return null;
         }
 
-        return list.getFirst();
+        return list.get(0);
     }
 
     public static <E> E last(List<E> list) {

@@ -29,7 +29,7 @@ public class NetworkUtil {
             }
 
             if (!ipv6Result.isEmpty()) {
-                return ipv6Result.getFirst();
+                return ipv6Result.get(0);
             }
 
             //If failed to find,fall back to localhost
@@ -57,7 +57,11 @@ public class NetworkUtil {
             return ip;
         }
 
-        return ipv4Result.getLast();
+        int lastIndex = ipv4Result.size() - 1;
+        if (lastIndex == -1) {
+            return null;
+        }
+        return ipv4Result.get(lastIndex);
     }
 
     private static void getAllAddresses(ArrayList<String> ipv4Result, ArrayList<String> ipv6Result) throws SocketException {

@@ -44,7 +44,7 @@ public class DefaultThreadFactory implements ThreadFactory {
         // Log all uncaught exception
         thread.setUncaughtExceptionHandler((t, e) ->
             log.error("[BUG] Thread has an uncaught exception, threadId={}, threadName={}",
-                t.threadId(), t.getName(), e));
+                t.getId(), t.getName(), e));
 
         return thread;
     }

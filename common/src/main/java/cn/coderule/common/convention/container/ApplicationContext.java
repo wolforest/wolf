@@ -40,7 +40,7 @@ public class ApplicationContext implements Context {
             return null;
         }
 
-        Object bean = list.getFirst();
+        Object bean = list.get(0);
         if (clazz.isInstance(bean)) {
             return clazz.cast(bean);
         }

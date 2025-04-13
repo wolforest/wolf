@@ -40,7 +40,7 @@ public class WeightBalance {
         init();
 
         if (1 == nodeList.size()) {
-            return nodeList.getFirst().getKey();
+            return nodeList.get(0).getKey();
         }
 
         int weight = ThreadLocalRandom.current().nextInt(0, totalWeight);

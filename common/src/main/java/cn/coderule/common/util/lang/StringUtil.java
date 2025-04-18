@@ -6,6 +6,7 @@ import com.google.common.base.Splitter;
 import com.google.common.html.HtmlEscapers;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import lombok.NonNull;
 import org.apache.commons.lang3.StringUtils;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
@@ -35,23 +36,27 @@ public class StringUtil {
     public static final String UNDERSCORE = "_";
     private static final String EMAIL_REGEX_PATTERN_RFC5322 = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
 
-    public static boolean notEmpty(String s, boolean trim) {
-        if (!trim) {
-            return notEmpty(s);
-        }
+//    public static boolean notEmpty(String s, boolean trim) {
+//        if (!trim) {
+//            return notEmpty(s);
+//        }
+//
+//        if (null == s) {
+//            return false;
+//        }
+//        return notEmpty(s.trim());
+//    }
 
-        if (null == s) {
-            return false;
-        }
-        return notEmpty(s.trim());
+//    public static boolean isEmpty(String s, boolean trim) {
+//        return !notEmpty(s, trim);
+//    }
+
+    public static boolean isEmpty(CharSequence cs) {
+        return cs == null || cs.isEmpty();
     }
 
-    public static boolean isEmpty(String s, boolean trim) {
-        return !notEmpty(s, trim);
-    }
-
-    public static boolean isEmpty(String s) {
-        return !notEmpty(s);
+    public static boolean notEmpty(CharSequence s) {
+        return !isEmpty(s);
     }
 
     public static boolean isAllEmpty(final CharSequence... css) {
@@ -83,24 +88,21 @@ public class StringUtil {
     }
 
     public static boolean isBlank(Object s) {
-        if (!(s instanceof String)) {
+        if (!(s instanceof CharSequence)) {
             return true;
         }
 
-        return isBlank((String) s);
+        return isBlank((CharSequence) s);
     }
 
-    public static boolean isBlank(String s) {
-        return isEmpty(s, true);
+    public static boolean isBlank(CharSequence s) {
+        return StringUtils.isBlank(s);
     }
 
     public static boolean notBlank(String s) {
         return !isBlank(s);
     }
 
-    public static boolean notEmpty(String s) {
-        return s != null && s.length() > 0;
-    }
 
     public static boolean isZero(String s) {
         return isZero(s, false);
@@ -498,7 +500,7 @@ public class StringUtil {
     }
 
     public static String ucWords(String s, String separator) {
-        if (isEmpty(s, true)) {
+        if (isBlank(s)) {
             return s;
         }
 
@@ -515,7 +517,7 @@ public class StringUtil {
     }
 
     public static String lcWords(String s, String separator) {
-        if (isEmpty(s, true)) {
+        if (isBlank(s)) {
             return s;
         }
 
@@ -750,4 +752,18 @@ public class StringUtil {
         }
         return true;
     }
+
+    public static <T extends CharSequence> T defaultIfBlank(T str, T defaultStr) {
+        return isBlank(str) ? defaultStr : str;
+    }
+
+    public static <T extends CharSequence> T defaultIfEmpty(T str, T defaultStr) {
+        return StringUtils.defaultIfEmpty(str, defaultStr);
+    }
+
+    public static String defaultString(String str) {
+        return Objects.toString(str, "");
+    }
+
+
 }

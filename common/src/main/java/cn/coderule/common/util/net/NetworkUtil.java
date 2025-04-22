@@ -163,17 +163,14 @@ public class NetworkUtil {
         return -1;
     }
 
+    public static String replacePort(String address, int port) {
+        String[] hostAndPort = getHostAndPort(address);
+        return hostAndPort[0] + ":" + port;
+    }
+
     public static String getHost(String address) {
-        if (address == null) {
-            return "";
-        }
-
-        String[] addressSplits = address.split(":");
-        if (addressSplits.length < 1) {
-            return "";
-        }
-
-        return addressSplits[0];
+        String[] hostAndPort = getHostAndPort(address);
+        return hostAndPort[0];
     }
 
     public static String[] getHostAndPort(String address) {

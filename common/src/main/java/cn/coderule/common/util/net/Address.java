@@ -50,6 +50,10 @@ public class Address implements Serializable {
         return hostAndPort.getHost();
     }
 
+    public String getHostAndPort() {
+        return hostAndPort.getHost() + ":" + hostAndPort.getPort();
+    }
+
     public int getPort() {
         return hostAndPort.getPort();
     }

@@ -36,6 +36,8 @@ public class StringUtil {
     public static final String UNDERSCORE = "_";
     private static final String EMAIL_REGEX_PATTERN_RFC5322 = "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
 
+    private final static char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
+
 //    public static boolean notEmpty(String s, boolean trim) {
 //        if (!trim) {
 //            return notEmpty(s);
@@ -763,6 +765,47 @@ public class StringUtil {
 
     public static String defaultString(String str) {
         return Objects.toString(str, "");
+    }
+
+    public static void writeInt(char[] buffer, int pos, int value) {
+        for (int moveBits = 28; moveBits >= 0; moveBits -= 4) {
+            buffer[pos++] = HEX_ARRAY[(value >>> moveBits) & 0x0F];
+        }
+    }
+
+    public static void writeShort(char[] buffer, int pos, int value) {
+        for (int moveBits = 12; moveBits >= 0; moveBits -= 4) {
+            buffer[pos++] = HEX_ARRAY[(value >>> moveBits) & 0x0F];
+        }
+    }
+
+    public static String bytes2string(byte[] src) {
+        char[] hexChars = new char[src.length * 2];
+        for (int j = 0; j < src.length; j++) {
+            int v = src[j] & 0xFF;
+            hexChars[j * 2] = HEX_ARRAY[v >>> 4];
+            hexChars[j * 2 + 1] = HEX_ARRAY[v & 0x0F];
+        }
+        return new String(hexChars);
+    }
+
+    public static byte[] string2bytes(String hexString) {
+        if (hexString == null || hexString.isEmpty()) {
+            return null;
+        }
+        hexString = hexString.toUpperCase();
+        int length = hexString.length() / 2;
+        char[] hexChars = hexString.toCharArray();
+        byte[] d = new byte[length];
+        for (int i = 0; i < length; i++) {
+            int pos = i * 2;
+            d[i] = (byte) (charToByte(hexChars[pos]) << 4 | charToByte(hexChars[pos + 1]));
+        }
+        return d;
+    }
+
+    private static byte charToByte(char c) {
+        return (byte) "0123456789ABCDEF".indexOf(c);
     }
 
 

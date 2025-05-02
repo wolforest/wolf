@@ -36,14 +36,14 @@ public class EventBus {
         }
     }
 
-    public void emit(Object event) {
+    public void emit(Object event, Object arg) {
         List<Consumer<Object>> handlers = this.listeners.get(event);
         if (handlers == null) {
             return;
         }
 
         for (Consumer<Object> handler : handlers) {
-            handler.accept(event);
+            handler.accept(arg);
         }
     }
 }

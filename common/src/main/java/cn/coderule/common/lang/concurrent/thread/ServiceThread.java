@@ -106,7 +106,7 @@ public abstract class ServiceThread implements Runnable {
 
     protected void await(long interval) {
         if (hasNotified.compareAndSet(true, false)) {
-            this.afterAwait();
+            this.postAwait();
             return;
         }
 
@@ -119,11 +119,11 @@ public abstract class ServiceThread implements Runnable {
             log.error("Interrupted", e);
         } finally {
             hasNotified.set(false);
-            this.afterAwait();
+            this.postAwait();
         }
     }
 
-    protected void afterAwait() {
+    protected void postAwait() {
     }
 
     public long getJoinTime() {

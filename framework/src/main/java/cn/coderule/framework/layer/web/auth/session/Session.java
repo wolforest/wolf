@@ -1,6 +1,6 @@
 package cn.coderule.framework.layer.web.auth.session;
 
-import cn.coderule.common.ds.map.ObjectMap;
+import cn.coderule.common.lang.type.map.ObjectMap;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
 import cn.coderule.common.util.lang.StringUtil;
 import cn.coderule.framework.layer.web.auth.auth.AuthConfig;

@@ -1,4 +1,4 @@
-package cn.coderule.common.ds.string;
+package cn.coderule.common.lang.type.string;
 
 import java.util.Collection;
 import java.util.Set;

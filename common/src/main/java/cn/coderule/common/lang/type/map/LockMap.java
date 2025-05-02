@@ -1,4 +1,4 @@
-package cn.coderule.common.ds.map;
+package cn.coderule.common.lang.type.map;
 
 import cn.coderule.common.lang.exception.SystemException;
 import java.util.Collection;

@@ -1,6 +1,6 @@
 package cn.coderule.common.lang.string;
 
-import cn.coderule.common.ds.string.WordDistance;
+import cn.coderule.common.lang.type.string.WordDistance;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

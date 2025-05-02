@@ -1,7 +1,7 @@
-package cn.coderule.common.ds;
+package cn.coderule.common.lang.type;
 
+import cn.coderule.common.lang.type.map.ObjectMap;
 import com.alibaba.fastjson2.util.TypeUtils;
-import cn.coderule.common.ds.map.ObjectMap;
 import lombok.NonNull;
 import cn.coderule.common.lang.exception.lang.IllegalArgumentException;
 

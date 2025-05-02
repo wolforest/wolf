@@ -1,6 +1,6 @@
-package cn.coderule.common.ds.map;
+package cn.coderule.common.type.map;
 
-import cn.coderule.common.ds.map.ObjectMap;
+import cn.coderule.common.lang.type.map.ObjectMap;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

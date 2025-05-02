@@ -1,4 +1,4 @@
-package cn.coderule.common.ds.map;
+package cn.coderule.common.lang.type.map;
 
 import cn.coderule.common.convention.container.Context;
 import com.alibaba.fastjson2.JSON;
@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 /**
- * com.wolf.common.lang.ds
+ * com.wolf.common.lang.type
  *
  * @author Wingle
  * @since 2020/2/29 5:20 下午

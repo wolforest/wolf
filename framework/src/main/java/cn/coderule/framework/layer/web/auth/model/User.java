@@ -1,6 +1,6 @@
 package cn.coderule.framework.layer.web.auth.model;
 
-import cn.coderule.common.ds.map.ObjectMap;
+import cn.coderule.common.lang.type.map.ObjectMap;
 import java.io.Serializable;
 import java.util.List;
 import lombok.AllArgsConstructor;

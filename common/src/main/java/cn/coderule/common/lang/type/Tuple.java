@@ -1,9 +1,9 @@
-package cn.coderule.common.ds;
+package cn.coderule.common.lang.type;
 
 import lombok.Data;
 
 /**
- * com.daydayup.learn.hello.common.lang.ds
+ * com.daydayup.learn.hello.common.lang.type
  *
  * @author Wingle
  * @since 2019/7/12 10:30 AM

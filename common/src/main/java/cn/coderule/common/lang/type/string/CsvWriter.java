@@ -1,4 +1,4 @@
-package cn.coderule.common.ds.string;
+package cn.coderule.common.lang.type.string;
 
 import lombok.extern.slf4j.Slf4j;
 import cn.coderule.common.util.lang.collection.CollectionUtil;

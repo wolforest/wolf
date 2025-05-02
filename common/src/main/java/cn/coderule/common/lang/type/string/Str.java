@@ -1,4 +1,4 @@
-package cn.coderule.common.ds.string;
+package cn.coderule.common.lang.type.string;
 
 import cn.coderule.common.util.lang.StringUtil;
 

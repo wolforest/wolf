@@ -2,7 +2,7 @@ package cn.coderule.httpclient;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
-import cn.coderule.common.ds.map.ObjectMap;
+import cn.coderule.common.lang.type.map.ObjectMap;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

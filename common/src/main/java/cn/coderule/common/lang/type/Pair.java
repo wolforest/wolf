@@ -1,10 +1,10 @@
-package cn.coderule.common.ds;
+package cn.coderule.common.lang.type;
 
 import java.io.Serializable;
 import lombok.Data;
 
 /**
- * com.wolf.common.lang.ds
+ * com.wolf.common.lang.type
  *
  * @author Wingle
  * @since 2020/12/2 11:58 上午

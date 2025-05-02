@@ -1,4 +1,4 @@
-package cn.coderule.common.ds.map;
+package cn.coderule.common.lang.type.map;
 
 import java.util.ArrayList;
 import java.util.Collection;

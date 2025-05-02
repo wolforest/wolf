@@ -1,6 +1,6 @@
-package cn.coderule.common.ds;
+package cn.coderule.common.type;
 
-import cn.coderule.common.ds.ObjectTree;
+import cn.coderule.common.lang.type.ObjectTree;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

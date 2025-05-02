@@ -1,6 +1,6 @@
 package cn.coderule.wolfno.wolfid;
 
-import cn.coderule.common.ds.map.LockMap;
+import cn.coderule.common.lang.type.map.LockMap;
 import cn.coderule.common.lang.exception.SystemException;
 import cn.coderule.wolfno.config.WolfNoConfig;
 import cn.coderule.wolfno.model.WolfNoContext;

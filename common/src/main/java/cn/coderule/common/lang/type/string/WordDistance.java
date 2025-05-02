@@ -1,4 +1,4 @@
-package cn.coderule.common.ds.string;
+package cn.coderule.common.lang.type.string;
 
 /**
  * com.wolf.common.lang.string

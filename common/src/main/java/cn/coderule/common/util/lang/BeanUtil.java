@@ -7,6 +7,7 @@ import java.util.function.Predicate;
 import lombok.NonNull;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.beans.BeanUtils;
@@ -584,6 +585,10 @@ public class BeanUtil {
 
     public static boolean isPropertyValid(Properties props, String key, Predicate<String> validator) {
         return validator.test(props.getProperty(key));
+    }
+
+    public static CompareToBuilder compareToBuilder() {
+        return new CompareToBuilder();
     }
 
     public static EqualsBuilder equalsBuilder() {

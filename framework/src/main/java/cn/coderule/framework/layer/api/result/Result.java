@@ -7,7 +7,7 @@ import java.io.Serializable;
 import lombok.experimental.SuperBuilder;
 
 /**
- * com.wolf.framework.rpc
+ * api result
  *
  * @author Wingle
  * @since 2019/11/6 4:18 下午

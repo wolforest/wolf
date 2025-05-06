@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
@@ -102,10 +103,6 @@ public class BeanUtil {
         }
 
         return false;
-    }
-
-    public static int hashCode(Object... objects) {
-        return Arrays.hashCode(objects);
     }
 
     public static boolean isEmpty(Object object) {
@@ -587,12 +584,20 @@ public class BeanUtil {
         return validator.test(props.getProperty(key));
     }
 
+    public static ToStringBuilder toStringBuilder(Object o) {
+        return new ToStringBuilder(o);
+    }
+
     public static CompareToBuilder compareToBuilder() {
         return new CompareToBuilder();
     }
 
     public static EqualsBuilder equalsBuilder() {
         return new EqualsBuilder();
+    }
+
+    public static int hashCode(Object... objects) {
+        return Arrays.hashCode(objects);
     }
 
     public static HashCodeBuilder hashCodeBuilder() {

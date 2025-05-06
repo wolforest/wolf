@@ -2,6 +2,7 @@ package cn.coderule.common.util.lang.time;
 
 import cn.coderule.common.util.lang.StringUtil;
 import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
 import lombok.NonNull;
 
 import java.text.SimpleDateFormat;
@@ -351,5 +352,19 @@ public class DateUtil {
 
     public static long daysBetween(@NonNull LocalDate start, @NonNull LocalDate end) {
         return ChronoUnit.DAYS.between(start, end);
+    }
+
+    public static String toHumanString(final long t) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(t);
+        return String.format("%04d%02d%02d%02d%02d%02d%03d",
+            cal.get(Calendar.YEAR),
+            cal.get(Calendar.MONTH) + 1,
+            cal.get(Calendar.DAY_OF_MONTH),
+            cal.get(Calendar.HOUR_OF_DAY),
+            cal.get(Calendar.MINUTE),
+            cal.get(Calendar.SECOND),
+            cal.get(Calendar.MILLISECOND)
+        );
     }
 }

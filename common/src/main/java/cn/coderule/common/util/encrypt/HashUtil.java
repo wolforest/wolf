@@ -16,11 +16,16 @@ public class HashUtil {
         return Hashing.md5().hashUnencodedChars(str).toString();
     }
 
+    @SuppressWarnings("ALL")
+    public static String md5(byte[] bytes) {
+        return Hashing.md5().hashBytes(bytes).toString();
+    }
+
     public static int consistentHash(long input, int buckets) {
         return Hashing.consistentHash(input, buckets);
     }
 
-    public static int crc32(@NonNull byte[] bytes) {
+    public static int crc32(byte[] bytes) {
         return Hashing.crc32().hashBytes(bytes).asInt();
     }
 

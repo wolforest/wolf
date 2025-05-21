@@ -2,7 +2,7 @@ package cn.coderule.mqclient.core.consumer;
 
 import cn.coderule.common.util.lang.collection.MapUtil;
 import cn.coderule.common.util.lang.collection.SetUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.config.MQConsumerConfig;
 import cn.coderule.mqclient.config.exception.MQConfigException;
 import cn.coderule.mqclient.core.consumer.exception.ConsumerSubscriptionConflictException;

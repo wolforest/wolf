@@ -1,6 +1,6 @@
 package cn.coderule.common.util.lang.collection.lb;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import lombok.NonNull;
 import cn.coderule.common.lang.exception.BusinessException;
 import cn.coderule.common.lang.exception.SystemException;

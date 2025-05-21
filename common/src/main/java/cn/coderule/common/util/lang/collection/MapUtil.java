@@ -1,7 +1,7 @@
 package cn.coderule.common.util.lang.collection;
 
-import cn.coderule.common.util.lang.BeanUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.bean.BeanUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import com.google.common.collect.Maps;
 import lombok.NonNull;
 

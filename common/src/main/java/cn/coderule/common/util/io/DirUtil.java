@@ -1,6 +1,6 @@
 package cn.coderule.common.util.io;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 import java.io.File;
 import java.io.IOException;

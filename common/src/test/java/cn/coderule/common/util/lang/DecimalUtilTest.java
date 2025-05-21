@@ -1,6 +1,6 @@
 package cn.coderule.common.util.lang;
 
-import cn.coderule.common.util.lang.DecimalUtil;
+import cn.coderule.common.util.lang.number.DecimalUtil;
 import org.junit.Assert;
 import org.junit.Test;
 

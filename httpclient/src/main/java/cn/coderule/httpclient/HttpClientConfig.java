@@ -4,7 +4,7 @@ import jakarta.annotation.PostConstruct;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
-import cn.coderule.common.util.lang.EnumUtil;
+import cn.coderule.common.util.lang.bean.EnumUtil;
 import cn.coderule.httpclient.cookie.CookiePolicyEnum;
 
 /**

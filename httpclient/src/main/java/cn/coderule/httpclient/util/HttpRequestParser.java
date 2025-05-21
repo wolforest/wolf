@@ -3,7 +3,7 @@ package cn.coderule.httpclient.util;
 import cn.coderule.httpclient.HttpRequestBuilder;
 import lombok.Getter;
 import lombok.NonNull;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 public class HttpRequestParser {
     @Getter

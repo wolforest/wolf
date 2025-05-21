@@ -1,7 +1,7 @@
 package cn.coderule.mqclient.vendor.rocketmq5.producer;
 
 import cn.coderule.common.lang.exception.SystemException;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.common.util.lang.time.DateUtil;
 import cn.coderule.mqclient.config.MQProducerConfig;
 import cn.coderule.mqclient.core.MQVendor;

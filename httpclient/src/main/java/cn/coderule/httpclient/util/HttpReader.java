@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NonNull;
 import cn.coderule.common.lang.exception.lang.IllegalArgumentException;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 import java.io.BufferedReader;
 import java.io.IOException;

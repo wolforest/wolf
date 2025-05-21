@@ -2,7 +2,7 @@ package cn.coderule.common.util.lang.collection.joiner.exception;
 
 import lombok.Getter;
 import cn.coderule.common.lang.exception.SystemException;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 @Getter
 public class InvalidGetterException extends SystemException {

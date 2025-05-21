@@ -1,4 +1,4 @@
-package cn.coderule.common.util.lang;
+package cn.coderule.common.util.lang.number;
 
 import java.util.concurrent.ThreadLocalRandom;
 import org.apache.commons.lang3.RandomStringUtils;

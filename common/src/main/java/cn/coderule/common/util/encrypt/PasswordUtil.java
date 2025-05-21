@@ -1,6 +1,6 @@
 package cn.coderule.common.util.encrypt;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 public class PasswordUtil {
     public static boolean validWeekPassword(String password) {

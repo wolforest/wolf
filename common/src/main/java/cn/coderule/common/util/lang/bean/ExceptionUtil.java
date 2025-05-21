@@ -1,4 +1,4 @@
-package cn.coderule.common.util.lang;
+package cn.coderule.common.util.lang.bean;
 
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.ExecutionException;

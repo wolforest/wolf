@@ -1,6 +1,5 @@
 package cn.coderule.common.util.lang.string;
 
-import cn.coderule.common.util.lang.StringUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONObject;

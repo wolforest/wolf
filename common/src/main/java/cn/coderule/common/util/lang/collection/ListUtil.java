@@ -2,7 +2,7 @@ package cn.coderule.common.util.lang.collection;
 
 import cn.coderule.common.lang.exception.BusinessException;
 
-import cn.coderule.common.util.lang.BeanUtil;
+import cn.coderule.common.util.lang.bean.BeanUtil;
 import java.security.SecureRandom;
 import java.util.*;
 

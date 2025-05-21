@@ -1,6 +1,6 @@
 package cn.coderule.mqclient.vendor.rocketmq;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.config.MQConsumerConfig;
 import cn.coderule.mqclient.config.MQProducerConfig;
 import cn.coderule.mqclient.config.MQTransactionProducerConfig;

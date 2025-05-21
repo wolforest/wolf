@@ -1,6 +1,6 @@
 package cn.coderule.framework.layer.web.auth.session;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.framework.layer.web.auth.auth.AuthConfig;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

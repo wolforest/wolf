@@ -1,6 +1,6 @@
 package cn.coderule.common.util.lang;
 
-import cn.coderule.common.util.lang.BeanUtil;
+import cn.coderule.common.util.lang.bean.BeanUtil;
 import lombok.Data;
 import org.junit.Test;
 

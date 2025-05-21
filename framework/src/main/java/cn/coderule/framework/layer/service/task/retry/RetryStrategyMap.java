@@ -1,6 +1,6 @@
 package cn.coderule.framework.layer.service.task.retry;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.framework.layer.service.task.retry.strategy.Daily7RetryStrategy;
 import cn.coderule.framework.layer.service.task.retry.strategy.DefaultRetryStrategy;
 import cn.coderule.framework.layer.service.task.retry.strategy.RetryStrategy;

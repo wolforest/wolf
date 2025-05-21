@@ -5,7 +5,7 @@ import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
 import cn.coderule.common.util.lang.collection.ListUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 import java.net.MalformedURLException;
 import java.net.URL;

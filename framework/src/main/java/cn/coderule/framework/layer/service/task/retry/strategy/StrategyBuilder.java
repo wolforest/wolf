@@ -2,7 +2,7 @@ package cn.coderule.framework.layer.service.task.retry.strategy;
 
 import cn.coderule.common.lang.exception.lang.IllegalArgumentException;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.framework.layer.service.task.retry.RetryStrategyMap;
 import java.util.ArrayList;
 import java.util.Collection;

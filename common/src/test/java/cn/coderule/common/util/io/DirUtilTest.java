@@ -1,7 +1,6 @@
 package cn.coderule.common.util.io;
 
-import cn.coderule.common.util.lang.StringUtil;
-import java.io.File;
+import cn.coderule.common.util.lang.string.StringUtil;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

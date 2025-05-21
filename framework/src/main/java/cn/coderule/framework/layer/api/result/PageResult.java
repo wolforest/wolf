@@ -2,7 +2,7 @@ package cn.coderule.framework.layer.api.result;
 
 import com.github.pagehelper.Page;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
-import cn.coderule.common.util.lang.BeanUtil;
+import cn.coderule.common.util.lang.bean.BeanUtil;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;

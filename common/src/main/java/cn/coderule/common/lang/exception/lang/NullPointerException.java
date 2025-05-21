@@ -1,7 +1,7 @@
 package cn.coderule.common.lang.exception.lang;
 
 import cn.coderule.common.lang.exception.SystemException;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 /**
  * com.wolf.common.lang.exception.lang

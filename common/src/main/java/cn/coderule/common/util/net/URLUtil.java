@@ -1,6 +1,6 @@
 package cn.coderule.common.util.net;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.common.util.lang.collection.MapUtil;
 import cn.coderule.common.util.lang.string.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;

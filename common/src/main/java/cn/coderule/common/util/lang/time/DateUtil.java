@@ -1,6 +1,6 @@
 package cn.coderule.common.util.lang.time;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import lombok.NonNull;

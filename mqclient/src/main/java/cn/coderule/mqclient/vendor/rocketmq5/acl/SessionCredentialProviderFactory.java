@@ -1,6 +1,6 @@
 package cn.coderule.mqclient.vendor.rocketmq5.acl;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.config.MQVendorConfig;
 import org.apache.rocketmq.client.apis.SessionCredentialsProvider;
 import org.apache.rocketmq.client.apis.StaticSessionCredentialsProvider;

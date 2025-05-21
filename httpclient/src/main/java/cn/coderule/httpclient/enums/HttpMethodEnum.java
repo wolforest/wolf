@@ -2,7 +2,7 @@ package cn.coderule.httpclient.enums;
 
 import lombok.Getter;
 import cn.coderule.common.lang.enums.CodeBasedEnum;
-import cn.coderule.common.util.lang.EnumUtil;
+import cn.coderule.common.util.lang.bean.EnumUtil;
 
 /**
  * com.wolf.framework.util.http

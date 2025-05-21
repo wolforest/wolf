@@ -1,6 +1,6 @@
 package cn.coderule.mqclient.core.transaction;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.config.MQDefaultConst;
 import cn.coderule.mqclient.core.transaction.exception.TransactionListenerOverrideException;
 import java.util.Map;

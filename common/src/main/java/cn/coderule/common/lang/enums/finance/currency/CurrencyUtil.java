@@ -1,8 +1,8 @@
 package cn.coderule.common.lang.enums.finance.currency;
 
 import cn.coderule.common.lang.enums.CodeBasedEnum;
-import cn.coderule.common.util.lang.EnumUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.bean.EnumUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 /**
  * com.wolf.common.lang.enums.currency

@@ -1,6 +1,6 @@
 package cn.coderule.common.lang.type.string;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 import javax.annotation.Nullable;
 

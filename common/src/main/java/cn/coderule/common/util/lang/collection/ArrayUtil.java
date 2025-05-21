@@ -1,6 +1,6 @@
 package cn.coderule.common.util.lang.collection;
 
-import cn.coderule.common.util.lang.BeanUtil;
+import cn.coderule.common.util.lang.bean.BeanUtil;
 import org.apache.commons.lang3.ArrayUtils;
 
 /**

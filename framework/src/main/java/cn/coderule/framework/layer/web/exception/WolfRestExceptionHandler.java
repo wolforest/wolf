@@ -1,7 +1,7 @@
 package cn.coderule.framework.layer.web.exception;
 
 import cn.coderule.common.lang.exception.BusinessException;
-import cn.coderule.common.util.lang.ExceptionUtil;
+import cn.coderule.common.util.lang.bean.ExceptionUtil;
 import cn.coderule.common.lang.exception.SystemException;
 import cn.coderule.common.lang.exception.api.NoPermissionException;
 import cn.coderule.common.lang.exception.api.NotLoggedInException;

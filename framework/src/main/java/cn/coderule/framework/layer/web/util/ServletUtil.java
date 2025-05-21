@@ -1,6 +1,6 @@
 package cn.coderule.framework.layer.web.util;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.framework.layer.web.HttpEnv;
 import jakarta.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;

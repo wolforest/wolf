@@ -1,6 +1,6 @@
 package cn.coderule.common.util.lang;
 
-import cn.coderule.common.util.lang.EnumUtil;
+import cn.coderule.common.util.lang.bean.EnumUtil;
 import org.junit.Test;
 import cn.coderule.common.lang.enums.common.GenderEnum;
 import cn.coderule.common.lang.exception.lang.UnsupportedEnumCodeException;

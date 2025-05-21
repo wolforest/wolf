@@ -2,7 +2,7 @@ package cn.coderule.mqclient.vendor.rocketmq.converter;
 
 import cn.coderule.common.util.lang.collection.CollectionUtil;
 import cn.coderule.common.util.lang.collection.MapUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.core.message.MessageContext;
 import cn.coderule.mqclient.core.producer.ProduceRequest;
 import java.util.List;

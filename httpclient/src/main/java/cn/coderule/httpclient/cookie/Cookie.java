@@ -2,7 +2,7 @@ package cn.coderule.httpclient.cookie;
 
 import lombok.Data;
 import lombok.NonNull;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

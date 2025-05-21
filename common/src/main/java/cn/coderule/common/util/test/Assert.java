@@ -1,6 +1,6 @@
 package cn.coderule.common.util.test;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import org.springframework.lang.Nullable;
 import cn.coderule.common.lang.exception.lang.IllegalArgumentException;
 

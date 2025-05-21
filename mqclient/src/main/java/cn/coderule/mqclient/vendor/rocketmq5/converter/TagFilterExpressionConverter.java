@@ -1,7 +1,7 @@
 package cn.coderule.mqclient.vendor.rocketmq5.converter;
 
 import cn.coderule.common.util.lang.collection.CollectionUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.config.MQConsumerConfig;
 import java.util.Set;
 import java.util.stream.Collectors;

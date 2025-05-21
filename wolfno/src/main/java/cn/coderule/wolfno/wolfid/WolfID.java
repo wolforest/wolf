@@ -1,6 +1,6 @@
 package cn.coderule.wolfno.wolfid;
 
-import cn.coderule.common.util.lang.BeanUtil;
+import cn.coderule.common.util.lang.bean.BeanUtil;
 import cn.coderule.wolfno.model.WolfNoContext;
 import java.io.Serializable;
 import java.time.LocalDateTime;

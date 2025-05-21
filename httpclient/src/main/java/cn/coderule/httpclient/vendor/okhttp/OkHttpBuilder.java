@@ -7,9 +7,9 @@ import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import cn.coderule.common.util.lang.collection.MapUtil;
-import cn.coderule.common.util.lang.BeanUtil;
+import cn.coderule.common.util.lang.bean.BeanUtil;
 import cn.coderule.common.util.lang.string.JSONUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.httpclient.HttpRequestBuilder;
 
 import java.util.Map;

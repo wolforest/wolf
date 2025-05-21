@@ -12,7 +12,7 @@ import org.apache.commons.io.IOUtils;
 import org.springframework.core.io.Resource;
 import org.springframework.util.FileCopyUtils;
 import cn.coderule.common.lang.exception.lang.FileNotFoundException;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 import java.io.*;
 import java.net.URL;

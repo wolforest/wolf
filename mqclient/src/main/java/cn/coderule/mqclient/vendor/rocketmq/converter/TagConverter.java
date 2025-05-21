@@ -1,7 +1,7 @@
 package cn.coderule.mqclient.vendor.rocketmq.converter;
 
 import cn.coderule.common.util.lang.collection.CollectionUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.config.MQConsumerConfig;
 import cn.coderule.mqclient.config.MQDefaultConst;
 import cn.coderule.mqclient.core.message.Message;

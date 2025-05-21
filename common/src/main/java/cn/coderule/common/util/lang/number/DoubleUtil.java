@@ -1,4 +1,4 @@
-package cn.coderule.common.util.lang;
+package cn.coderule.common.util.lang.number;
 
 /**
  * com.wolf.common.util

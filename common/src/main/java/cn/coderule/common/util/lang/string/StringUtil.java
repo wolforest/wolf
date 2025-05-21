@@ -1,4 +1,4 @@
-package cn.coderule.common.util.lang;
+package cn.coderule.common.util.lang.string;
 
 import com.google.common.base.CaseFormat;
 import com.google.common.base.Joiner;

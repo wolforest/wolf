@@ -1,5 +1,6 @@
-package cn.coderule.common.util.lang;
+package cn.coderule.common.util.lang.bean;
 
+import cn.coderule.common.util.lang.string.StringUtil;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;

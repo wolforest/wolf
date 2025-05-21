@@ -1,7 +1,7 @@
 package cn.coderule.mqclient.core.message;
 
 import cn.coderule.common.util.lang.collection.MapUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;

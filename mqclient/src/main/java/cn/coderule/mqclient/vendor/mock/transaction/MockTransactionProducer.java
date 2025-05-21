@@ -1,6 +1,6 @@
 package cn.coderule.mqclient.vendor.mock.transaction;
 
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.mqclient.config.MQTransactionProducerConfig;
 import cn.coderule.mqclient.core.MQVendor;
 import cn.coderule.mqclient.core.message.Message;

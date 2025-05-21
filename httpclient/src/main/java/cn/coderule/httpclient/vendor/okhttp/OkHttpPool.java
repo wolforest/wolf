@@ -8,7 +8,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.tls.Certificates;
 import okhttp3.tls.HandshakeCertificates;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.httpclient.HttpRequestBuilder;
 import cn.coderule.httpclient.util.HttpLoggingInterceptor;
 

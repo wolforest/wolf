@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NonNull;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
 import cn.coderule.common.util.lang.collection.MapUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.common.util.net.URLUtil;
 import cn.coderule.httpclient.cookie.Cookie;
 import cn.coderule.httpclient.cookie.CookieBuilder;

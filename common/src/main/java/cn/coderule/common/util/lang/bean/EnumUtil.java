@@ -1,8 +1,9 @@
-package cn.coderule.common.util.lang;
+package cn.coderule.common.util.lang.bean;
 
 import cn.coderule.common.lang.enums.CodeBasedEnum;
 import cn.coderule.common.lang.exception.lang.UnsupportedEnumCodeException;
 
+import cn.coderule.common.util.lang.string.StringUtil;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

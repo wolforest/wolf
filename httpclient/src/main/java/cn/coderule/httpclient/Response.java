@@ -8,7 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import cn.coderule.common.util.lang.collection.MapUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import cn.coderule.httpclient.cookie.Cookie;
 import cn.coderule.httpclient.exception.HttpRequestFailException;
 

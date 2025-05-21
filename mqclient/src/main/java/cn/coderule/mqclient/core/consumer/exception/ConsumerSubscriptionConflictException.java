@@ -2,7 +2,7 @@ package cn.coderule.mqclient.core.consumer.exception;
 
 import cn.coderule.common.lang.exception.SystemException;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 import java.util.Arrays;
 
 /**

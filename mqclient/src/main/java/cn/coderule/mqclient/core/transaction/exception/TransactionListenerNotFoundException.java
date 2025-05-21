@@ -1,7 +1,7 @@
 package cn.coderule.mqclient.core.transaction.exception;
 
 import cn.coderule.common.lang.exception.SystemException;
-import cn.coderule.common.util.lang.StringUtil;
+import cn.coderule.common.util.lang.string.StringUtil;
 
 /**
  * @author weixing

@@ -21,8 +21,16 @@ public abstract class BaseException extends RuntimeException {
         this(100, message);
     }
 
+    public BaseException(String message, Throwable t) {
+        this(100, message, t);
+    }
+
     public BaseException(long code, String message) {
-        super(message);
+        this(code, message, null);
+    }
+
+    public BaseException(long code, String message, Throwable t) {
+        super(message, t);
         this.code = code;
     }
 

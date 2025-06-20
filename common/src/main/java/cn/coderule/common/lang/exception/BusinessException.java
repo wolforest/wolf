@@ -13,11 +13,19 @@ public class BusinessException extends BaseException {
     }
 
     public BusinessException(String message) {
-        super(10000, message);
+        super(10000, message, null);
     }
 
     public BusinessException(long code, String message) {
-        super(code, message);
+        super(code, message, null);
+    }
+
+    public BusinessException(String message, Throwable t) {
+        super(10000, message, t);
+    }
+
+    public BusinessException(long code, String message, Throwable t) {
+        super(code, message, t);
     }
 
     @Override

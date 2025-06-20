@@ -57,6 +57,18 @@ public class CollectionUtil {
         return null != collection && !collection.isEmpty();
     }
 
+    public static <E> boolean notEmpty(E[] arr) {
+        return !isEmpty(arr);
+    }
+
+    public static <E> boolean isEmpty(E[] arr) {
+        if (arr == null) {
+            return true;
+        }
+
+        return arr.length == 0;
+    }
+
     public static <E> boolean isEmpty(Collection<E> collection) {
         return !notEmpty(collection);
     }

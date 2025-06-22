@@ -38,20 +38,6 @@ public class StringUtil {
 
     private final static char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
 
-//    public static boolean notEmpty(String s, boolean trim) {
-//        if (!trim) {
-//            return notEmpty(s);
-//        }
-//
-//        if (null == s) {
-//            return false;
-//        }
-//        return notEmpty(s.trim());
-//    }
-
-//    public static boolean isEmpty(String s, boolean trim) {
-//        return !notEmpty(s, trim);
-//    }
 
     public static boolean isEmpty(CharSequence cs) {
         return cs == null || cs.isEmpty();
@@ -232,6 +218,10 @@ public class StringUtil {
 
     public static String truncate(final String str, final int offset, final int maxWidth) {
         return StringUtils.truncate(str, offset, maxWidth);
+    }
+
+    public static boolean isNumeric(String s) {
+        return StringUtils.isNumeric(s);
     }
 
     public static String strip(final String str, final String stripChars) {

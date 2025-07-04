@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import lombok.NonNull;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import cn.coderule.common.util.lang.collection.CollectionUtil;
 import cn.coderule.common.util.lang.collection.MapUtil;
@@ -25,6 +26,7 @@ import java.util.regex.Pattern;
  * @author Wingle
  * @since 2019/12/10 9:51 上午
  **/
+@Slf4j
 public class StringUtil {
     public static final String DEFAULT_DELIMITER = "";
     public static final String EMPTY = "";
@@ -798,5 +800,18 @@ public class StringUtil {
         return (byte) "0123456789ABCDEF".indexOf(c);
     }
 
+    public static Long getLong(String s) {
+        return getLong(s, 0L);
+    }
+
+    public static Long getLong(String s, long defaultValue) {
+        long v = defaultValue;
+        try {
+            v = Long.parseLong(s);
+        } catch (Exception e) {
+            log.error("GetLong error", e);
+        }
+        return v;
+    }
 
 }

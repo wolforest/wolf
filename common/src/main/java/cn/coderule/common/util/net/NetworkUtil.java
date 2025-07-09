@@ -3,6 +3,8 @@ package cn.coderule.common.util.net;
 import cn.coderule.common.util.lang.SystemUtil;
 import io.netty.channel.Channel;
 import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.Inet4Address;
 import java.net.Inet6Address;
 import java.net.InetAddress;
@@ -12,6 +14,8 @@ import java.net.NetworkInterface;
 import java.net.SocketAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.nio.channels.Selector;
+import java.nio.channels.spi.SelectorProvider;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import lombok.extern.slf4j.Slf4j;
@@ -278,5 +282,39 @@ public class NetworkUtil {
             || inetAddr.isSiteLocalAddress();
     }
 
+
+
+    public static Selector openSelector() throws IOException {
+        Selector result = null;
+
+        if (SystemUtil.isLinux()) {
+            result = openLinuxSelector();
+        }
+
+        if (result == null) {
+            result = Selector.open();
+        }
+
+        return result;
+    }
+
+    public static Selector openLinuxSelector() {
+        try {
+            final Class<?> providerClazz = Class.forName("sun.nio.ch.EPollSelectorProvider");
+            try {
+                final Method method = providerClazz.getMethod("provider");
+                final SelectorProvider selectorProvider = (SelectorProvider) method.invoke(null);
+                if (selectorProvider != null) {
+                    return selectorProvider.openSelector();
+                }
+            } catch (final Exception e) {
+                log.warn("Open ePoll Selector for linux platform exception", e);
+            }
+        } catch (final Exception e) {
+            // ignore
+        }
+
+        return null;
+    }
 
 }

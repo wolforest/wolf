@@ -1,18 +1,18 @@
 package cn.coderule.common.convention.service;
 
 public interface Lifecycle {
-    void start();
-    void shutdown();
+    void start() throws Exception;
+    void shutdown() throws Exception;
 
     /**
      * Initialization, it will be called before start
      */
-    default void initialize() {}
+    default void initialize() throws Exception {}
 
     /**
      * cleanup, it will be called before shutdown
      */
-    default void cleanup() {}
+    default void cleanup() throws Exception {}
 
     default State getState() {
         return State.RUNNING;

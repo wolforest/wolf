@@ -28,7 +28,7 @@ public abstract class ServiceThread implements Runnable {
 
     public abstract String getServiceName();
 
-    public void start() {
+    public void start() throws Exception {
         log.info("Try to start service thread:{} started:{} lastThread:{}", getServiceName(), started.get(), thread);
         if (!started.compareAndSet(false, true)) {
             return;
@@ -42,7 +42,7 @@ public abstract class ServiceThread implements Runnable {
         log.info("Start service thread:{} started:{} lastThread:{}", getServiceName(), started.get(), thread);
     }
 
-    public void shutdown() {
+    public void shutdown() throws Exception {
         this.shutdown(false);
     }
 

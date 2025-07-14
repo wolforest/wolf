@@ -11,27 +11,46 @@ public class LifecycleManager implements Lifecycle {
     }
 
     @Override
-    public State getState() {
-        return null;
+    public void initialize() throws Exception {
+        components.forEach(lifecycle -> {
+            try {
+                lifecycle.initialize();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     @Override
-    public void initialize() {
-        components.forEach(Lifecycle::initialize);
+    public void cleanup() throws Exception {
+        components.forEach(lifecycle -> {
+            try {
+                lifecycle.cleanup();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     @Override
-    public void cleanup() {
-        components.forEach(Lifecycle::cleanup);
+    public void start() throws Exception {
+        components.forEach(lifecycle -> {
+            try {
+                lifecycle.start();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     @Override
-    public void start() {
-        components.forEach(Lifecycle::start);
-    }
-
-    @Override
-    public void shutdown() {
-        components.forEach(Lifecycle::shutdown);
+    public void shutdown() throws Exception {
+        components.forEach(lifecycle -> {
+            try {
+                lifecycle.shutdown();
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 }

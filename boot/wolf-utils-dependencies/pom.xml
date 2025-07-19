@@ -25,6 +25,7 @@
         <fastjson2.version>2.0.52</fastjson2.version>
         <fastjson2.spring.version>2.0.52</fastjson2.spring.version>
         <disruptor.version>4.0.0</disruptor.version>
+        <disruptor-conversantmedia.version>1.2.21</disruptor-conversantmedia.version>
 
         <mapstruct.version>1.3.0.Final</mapstruct.version>
         <easyexcel.version>2.2.11</easyexcel.version>
@@ -93,6 +94,13 @@
                 <groupId>com.lmax</groupId>
                 <artifactId>disruptor</artifactId>
                 <version>${disruptor.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.conversantmedia/disruptor -->
+            <dependency>
+                <groupId>com.conversantmedia</groupId>
+                <artifactId>disruptor</artifactId>
+                <version>${disruptor-conversantmedia.version}</version>
             </dependency>
 
             <dependency>

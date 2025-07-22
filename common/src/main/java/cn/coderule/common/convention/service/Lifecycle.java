@@ -22,10 +22,15 @@ public interface Lifecycle {
         return State.RUNNING.equals(getState());
     }
 
+    default boolean isWaiting() {
+        return State.WAITING.equals(getState());
+    }
+
     enum State {
         INITIALIZING,
         STARTING,
         RUNNING,
+        WAITING,
         SHUTTING_DOWN,
         TERMINATED
     }

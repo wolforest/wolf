@@ -1,5 +1,6 @@
 package cn.coderule.common.lang.concurrent.thread;
 
+import cn.coderule.common.convention.service.Lifecycle;
 import cn.coderule.common.lang.concurrent.sync.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -8,8 +9,11 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public abstract class ServiceThread implements Runnable {
+public abstract class ServiceThread implements Runnable, Lifecycle {
     private static final long JOIN_TIME = 90 * 1000;
+
+    @Setter
+    protected State state = State.INITIALIZING;
 
     protected Thread thread;
     protected final CountDownLatch waitPoint = new CountDownLatch(1);

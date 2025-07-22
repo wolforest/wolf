@@ -85,19 +85,6 @@ public class CollectionUtil {
         return null;
     }
 
-    public static <E> E firstNotNull(Collection<E> collection) {
-        if (isEmpty(collection)) {
-            return null;
-        }
-
-        for (E e : collection) {
-            if (null != e) {
-                return e;
-            }
-        }
-
-        return null;
-    }
 
     public static <E> E last(Collection<E> collection) {
         if (isEmpty(collection)) {

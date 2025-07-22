@@ -31,6 +31,7 @@ public interface Lifecycle {
         STARTING,
         RUNNING,
         WAITING,
+        ENDING,
         SHUTTING_DOWN,
         TERMINATED
     }

@@ -3,6 +3,7 @@ package cn.coderule.common.util.lang.collection;
 import cn.coderule.common.util.lang.bean.BeanUtil;
 import cn.coderule.common.util.lang.string.StringUtil;
 import com.google.common.collect.Maps;
+import java.nio.charset.Charset;
 import lombok.NonNull;
 
 import java.util.ArrayList;
@@ -62,6 +63,19 @@ public class MapUtil {
 
     public static <K, V> boolean isEmpty(Map<K, V> map) {
         return ! notEmpty(map);
+    }
+
+    public static int getLength(Map<String, String> map, Charset charset) {
+        if (isEmpty(map)) {
+            return 0;
+        }
+        int size = 0;
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            size += entry.getKey().getBytes(charset).length;
+            size += entry.getValue().getBytes(charset).length;
+        }
+
+        return size;
     }
 
     public static <K, V> List<V> toList(Map<K, V> map) {

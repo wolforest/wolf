@@ -4,6 +4,7 @@ import cn.coderule.common.util.lang.bean.BeanUtil;
 import cn.coderule.common.util.lang.string.StringUtil;
 import com.google.common.collect.Maps;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import lombok.NonNull;
 
 import java.util.ArrayList;
@@ -65,7 +66,11 @@ public class MapUtil {
         return ! notEmpty(map);
     }
 
-    public static int getLength(Map<String, String> map, Charset charset) {
+    public static int calculateLength(Map<String, String> map) {
+        return calculateLength(map, StandardCharsets.UTF_8);
+    }
+
+    public static int calculateLength(Map<String, String> map, Charset charset) {
         if (isEmpty(map)) {
             return 0;
         }

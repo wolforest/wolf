@@ -74,6 +74,7 @@ public class MapUtil {
         if (isEmpty(map)) {
             return 0;
         }
+
         int size = 0;
         for (Map.Entry<String, String> entry : map.entrySet()) {
             size += entry.getKey().getBytes(charset).length;

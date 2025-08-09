@@ -1,6 +1,7 @@
 package cn.coderule.common.util.lang.string;
 
 import com.google.common.base.CaseFormat;
+import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.html.HtmlEscapers;
@@ -812,6 +813,15 @@ public class StringUtil {
             log.error("GetLong error", e);
         }
         return v;
+    }
+
+    public static boolean containControlCharacter(String data) {
+        for (int i = 0; i < data.length(); i++) {
+            if (CharMatcher.javaIsoControl().matches(data.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

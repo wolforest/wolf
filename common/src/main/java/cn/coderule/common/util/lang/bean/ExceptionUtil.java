@@ -11,7 +11,9 @@ public class ExceptionUtil {
     }
 
     public static Throwable getRealException(Throwable throwable) {
-        if (throwable instanceof CompletionException || throwable instanceof ExecutionException) {
+        if (throwable instanceof CompletionException
+            || throwable instanceof ExecutionException
+        ) {
             if (throwable.getCause() != null) {
                 throwable = throwable.getCause();
             }
@@ -19,7 +21,7 @@ public class ExceptionUtil {
         return throwable;
     }
 
-    public static String getErrorDetailMessage(Throwable t) {
+    public static String getErrorMessage(Throwable t) {
         if (t == null) {
             return null;
         }

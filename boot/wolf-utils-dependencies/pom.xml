@@ -21,6 +21,7 @@
 
         <javafaker.version>1.0.2</javafaker.version>
         <commons-io.version>2.16.1</commons-io.version>
+        <commons-codec.version>1.19.0</commons-codec.version>
         <guava.version>33.2.1-jre</guava.version>
         <fastjson2.version>2.0.52</fastjson2.version>
         <fastjson2.spring.version>2.0.52</fastjson2.spring.version>
@@ -89,6 +90,13 @@
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+
 
             <!-- https://mvnrepository.com/artifact/com.lmax/disruptor -->
             <dependency>

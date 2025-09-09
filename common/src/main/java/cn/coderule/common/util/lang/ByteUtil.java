@@ -4,6 +4,10 @@ import io.netty.util.internal.PlatformDependent;
 import java.nio.ByteBuffer;
 
 public class ByteUtil {
+
+    public static String encodeHexString() {
+        return null;
+    }
     public static void cleanBuffer(ByteBuffer buffer) {
         if (null == buffer || !buffer.isDirect() || buffer.capacity() == 0) {
             return;

@@ -2,12 +2,18 @@ package cn.coderule.common.util.lang;
 
 import io.netty.util.internal.PlatformDependent;
 import java.nio.ByteBuffer;
+import org.apache.commons.codec.binary.Hex;
 
 public class ByteUtil {
 
-    public static String encodeHexString() {
-        return null;
+    public static String encodeHexString(byte[] data) {
+        return Hex.encodeHexString(data);
     }
+
+    public static String encodeHexString(byte[] data, boolean toLowerCase) {
+        return Hex.encodeHexString(data, toLowerCase);
+    }
+
     public static void cleanBuffer(ByteBuffer buffer) {
         if (null == buffer || !buffer.isDirect() || buffer.capacity() == 0) {
             return;

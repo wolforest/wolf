@@ -4,6 +4,7 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.JSONReader;
 import cn.coderule.common.lang.exception.SystemException;
+import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import lombok.extern.slf4j.Slf4j;
@@ -195,6 +196,18 @@ public class FileUtil {
             return new FileReader(url.getFile());
         } catch (java.io.FileNotFoundException e) {
             throw new FileNotFoundException(path);
+        }
+    }
+
+    public static void closeChannel(FileChannel channel) {
+        if (channel == null) {
+            return;
+        }
+
+        try {
+            channel.close();
+        } catch (Exception e) {
+            log.error("closeChannel exception", e);
         }
     }
 

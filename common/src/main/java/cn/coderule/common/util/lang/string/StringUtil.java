@@ -782,6 +782,7 @@ public class StringUtil {
         return new String(hexChars);
     }
 
+    @Deprecated
     public static byte[] string2bytes(String hexString) {
         if (hexString == null || hexString.isEmpty()) {
             return null;

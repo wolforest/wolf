@@ -20,6 +20,7 @@
         <pagehelper.version>2.1.0</pagehelper.version>
         <druid.version>1.2.8</druid.version>
         <mysql.version>8.0.33</mysql.version>
+        <rocksdb.version>10.4.2</rocksdb.version>
         <postgresql.version>42.7.3</postgresql.version>
 
     </properties>
@@ -53,6 +54,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.rocksdb</groupId>
+                <artifactId>rocksdbjni</artifactId>
+                <version>${rocksdb.version}</version>
             </dependency>
 
         </dependencies>

@@ -39,6 +39,8 @@
         <testng.version>7.11.0</testng.version>
         <junit5.version>5.13.4</junit5.version>
 
+        <antlr.version>4.13.2</antlr.version>
+
     </properties>
 
     <dependencyManagement>
@@ -147,6 +149,13 @@
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
                 <version>${junit5.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr4-runtime</artifactId>
+                <version>${antlr.version}</version>
             </dependency>
 
         </dependencies>

@@ -11,6 +11,7 @@
 
     <properties>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <antlr4-maven-plugin.version>4.13.2</antlr4-maven-plugin.version>
     </properties>
 
     <build>
@@ -20,6 +21,13 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
+                </plugin>
+
+                <!-- https://mvnrepository.com/artifact/org.antlr/antlr4-maven-plugin -->
+                <plugin>
+                    <groupId>org.antlr</groupId>
+                    <artifactId>antlr4-maven-plugin</artifactId>
+                    <version>${antlr4-maven-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

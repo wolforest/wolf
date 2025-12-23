@@ -44,6 +44,10 @@ public class DirUtil {
         }
     }
 
+    public static void delete(Path path) {
+        delete(path.toString());
+    }
+
     public static void delete(String dir) {
         if (!FileUtil.exists(dir)) {
             return;

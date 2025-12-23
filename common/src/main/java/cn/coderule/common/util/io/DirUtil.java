@@ -12,6 +12,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
 
 /**
  * com.wolf.framework.util.file
@@ -38,6 +39,17 @@ public class DirUtil {
                     .map(Path::getFileName)
                     .map(Path::toString)
                     .collect(Collectors.toSet());
+        } catch (IOException e) {
+            throw new cn.coderule.common.lang.exception.lang.IOException(e.getMessage());
+        }
+    }
+
+    public static void delete(String dir) {
+        if (!FileUtil.exists(dir)) {
+            return;
+        }
+        try {
+            FileUtils.deleteDirectory(new File(dir));
         } catch (IOException e) {
             throw new cn.coderule.common.lang.exception.lang.IOException(e.getMessage());
         }

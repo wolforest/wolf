@@ -22,6 +22,7 @@
         <module>starter/wolf-boot-starter</module>
         <module>starter/wolf-framework-starter</module>
         <module>dts</module>
+        <module>ddd</module>
     </modules>
 
     <properties>

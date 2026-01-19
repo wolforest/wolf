@@ -1,4 +1,4 @@
-package cn.coderule.ddd.core;
+package cn.coderule.ddd.domain;
 
 public interface DomainService {
 }

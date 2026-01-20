@@ -10,6 +10,10 @@ public class OrderInfraRepository implements OrderRepository {
         this.eventPublisher = new EventPublisher();
     }
 
+    public OrderEntity findById(String orderId) {
+        return new OrderEntity();
+    }
+
     @Override
     public void save(OrderEntity order) {
 

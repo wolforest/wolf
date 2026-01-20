@@ -16,6 +16,6 @@ public class OrderEntity extends Order {
     }
 
     public void pay() {
-
+        addEvent(new OrderPaid());
     }
 }

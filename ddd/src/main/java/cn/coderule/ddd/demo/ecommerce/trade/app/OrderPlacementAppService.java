@@ -14,20 +14,25 @@ import cn.coderule.ddd.demo.ecommerce.trade.infra.PromotionInfraService;
 import cn.coderule.ddd.layer.MockTransaction;
 
 public class OrderPlacementAppService {
-    public OrderPlacementResult place(OrderPlacementCommand command) {
-        MockTransaction transaction = new MockTransaction();
-        OrderPlacementService service = new OrderPlacementService();
+    private final OrderPlacementService orderPlacementService;
+
+    public OrderPlacementAppService() {
+        orderPlacementService = new OrderPlacementService();
 
         ProductService productService = new ProductInfraService();
         InventoryService inventoryService = new InventoryInfraService();
         PromotionService promotionService = new PromotionInfraService();
         OrderRepository orderRepository = new OrderInfraRepository();
 
-        service.inject(productService, inventoryService, promotionService, orderRepository);
+        orderPlacementService.inject(productService, inventoryService, promotionService, orderRepository);
+    }
+
+    public OrderPlacementResult place(OrderPlacementCommand command) {
+        MockTransaction transaction = new MockTransaction();
 
         try {
             transaction.begin();
-            OrderPlacementResult result = service.place(command);
+            OrderPlacementResult result = orderPlacementService.place(command);
             transaction.commit();
 
             return result;

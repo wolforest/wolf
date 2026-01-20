@@ -1,4 +1,6 @@
 package cn.coderule.ddd.demo.ecommerce.product.api;
 
-public class Product {
+import cn.coderule.ddd.domain.Entity;
+
+public class Product extends Entity {
 }

@@ -1,6 +1,6 @@
 package cn.coderule.ddd.demo.ecommerce.trade.app;
 
-import cn.coderule.ddd.demo.ecommerce.trade.api.OrderPlacementCommand;
+import cn.coderule.ddd.demo.ecommerce.trade.api.command.OrderPlacementCommand;
 import cn.coderule.ddd.demo.ecommerce.trade.api.OrderPlacementResult;
 import cn.coderule.ddd.demo.ecommerce.trade.domain.InventoryService;
 import cn.coderule.ddd.demo.ecommerce.trade.domain.OrderPlacementService;

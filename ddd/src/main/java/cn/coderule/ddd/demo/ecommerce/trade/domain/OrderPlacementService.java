@@ -2,7 +2,7 @@ package cn.coderule.ddd.demo.ecommerce.trade.domain;
 
 import cn.coderule.ddd.demo.ecommerce.inventory.api.ReserveCommand;
 import cn.coderule.ddd.demo.ecommerce.product.api.Product;
-import cn.coderule.ddd.demo.ecommerce.trade.api.OrderPlacementCommand;
+import cn.coderule.ddd.demo.ecommerce.trade.api.command.OrderPlacementCommand;
 import cn.coderule.ddd.demo.ecommerce.trade.api.OrderPlacementResult;
 import cn.coderule.ddd.demo.ecommerce.trade.api.TradeException;
 import cn.coderule.ddd.demo.ecommerce.ump.api.PromotionCommand;

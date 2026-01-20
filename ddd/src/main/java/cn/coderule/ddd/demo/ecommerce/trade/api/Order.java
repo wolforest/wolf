@@ -1,8 +1,8 @@
 package cn.coderule.ddd.demo.ecommerce.trade.api;
 
-import java.io.Serializable;
+import cn.coderule.ddd.domain.Entity;
 import lombok.Data;
 
 @Data
-public class Order implements Serializable {
+public class Order extends Entity {
 }

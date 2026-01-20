@@ -1,4 +1,4 @@
-package cn.coderule.ddd.demo.ecommerce.trade.api;
+package cn.coderule.ddd.demo.ecommerce.trade.api.command;
 
 import java.io.Serializable;
 import lombok.Data;

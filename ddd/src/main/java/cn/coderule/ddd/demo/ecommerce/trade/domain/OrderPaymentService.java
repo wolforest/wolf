@@ -12,7 +12,7 @@ public class OrderPaymentService {
     public void pay(OrderPaymentCommand command) {
         OrderEntity order = orderRepository.findById(command.getOrderId());
 
-        order.pay();
+        order.markPaid();
         orderRepository.save(order);
     }
 }

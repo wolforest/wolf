@@ -11,11 +11,11 @@ public class OrderEntity extends Order {
         addEvent(new OrderPaid());
     }
 
-    public void cancel() {
+    public void markCanceled() {
 
     }
 
-    public void pay() {
+    public void markPaid() {
         addEvent(new OrderPaid());
     }
 }

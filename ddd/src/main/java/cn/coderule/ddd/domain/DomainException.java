@@ -1,4 +1,4 @@
-package cn.coderule.ddd.layer;
+package cn.coderule.ddd.domain;
 
 import cn.coderule.common.lang.exception.BusinessException;
 

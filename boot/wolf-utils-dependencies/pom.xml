@@ -36,8 +36,10 @@
         <nv-i18n.version>1.29</nv-i18n.version>
         <javax-el.version>3.0.0</javax-el.version>
         <servlet-api.version>4.0.1</servlet-api.version>
+
         <testng.version>7.11.0</testng.version>
         <junit5.version>5.13.4</junit5.version>
+        <mockito.version>5.22.0</mockito.version>
 
         <antlr.version>4.13.2</antlr.version>
 
@@ -156,6 +158,14 @@
                 <groupId>org.antlr</groupId>
                 <artifactId>antlr4-runtime</artifactId>
                 <version>${antlr.version}</version>
+            </dependency>
+
+            <!-- Source: https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+<!--                <version>5.22.0</version>-->
             </dependency>
 
         </dependencies>

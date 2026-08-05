@@ -1,4 +1,4 @@
-package cn.coderule.common.util.test;
+package cn.coderule.common.test;
 
 import java.util.LinkedHashMap;
 import lombok.Getter;

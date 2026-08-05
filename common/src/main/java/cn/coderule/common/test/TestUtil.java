@@ -1,4 +1,4 @@
-package cn.coderule.common.util.test;
+package cn.coderule.common.test;
 
 public class TestUtil {
     public String createString(int length) {

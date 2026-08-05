@@ -1,4 +1,4 @@
-package cn.coderule.common.util.test;
+package cn.coderule.common.test;
 
 import cn.coderule.common.util.lang.string.StringUtil;
 import org.springframework.lang.Nullable;

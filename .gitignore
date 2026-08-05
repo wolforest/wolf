@@ -5,6 +5,8 @@ crhttp/
 testhttp/
 .bak/
 
+.sisyphus/
+
 # Log file
 *.log
 

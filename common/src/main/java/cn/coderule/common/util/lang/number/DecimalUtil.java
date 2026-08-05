@@ -1,6 +1,6 @@
 package cn.coderule.common.util.lang.number;
 
-import cn.coderule.common.util.test.Assert;
+import cn.coderule.common.test.Assert;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

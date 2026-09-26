@@ -9,7 +9,7 @@ public class ReentrantLock extends java.util.concurrent.locks.ReentrantLock {
         try {
             super.unlock();
         } catch (IllegalMonitorStateException e) {
-            log.error("Attempting to unlock a read lock that was not acquired.", e);
+            log.error("Attempting to unlock a lock that was not acquired.", e);
         }
     }
 }

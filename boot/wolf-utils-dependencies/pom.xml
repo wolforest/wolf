@@ -24,6 +24,8 @@
         <commons-codec.version>1.19.0</commons-codec.version>
         <guava.version>33.2.1-jre</guava.version>
         <caffeine.version>3.3.0</caffeine.version>
+
+        <snakeyaml.version>2.7</snakeyaml.version>
         <fastjson2.version>2.0.52</fastjson2.version>
         <fastjson2.spring.version>2.0.52</fastjson2.spring.version>
         <disruptor.version>4.0.0</disruptor.version>
@@ -72,6 +74,13 @@
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson2.version}</version>
+            </dependency>
+
+            <!-- Source: https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${snakeyaml.version}</version>
             </dependency>
 
             <dependency>

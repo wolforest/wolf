@@ -23,6 +23,7 @@
         <commons-io.version>2.16.1</commons-io.version>
         <commons-codec.version>1.19.0</commons-codec.version>
         <guava.version>33.2.1-jre</guava.version>
+        <caffeine.version>3.3.0</caffeine.version>
         <fastjson2.version>2.0.52</fastjson2.version>
         <fastjson2.spring.version>2.0.52</fastjson2.spring.version>
         <disruptor.version>4.0.0</disruptor.version>
@@ -58,6 +59,13 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+
+            <!-- Source: https://mvnrepository.com/artifact/com.github.ben-manes.caffeine/caffeine -->
+            <dependency>
+                <groupId>com.github.ben-manes.caffeine</groupId>
+                <artifactId>caffeine</artifactId>
+                <version>${caffeine.version}</version>
             </dependency>
 
             <dependency>

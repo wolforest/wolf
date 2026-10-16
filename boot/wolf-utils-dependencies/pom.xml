@@ -46,6 +46,8 @@
 
         <antlr.version>4.13.2</antlr.version>
 
+        <picocli.version>4.7.7</picocli.version>
+
     </properties>
 
     <dependencyManagement>
@@ -183,6 +185,13 @@
                 <artifactId>mockito-core</artifactId>
                 <version>${mockito.version}</version>
 <!--                <version>5.22.0</version>-->
+            </dependency>
+
+            <!-- Source: https://mvnrepository.com/artifact/info.picocli/picocli -->
+            <dependency>
+                <groupId>info.picocli</groupId>
+                <artifactId>picocli</artifactId>
+                <version>${picocli.version}</version>
             </dependency>
 
         </dependencies>

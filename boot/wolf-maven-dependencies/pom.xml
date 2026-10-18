@@ -7,14 +7,14 @@
     <parent>
         <groupId>cn.coderule</groupId>
         <artifactId>wolf-dependencies-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../wolf-dependencies-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>cn.coderule</groupId>
     <artifactId>wolf-maven-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <properties>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>

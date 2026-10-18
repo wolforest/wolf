@@ -4,12 +4,12 @@
     <parent>
         <groupId>cn.coderule</groupId>
         <artifactId>wolf-boot-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../boot/pom.xml</relativePath>
     </parent>
 
     <artifactId>common</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <name>common</name>
     <description>common</description>

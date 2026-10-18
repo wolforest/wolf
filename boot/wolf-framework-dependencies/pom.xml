@@ -8,28 +8,27 @@
     <parent>
         <groupId>cn.coderule</groupId>
         <artifactId>wolf-dependencies-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../wolf-dependencies-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>cn.coderule</groupId>
     <artifactId>wolf-framework-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <properties>
-        <version.snapshot>1.0.0-SNAPSHOT</version.snapshot>
-        <wolf-boot.version>1.0.0-SNAPSHOT</wolf-boot.version>
-        <wolf-framework-boot.version>1.0.0-SNAPSHOT</wolf-framework-boot.version>
-        <wolf-principle.version>1.0.0-SNAPSHOT</wolf-principle.version>
-        <wolf-common.version>1.0.0-SNAPSHOT</wolf-common.version>
-        <wolf-wolfno.version>1.0.0-SNAPSHOT</wolf-wolfno.version>
-        <wolf-framework.version>1.0.0-SNAPSHOT</wolf-framework.version>
+        <wolf-boot.version>${revision}</wolf-boot.version>
+        <wolf-framework-boot.version>${revision}</wolf-framework-boot.version>
+        <wolf-principle.version>${revision}</wolf-principle.version>
+        <wolf-common.version>${revision}</wolf-common.version>
+        <wolf-wolfno.version>${revision}</wolf-wolfno.version>
+        <wolf-framework.version>${revision}</wolf-framework.version>
 
-        <wolf-dbclient.version>1.0.0-SNAPSHOT</wolf-dbclient.version>
-        <wolf-mqclient.version>1.0.0-SNAPSHOT</wolf-mqclient.version>
-        <wolf-httpclient.version>1.0.0-SNAPSHOT</wolf-httpclient.version>
-        <wolf-dts.version>1.0.0-SNAPSHOT</wolf-dts.version>
+        <wolf-dbclient.version>${revision}</wolf-dbclient.version>
+        <wolf-mqclient.version>${revision}</wolf-mqclient.version>
+        <wolf-httpclient.version>${revision}</wolf-httpclient.version>
+        <wolf-dts.version>${revision}</wolf-dts.version>
     </properties>
 
     <dependencyManagement>
@@ -61,7 +60,6 @@
                 <artifactId>dts</artifactId>
                 <version>${wolf-dts.version}</version>
             </dependency>
-
 
             <dependency>
                 <groupId>cn.coderule</groupId>
@@ -97,33 +95,33 @@
             <dependency>
                 <artifactId>wolf-starter-web</artifactId>
                 <groupId>cn.coderule.starter</groupId>
-                <version>${version.snapshot}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <artifactId>wolf-starter-dubbo</artifactId>
                 <groupId>cn.coderule.starter</groupId>
-                <version>${version.snapshot}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <artifactId>wolf-starter-mybatis</artifactId>
                 <groupId>cn.coderule.starter</groupId>
-                <version>${version.snapshot}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <artifactId>wolf-starter-cache</artifactId>
                 <groupId>cn.coderule.starter</groupId>
-                <version>${version.snapshot}</version>
+                <version>${revision}</version>
             </dependency>
             <dependency>
                 <artifactId>wolf-starter-mq</artifactId>
                 <groupId>cn.coderule.starter</groupId>
-                <version>${version.snapshot}</version>
+                <version>${revision}</version>
             </dependency>
 
             <dependency>
                 <artifactId>wolf-starter-grpc</artifactId>
                 <groupId>cn.coderule.starter</groupId>
-                <version>${version.snapshot}</version>
+                <version>${revision}</version>
             </dependency>
 
 

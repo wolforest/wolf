@@ -8,17 +8,16 @@
     <parent>
         <groupId>cn.coderule</groupId>
         <artifactId>wolf-dependencies-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../wolf-dependencies-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>cn.coderule</groupId>
     <artifactId>wolf-sdk-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <properties>
-        <version.snapshot>1.0.0-SNAPSHOT</version.snapshot>
         <oapi-sdk.version>2.0.16</oapi-sdk.version>
         <oapi-sdk-servlet-ext.version>1.0.0-rc3</oapi-sdk-servlet-ext.version>
         <arms.version>1.7.3</arms.version>

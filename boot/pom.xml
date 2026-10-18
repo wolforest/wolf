@@ -10,7 +10,7 @@
 
     <groupId>cn.coderule</groupId>
     <artifactId>wolf-boot-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
     <name>wolf-boot-parent</name>
     <description>wolf boot parent</description>
@@ -51,6 +51,7 @@
     </modules>
 
     <properties>
+        <revision>1.0.0-SNAPSHOT</revision>
         <java.version>21</java.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
@@ -59,13 +60,13 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
-        <wolf-dependencies.version>1.0.0-SNAPSHOT</wolf-dependencies.version>
-        <wolf-utils-dependencies.version>1.0.0-SNAPSHOT</wolf-utils-dependencies.version>
-        <wolf-middleware-dependencies.version>1.0.0-SNAPSHOT</wolf-middleware-dependencies.version>
-        <wolf-db-dependencies.version>1.0.0-SNAPSHOT</wolf-db-dependencies.version>
-        <wolf-dubbo-dependencies.version>1.0.0-SNAPSHOT</wolf-dubbo-dependencies.version>
-        <wolf-sdk-dependencies.version>1.0.0-SNAPSHOT</wolf-sdk-dependencies.version>
-        <wolf-net-dependencies.version>1.0.0-SNAPSHOT</wolf-net-dependencies.version>
+        <wolf-dependencies.version>${revision}</wolf-dependencies.version>
+        <wolf-utils-dependencies.version>${revision}</wolf-utils-dependencies.version>
+        <wolf-middleware-dependencies.version>${revision}</wolf-middleware-dependencies.version>
+        <wolf-db-dependencies.version>${revision}</wolf-db-dependencies.version>
+        <wolf-dubbo-dependencies.version>${revision}</wolf-dubbo-dependencies.version>
+        <wolf-sdk-dependencies.version>${revision}</wolf-sdk-dependencies.version>
+        <wolf-net-dependencies.version>${revision}</wolf-net-dependencies.version>
 
     </properties>
 

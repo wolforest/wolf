@@ -7,14 +7,14 @@
     <parent>
         <groupId>cn.coderule</groupId>
         <artifactId>wolf-dependencies-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../wolf-dependencies-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>cn.coderule</groupId>
     <artifactId>wolf-net-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <properties>
         <netty-http.version>1.2.3</netty-http.version>

@@ -6,13 +6,13 @@
     <parent>
         <artifactId>wolf-boot-parent</artifactId>
         <groupId>cn.coderule</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../../boot/pom.xml</relativePath>
     </parent>
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-starter-grpc</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <properties>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>

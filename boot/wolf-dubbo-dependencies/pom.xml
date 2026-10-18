@@ -8,18 +8,16 @@
     <parent>
         <groupId>cn.coderule</groupId>
         <artifactId>wolf-dependencies-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../wolf-dependencies-parent/pom.xml</relativePath>
     </parent>
 
     <groupId>cn.coderule</groupId>
     <artifactId>wolf-dubbo-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <properties>
-        <version.snapshot>1.0.0-SNAPSHOT</version.snapshot>
-
         <dubbo.version>3.1.3</dubbo.version>
         <nacos.version>0.2.12</nacos.version>
         <spring-context-support.version>1.0.11</spring-context-support.version>

@@ -7,13 +7,13 @@
     <parent>
         <groupId>cn.coderule</groupId>
         <artifactId>wolf-boot-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>${revision}</version>
         <relativePath>../boot/pom.xml</relativePath>
     </parent>
 
     <groupId>cn.coderule.wolf</groupId>
     <artifactId>principle</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${revision}</version>
 
     <name>wolf-principle</name>
     <description>wolf coding principle</description>

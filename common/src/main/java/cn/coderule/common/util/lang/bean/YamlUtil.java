@@ -6,7 +6,7 @@ import org.yaml.snakeyaml.Yaml;
 
 public class YamlUtil {
 
-    public static <T> T load(String fileName, Class<T> clazz) {
+    public static <T> T load(String fileName, Class<T> clazz) throws IOException {
         ClassLoader loader = YamlUtil.class.getClassLoader();
 
         try (InputStream is = loader.getResourceAsStream(fileName)) {
@@ -16,8 +16,6 @@ public class YamlUtil {
 
             Yaml yaml = new Yaml();
             return yaml.loadAs(is, clazz);
-        } catch (IOException ioException) {
-            return null;
         }
     }
 }

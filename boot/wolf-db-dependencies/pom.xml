@@ -5,6 +5,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>cn.coderule</groupId>
+        <artifactId>wolf-dependencies-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../wolf-dependencies-parent/pom.xml</relativePath>
+    </parent>
+
     <groupId>cn.coderule</groupId>
     <artifactId>wolf-db-dependencies</artifactId>
     <packaging>pom</packaging>

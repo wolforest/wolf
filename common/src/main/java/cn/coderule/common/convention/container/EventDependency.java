@@ -1,11 +1,12 @@
 package cn.coderule.common.convention.container;
 
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
 import lombok.Getter;
 
 public class EventDependency {
-    private final ConcurrentMap<Object, Boolean> sourceMap;
+    private final Set<Object> sources;
+    private final Set<Object> fired;
     @Getter
     private final Object event;
     @Getter
@@ -28,41 +29,31 @@ public class EventDependency {
         this.event = event;
         this.arg = arg;
 
-        this.sourceMap = new ConcurrentHashMap<>();
+        this.sources = ConcurrentHashMap.newKeySet();
+        this.fired = ConcurrentHashMap.newKeySet();
     }
 
     public boolean isEmpty() {
-        return sourceMap.isEmpty();
+        return sources.isEmpty();
     }
 
     public void addSource(Object sourceEvent) {
-        if (sourceMap.containsKey(sourceEvent)) {
-            return;
-        }
-
-        sourceMap.put(sourceEvent, false);
+        sources.add(sourceEvent);
     }
 
     public boolean markFired(Object sourceEvent) {
-        if (!sourceMap.containsKey(sourceEvent)) {
+        if (!sources.contains(sourceEvent)) {
             return false;
         }
 
-        if (sourceMap.get(sourceEvent)) {
+        if (!fired.add(sourceEvent)) {
             return false;
         }
 
-        sourceMap.put(sourceEvent, true);
-        return isSatisfied();
+        return fired.size() == sources.size();
     }
 
     public void reset() {
-        sourceMap.replaceAll((_, _) -> false);
-    }
-
-    private boolean isSatisfied() {
-        return sourceMap.values()
-            .stream()
-            .allMatch(Boolean.TRUE::equals);
+        fired.clear();
     }
 }

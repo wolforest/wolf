@@ -1,6 +1,7 @@
 # Compiled class file
 *.class
 target/
+.flattened-pom.xml
 crhttp/
 testhttp/
 .bak/

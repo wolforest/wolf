@@ -18,9 +18,10 @@
     <version>${revision}</version>
 
     <properties>
+        <wolf-principle.version>1.0.0</wolf-principle.version>
+
         <wolf-boot.version>${revision}</wolf-boot.version>
         <wolf-framework-boot.version>${revision}</wolf-framework-boot.version>
-        <wolf-principle.version>${revision}</wolf-principle.version>
         <wolf-common.version>${revision}</wolf-common.version>
         <wolf-wolfno.version>${revision}</wolf-wolfno.version>
         <wolf-framework.version>${revision}</wolf-framework.version>

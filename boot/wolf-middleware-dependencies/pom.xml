@@ -26,11 +26,18 @@
 
         <rocketmq.version>4.9.8</rocketmq.version>
         <rocketmq5.version>5.2.2</rocketmq5.version>
+        <amqp-client.version>5.37.0</amqp-client.version>
 
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <dependency>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${amqp-client.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.apache.rocketmq</groupId>

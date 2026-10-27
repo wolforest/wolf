@@ -11,7 +11,6 @@
         <relativePath>../wolf-dependencies-parent/pom.xml</relativePath>
     </parent>
 
-    <groupId>cn.coderule</groupId>
     <artifactId>wolf-net-dependencies</artifactId>
     <packaging>pom</packaging>
     <version>${revision}</version>

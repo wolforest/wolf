@@ -195,7 +195,8 @@ public class KafkaConsumer implements VendorConsumer {
             //ConsumerBuilder.CheckPoint checkPoint = consumerBuilder.getCheckPoint();
             MQConsumerConfig.CheckPoint checkPoint = config.getCheckPoint();
             long timestamp = checkPoint.getTimestamp();
-            OffsetAndMetadata offsetAndMetadata = consumer.committed(topicPartition);
+            Map<TopicPartition, OffsetAndMetadata> committed = consumer.committed(Collections.singleton(topicPartition));
+            OffsetAndMetadata offsetAndMetadata = committed.get(topicPartition);
             if (!checkPoint.isForce() && null != offsetAndMetadata) {
                 log.info("consumer committed offsetAndMetadata: {}", offsetAndMetadata);
                 timestamp = Long.parseLong(offsetAndMetadata.metadata());

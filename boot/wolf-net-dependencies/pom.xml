@@ -18,10 +18,10 @@
 
     <properties>
         <netty-http.version>1.2.3</netty-http.version>
-        <netty.version>4.2.0.Final</netty.version>
+        <netty.version>4.2.19.Final</netty.version>
 
-        <grpc.version>1.70.0</grpc.version>
-        <protobuf.version>4.29.3</protobuf.version>
+        <grpc.version>1.85.1</grpc.version>
+        <protobuf.version>4.36.2</protobuf.version>
         <okhttp.version>4.12.0</okhttp.version>
 
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>

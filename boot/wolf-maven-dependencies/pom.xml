@@ -17,7 +17,7 @@
     <version>${revision}</version>
 
     <properties>
-        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <antlr4-maven-plugin.version>4.13.2</antlr4-maven-plugin.version>
     </properties>
 

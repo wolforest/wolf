@@ -19,13 +19,13 @@
 
     <properties>
         <flink.version>1.9.1</flink.version>
-        <kafka-clients.version>2.0.0</kafka-clients.version>
+        <kafka-clients.version>4.2.2</kafka-clients.version>
 
-        <hbase-client.version>2.5.5</hbase-client.version>
-        <xxljob.version>2.3.0</xxljob.version>
+        <hbase-client.version>3.0.0</hbase-client.version>
+        <xxljob.version>3.5.0</xxljob.version>
 
         <rocketmq.version>4.9.8</rocketmq.version>
-        <rocketmq5.version>5.0.7</rocketmq5.version>
+        <rocketmq5.version>5.2.2</rocketmq5.version>
 
     </properties>
 

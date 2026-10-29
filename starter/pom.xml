@@ -11,7 +11,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>cn.coderule</groupId>
     <artifactId>starter</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>

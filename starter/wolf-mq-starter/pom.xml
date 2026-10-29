@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.coderule.starter</groupId>
-    <artifactId>wolf-starter-mq</artifactId>
+    <artifactId>wolf-mq-starter</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>
 

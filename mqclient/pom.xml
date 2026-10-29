@@ -22,7 +22,7 @@
         </dependency>
 
         <dependency>
-            <artifactId>wolf-starter-mq</artifactId>
+            <artifactId>wolf-mq-starter</artifactId>
             <groupId>cn.coderule.starter</groupId>
         </dependency>
 

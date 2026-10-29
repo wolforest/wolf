@@ -30,7 +30,7 @@
 
         <dependency>
             <groupId>cn.coderule.starter</groupId>
-            <artifactId>wolf-starter-mybatis</artifactId>
+            <artifactId>wolf-mybatis-starter</artifactId>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>

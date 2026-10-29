@@ -32,7 +32,7 @@
 
         <dependency>
             <groupId>cn.coderule.starter</groupId>
-            <artifactId>wolf-starter-mybatis</artifactId>
+            <artifactId>wolf-mybatis-starter</artifactId>
         </dependency>
 
         <dependency>

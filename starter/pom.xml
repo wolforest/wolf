@@ -20,7 +20,7 @@
 
     <modules>
         <module>wolf-web-starter</module>
-        <module>wolf-starter-mybatis</module>
+        <module>wolf-mybatis-starter</module>
         <module>wolf-starter-dubbo</module>
         <module>wolf-starter-mq</module>
         <module>wolf-starter-cache</module>

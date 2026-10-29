@@ -19,7 +19,7 @@
     <description>wolf framework starter aggregator</description>
 
     <modules>
-        <module>wolf-starter-web</module>
+        <module>wolf-web-starter</module>
         <module>wolf-starter-mybatis</module>
         <module>wolf-starter-dubbo</module>
         <module>wolf-starter-mq</module>

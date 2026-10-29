@@ -23,7 +23,7 @@
 
         <dependency>
             <groupId>cn.coderule.starter</groupId>
-            <artifactId>wolf-starter-web</artifactId>
+            <artifactId>wolf-web-starter</artifactId>
             <scope>provided</scope>
             <optional>true</optional>
         </dependency>

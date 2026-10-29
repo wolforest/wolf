@@ -93,7 +93,7 @@
             </dependency>
 
             <dependency>
-                <artifactId>wolf-starter-web</artifactId>
+                <artifactId>wolf-web-starter</artifactId>
                 <groupId>cn.coderule.starter</groupId>
                 <version>${revision}</version>
             </dependency>

@@ -37,7 +37,7 @@
 
         <dependency>
             <groupId>cn.coderule.starter</groupId>
-            <artifactId>wolf-starter-cache</artifactId>
+            <artifactId>wolf-cache-starter</artifactId>
         </dependency>
 
         <dependency>

@@ -108,7 +108,7 @@
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <artifactId>wolf-starter-cache</artifactId>
+                <artifactId>wolf-cache-starter</artifactId>
                 <groupId>cn.coderule.starter</groupId>
                 <version>${revision}</version>
             </dependency>

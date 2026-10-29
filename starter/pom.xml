@@ -23,7 +23,7 @@
         <module>wolf-mybatis-starter</module>
         <module>wolf-dubbo-starter</module>
         <module>wolf-mq-starter</module>
-        <module>wolf-starter-cache</module>
+        <module>wolf-cache-starter</module>
         <module>wolf-starter-grpc</module>
     </modules>
 

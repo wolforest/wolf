@@ -21,7 +21,7 @@
     <modules>
         <module>wolf-web-starter</module>
         <module>wolf-mybatis-starter</module>
-        <module>wolf-starter-dubbo</module>
+        <module>wolf-dubbo-starter</module>
         <module>wolf-starter-mq</module>
         <module>wolf-starter-cache</module>
         <module>wolf-starter-grpc</module>

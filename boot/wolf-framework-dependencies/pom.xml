@@ -98,7 +98,7 @@
                 <version>${revision}</version>
             </dependency>
             <dependency>
-                <artifactId>wolf-starter-dubbo</artifactId>
+                <artifactId>wolf-dubbo-starter</artifactId>
                 <groupId>cn.coderule.starter</groupId>
                 <version>${revision}</version>
             </dependency>

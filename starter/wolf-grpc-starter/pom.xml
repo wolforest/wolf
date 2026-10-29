@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>cn.coderule.starter</groupId>
-    <artifactId>wolf-starter-grpc</artifactId>
+    <artifactId>wolf-grpc-starter</artifactId>
     <version>${revision}</version>
 
     <properties>

@@ -1,4 +1,4 @@
-package cn.coderule.common.type.map;
+package cn.coderule.common.lang.type.map;
 
 import junit.framework.TestCase;
 

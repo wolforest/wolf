@@ -104,7 +104,7 @@ public class ObjectMap extends JSONObject implements Map<String, Object>, Contex
         return obj.getBigDecimal(key);
     }
 
-    public String getString(String path, String key) {
+    public String getPathString(String path, String key) {
         JSONObject obj = JSONUtil.getJSONObject(this, path);
         if (obj == null) {
             return null;

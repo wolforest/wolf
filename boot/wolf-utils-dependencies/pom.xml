@@ -20,13 +20,13 @@
         <javafaker.version>1.0.2</javafaker.version>
         <commons-io.version>2.22.0</commons-io.version>
         <commons-codec.version>1.23.0</commons-codec.version>
-        <guava.version>33.7.2-jre</guava.version>
+        <guava.version>33.8.0-jre</guava.version>
         <jsr305.version>3.0.2</jsr305.version>
         <caffeine.version>3.3.1</caffeine.version>
 
         <snakeyaml.version>2.7</snakeyaml.version>
-        <fastjson2.version>2.0.52</fastjson2.version>
-        <fastjson2.spring.version>2.0.52</fastjson2.spring.version>
+        <fastjson2.version>2.0.66</fastjson2.version>
+        <fastjson2.spring.version>2.0.66</fastjson2.spring.version>
         <disruptor.version>4.0.0</disruptor.version>
         <disruptor-conversantmedia.version>1.2.21</disruptor-conversantmedia.version>
 
@@ -39,9 +39,9 @@
         <javax-el.version>3.0.0</javax-el.version>
         <servlet-api.version>4.0.1</servlet-api.version>
 
-        <testng.version>7.11.0</testng.version>
+        <testng.version>7.12.0</testng.version>
         <junit5.version>5.13.4</junit5.version>
-        <mockito.version>5.22.0</mockito.version>
+        <mockito.version>5.24.0</mockito.version>
         <archunit.version>1.5.1</archunit.version>
 
         <antlr.version>4.13.2</antlr.version>

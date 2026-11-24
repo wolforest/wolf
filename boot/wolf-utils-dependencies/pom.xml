@@ -43,6 +43,7 @@
         <junit5.version>5.13.4</junit5.version>
         <mockito.version>5.24.0</mockito.version>
         <archunit.version>1.5.1</archunit.version>
+        <jmh.version>1.37</jmh.version>
 
         <antlr.version>4.13.2</antlr.version>
 
@@ -206,6 +207,21 @@
                 <groupId>info.picocli</groupId>
                 <artifactId>picocli</artifactId>
                 <version>${picocli.version}</version>
+            </dependency>
+
+            <!-- Source: https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core -->
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-core</artifactId>
+                <version>${jmh.version}</version>
+            </dependency>
+
+            <!-- Source: https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-generator-annprocess -->
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-generator-annprocess</artifactId>
+                <version>${jmh.version}</version>
+                <scope>test</scope>
             </dependency>
 
         </dependencies>

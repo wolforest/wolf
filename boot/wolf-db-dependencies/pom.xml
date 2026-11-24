@@ -25,18 +25,11 @@
         <druid.version>1.2.28</druid.version>
         <mysql.version>8.0.33</mysql.version>
         <rocksdb.version>10.4.2</rocksdb.version>
-        <postgresql.version>42.7.14</postgresql.version>
 
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>${postgresql.version}</version>
-            </dependency>
-
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>

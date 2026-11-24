@@ -14,11 +14,9 @@
 
     <artifactId>wolf-middleware-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>${revision}</version>
 
     <properties>
         <flink.version>1.9.1</flink.version>
-        <kafka-clients.version>4.2.2</kafka-clients.version>
 
         <hbase-client.version>3.0.0</hbase-client.version>
         <xxljob.version>3.5.0</xxljob.version>
@@ -54,12 +52,6 @@
                 <groupId>org.apache.rocketmq</groupId>
                 <artifactId>rocketmq-acl</artifactId>
                 <version>${rocketmq.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.kafka</groupId>
-                <artifactId>kafka-clients</artifactId>
-                <version>${kafka-clients.version}</version>
             </dependency>
 
             <dependency>

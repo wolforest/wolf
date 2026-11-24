@@ -9,8 +9,6 @@
     </parent>
 
     <artifactId>common</artifactId>
-    <version>${revision}</version>
-
     <name>common</name>
     <description>common</description>
 

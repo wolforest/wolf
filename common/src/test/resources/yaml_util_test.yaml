@@ -1,0 +1,9 @@
+name: wolf
+version: 1.0.0
+enabled: true
+tags:
+  - java
+  - yaml
+server:
+  host: 127.0.0.1
+  port: 8080

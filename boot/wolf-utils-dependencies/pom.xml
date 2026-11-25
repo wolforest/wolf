@@ -14,7 +14,6 @@
 
     <artifactId>wolf-utils-dependencies</artifactId>
     <packaging>pom</packaging>
-    <version>${revision}</version>
 
     <properties>
         <javafaker.version>1.0.2</javafaker.version>
@@ -40,7 +39,7 @@
         <servlet-api.version>4.0.1</servlet-api.version>
 
         <testng.version>7.12.0</testng.version>
-        <junit5.version>5.13.4</junit5.version>
+        <junit.version>6.1.3</junit.version>
         <mockito.version>5.24.0</mockito.version>
         <archunit.version>1.5.1</archunit.version>
         <jmh.version>1.37</jmh.version>
@@ -53,6 +52,15 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Source: https://mvnrepository.com/artifact/org.junit/junit-bom -->
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -173,11 +181,7 @@
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter</artifactId>
-                <version>${junit5.version}</version>
-            </dependency>
+            <!-- version is managed by junit-bom above -->
 
             <!-- https://mvnrepository.com/artifact/org.antlr/antlr4-runtime -->
             <dependency>

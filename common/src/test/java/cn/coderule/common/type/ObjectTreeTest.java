@@ -1,9 +1,9 @@
 package cn.coderule.common.type;
 
 import cn.coderule.common.lang.type.ObjectTree;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ObjectTreeTest {
 
@@ -49,8 +49,8 @@ public class ObjectTreeTest {
                             .put("l4-7", "c");
         //@formatter:on
 
-        assertEquals("ObjectTree build fail", "a", tree.getObject("l1-1", String.class));
-        assertEquals("ObjectTree build fail", "b", tree.getObject(String.class, "l1-8", "l2-8", "l3-8", "l4-6"));
+        assertEquals("a", tree.getObject("l1-1", String.class), "ObjectTree build fail");
+        assertEquals("b", tree.getObject(String.class, "l1-8", "l2-8", "l3-8", "l4-6"), "ObjectTree build fail");
 
     }
 

@@ -4,15 +4,15 @@ import cn.coderule.common.sm.Event;
 import cn.coderule.common.sm.State;
 import cn.coderule.common.sm.StateGraph;
 import lombok.Getter;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import cn.coderule.common.lang.enums.CodeBasedEnum;
 import cn.coderule.common.sm.impl.DefaultStateGraph;
 
 import java.util.Set;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * com.wolf.common.sm
@@ -28,7 +28,7 @@ public class DefaultStateGraphTest {
 
         TradeState initState = stateGraph.getRootState();
         TradeState expected = new WaitToPay();
-        assertEquals("InitState failed", expected.getClass().getName(), initState.getClass().getName());
+        assertEquals(expected.getClass().getName(), initState.getClass().getName(), "InitState failed");
     }
 
     @Test
@@ -42,16 +42,16 @@ public class DefaultStateGraphTest {
 
         StateGraph<TradeState, TradeEvent> stateGraph = new DefaultStateGraph<>(init);
 
-        assertEquals("init state fail", init, stateGraph.getRootState());
+        assertEquals(init, stateGraph.getRootState(), "init state fail");
 
         stateGraph.addTransition(init, paid, payEvent);
         stateGraph.addTransition(paid, consigned, sendEvent);
 
         TradeState expectedPaid = stateGraph.transit(init, payEvent);
-        assertEquals("paid event bind fail", expectedPaid, paid);
+        assertEquals(expectedPaid, paid, "paid event bind fail");
 
         TradeState expectedConsigned = stateGraph.transit(paid, sendEvent);
-        assertEquals("send event bind fail", expectedConsigned, consigned);
+        assertEquals(expectedConsigned, consigned, "send event bind fail");
     }
 
     @Test
@@ -65,7 +65,7 @@ public class DefaultStateGraphTest {
         stateGraph.addTransition(paid, consigned, sendEvent);
 
         TradeState expectedState = stateGraph.transit(paid, new SendEvent());
-        assertEquals("different event instance fail.", expectedState, consigned);
+        assertEquals(expectedState, consigned, "different event instance fail.");
 
     }
 
@@ -80,7 +80,7 @@ public class DefaultStateGraphTest {
         stateGraph.addTransition(paid, consigned, sendEvent);
 
         TradeState expectedState = stateGraph.transit(new Paid(), new SendEvent());
-        assertEquals("different source instance fail.", expectedState, consigned);
+        assertEquals(expectedState, consigned, "different source instance fail.");
     }
 
     @Test
@@ -95,8 +95,8 @@ public class DefaultStateGraphTest {
 
         TradeState paidFromSM = stateGraph.getState(2);
         TradeState consignFromSM = stateGraph.getState(3);
-        assertEquals("get state by code from StateMachine fail.", consignFromSM, consigned);
-        assertEquals("get state by code from StateMachine fail.", paid, paidFromSM);
+        assertEquals(consignFromSM, consigned, "get state by code from StateMachine fail.");
+        assertEquals(paid, paidFromSM, "get state by code from StateMachine fail.");
     }
 
     @Test
@@ -110,7 +110,7 @@ public class DefaultStateGraphTest {
         stateGraph.addTransition(paid, consigned, sendEvent);
 
         Set<TradeEvent> events = stateGraph.getTransitions(paid);
-        assertTrue("get bind event list fail", events.contains(sendEvent));
+        assertTrue(events.contains(sendEvent), "get bind event list fail");
     }
 
     @Test
@@ -121,22 +121,22 @@ public class DefaultStateGraphTest {
                 .addTransition(PaymentStateEnum.PENDING, PaymentStateEnum.SUCCESS, PaymentEventEnum.SUCCEED);
 
         PaymentStateEnum state1 = stateGraph.transit(PaymentStateEnum.PENDING, PaymentEventEnum.SUCCEED);
-        assertEquals("state machine transit fail", PaymentStateEnum.SUCCESS, state1);
+        assertEquals(PaymentStateEnum.SUCCESS, state1, "state machine transit fail");
 
         PaymentStateEnum state2 = stateGraph.getRootState();
-        assertEquals("state machine transit fail", PaymentStateEnum.WAIT_TO_PAY, state2);
+        assertEquals(PaymentStateEnum.WAIT_TO_PAY, state2, "state machine transit fail");
 
         boolean s1 = stateGraph.canTransit(PaymentStateEnum.PENDING, PaymentStateEnum.SUCCESS);
-        assertTrue("state machine  canTransit failed", s1);
+        assertTrue(s1, "state machine  canTransit failed");
 
         boolean s2 = stateGraph.canTransit(PaymentStateEnum.PENDING, PaymentStateEnum.WAIT_TO_PAY);
-        assertFalse("state machine  canTransit failed", s2);
+        assertFalse(s2, "state machine  canTransit failed");
 
         boolean s3 = stateGraph.canTransit(PaymentStateEnum.WAIT_TO_PAY, PaymentEventEnum.PAY);
-        assertTrue("state machine  canTransit failed", s3);
+        assertTrue(s3, "state machine  canTransit failed");
 
         boolean s4 = stateGraph.canTransit(PaymentStateEnum.PENDING, PaymentEventEnum.PAY);
-        assertFalse("state machine  canTransit failed", s4);
+        assertFalse(s4, "state machine  canTransit failed");
 
     }
 

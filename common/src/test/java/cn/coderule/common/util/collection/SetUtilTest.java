@@ -1,12 +1,12 @@
 package cn.coderule.common.util.collection;
 
 import cn.coderule.common.util.lang.collection.SetUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.util.collection
@@ -20,14 +20,14 @@ public class SetUtilTest {
     public void first() {
         Set<String> stringSet = createSet();
 
-        assertEquals("SetUtil.first fail", "1", SetUtil.first(stringSet));
+        assertEquals("1", SetUtil.first(stringSet), "SetUtil.first fail");
     }
 
     @Test
     public void last() {
         Set<String> stringSet = createSet();
 
-        assertEquals("SetUtil.last fail", "5", SetUtil.last(stringSet));
+        assertEquals("5", SetUtil.last(stringSet), "SetUtil.last fail");
     }
 
     private Set<String> createSet() {

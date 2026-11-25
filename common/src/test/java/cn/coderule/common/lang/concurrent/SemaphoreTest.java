@@ -2,9 +2,9 @@ package cn.coderule.common.lang.concurrent;
 
 import cn.coderule.common.lang.concurrent.sync.Semaphore;
 import cn.coderule.common.lang.concurrent.sync.SemaphoreGuard;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SemaphoreTest {
 
@@ -12,33 +12,33 @@ public class SemaphoreTest {
     public void acquire() {
         Semaphore semaphore = new Semaphore(3);
         SemaphoreGuard guard = semaphore.acquire();
-        assertTrue("Semaphore release failed.", guard.release());
-        assertFalse("Semaphore release failed.", guard.release());
-        assertFalse("Semaphore release failed.", guard.release());
-        assertFalse("Semaphore release failed.", guard.release());
+        assertTrue(guard.release(), "Semaphore release failed.");
+        assertFalse(guard.release(), "Semaphore release failed.");
+        assertFalse(guard.release(), "Semaphore release failed.");
+        assertFalse(guard.release(), "Semaphore release failed.");
     }
 
     @Test
     public void tryAcquire() {
         Semaphore semaphore = new Semaphore(1);
         SemaphoreGuard firstGuard = semaphore.tryAcquire();
-        assertNotNull("tryAcquire failed", firstGuard);
+        assertNotNull(firstGuard, "tryAcquire failed");
 
         SemaphoreGuard secondGuard = semaphore.tryAcquire();
-        assertNull("tryAcquire failed", secondGuard);
+        assertNull(secondGuard, "tryAcquire failed");
 
         SemaphoreGuard thirdGuard = semaphore.tryAcquire();
-        assertNull("tryAcquire failed", thirdGuard);
+        assertNull(thirdGuard, "tryAcquire failed");
 
         firstGuard.release();
         SemaphoreGuard forthGuard = semaphore.tryAcquire();
-        assertNotNull("tryAcquire failed", firstGuard);
+        assertNotNull(firstGuard, "tryAcquire failed");
 
         SemaphoreGuard fifthGuard = semaphore.tryAcquire();
-        assertNull("tryAcquire failed", fifthGuard);
+        assertNull(fifthGuard, "tryAcquire failed");
 
         SemaphoreGuard sixthGuard = semaphore.tryAcquire();
-        assertNull("tryAcquire failed", sixthGuard);
+        assertNull(sixthGuard, "tryAcquire failed");
 
     }
 }

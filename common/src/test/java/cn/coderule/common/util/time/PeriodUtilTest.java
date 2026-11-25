@@ -1,14 +1,14 @@
 package cn.coderule.common.util.time;
 
 import cn.coderule.common.util.lang.time.PeriodUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import cn.coderule.common.lang.enums.unit.PeriodStrategyEnum;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * com.wolf.common.util
@@ -29,19 +29,19 @@ public class PeriodUtilTest {
 
         expected = 1;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 1;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 1;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 0;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
     }
 
     @Test
@@ -55,19 +55,19 @@ public class PeriodUtilTest {
 
         expected = 10;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 9;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 9;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 8;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
     }
 
     @Test
@@ -81,19 +81,19 @@ public class PeriodUtilTest {
 
         expected = 41;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 40;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 40;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 39;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
     }
 
     @Test
@@ -107,19 +107,19 @@ public class PeriodUtilTest {
 
         expected = 366;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 365;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 365;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = 364;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
     }
 
     @Test
@@ -133,19 +133,19 @@ public class PeriodUtilTest {
 
         expected = -366;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = -365;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.CLOSE_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = -365;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_CLOSE);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
 
         expected = -364;
         days = PeriodUtil.daysBetween(start, end, PeriodStrategyEnum.OPEN_OPEN);
-        assertEquals("same day count daysBetween: close close strategy fail", expected, days);
+        assertEquals(expected, days, "same day count daysBetween: close close strategy fail");
     }
 
     @Test
@@ -157,19 +157,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2019, 1, 1);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("same day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2019, 1, 1);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("same day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2019, 1, 1);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("same day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2019, 1, 1);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("same day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open open strategy fail");
     }
 
     @Test
@@ -181,19 +181,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2019, 1, 1);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("same day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2019, 1, 2);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("same day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2019, 1, 2);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("same day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2019, 1, 3);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("same day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open open strategy fail");
     }
 
     @Test
@@ -205,19 +205,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2019, 1, 5);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("same day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2019, 1, 6);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("same day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2019, 1, 6);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("same day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2019, 1, 7);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("same day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open open strategy fail");
     }
 
     @Test
@@ -229,19 +229,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2019, 2, 9);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("same day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2019, 2, 10);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("same day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2019, 2, 10);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("same day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2019, 2, 11);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("same day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open open strategy fail");
     }
 
     @Test
@@ -253,19 +253,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2019, 1, 10);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("same day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2019, 1, 11);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("same day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2019, 1, 11);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("same day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2019, 1, 12);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("same day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "same day daysAfter: open open strategy fail");
     }
 
     @Test
@@ -277,19 +277,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2018, 1, 12);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("negative day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2018, 1, 11);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("negative day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2018, 1, 11);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("negative day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2018, 1, 10);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("negative day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: open open strategy fail");
     }
 
     @Test
@@ -301,19 +301,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2019, 1, 3);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("negative day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2019, 1, 2);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("negative day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2019, 1, 2);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("negative day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2019, 1, 1);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("negative day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: open open strategy fail");
     }
 
     @Test
@@ -325,19 +325,19 @@ public class PeriodUtilTest {
 
         expected = LocalDate.of(2019, 1, 3);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_CLOSE, start);
-        assertEquals("negative day daysAfter: close close strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: close close strategy fail");
 
         expected = LocalDate.of(2019, 1, 2);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.CLOSE_OPEN, start);
-        assertEquals("negative day daysAfter: close open strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: close open strategy fail");
 
         expected = LocalDate.of(2019, 1, 2);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_CLOSE, start);
-        assertEquals("negative day daysAfter: open close strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: open close strategy fail");
 
         expected = LocalDate.of(2019, 1, 1);
         end = PeriodUtil.daysAfter(days, PeriodStrategyEnum.OPEN_OPEN, start);
-        assertEquals("negative day daysAfter: open open strategy fail", expected, end);
+        assertEquals(expected, end, "negative day daysAfter: open open strategy fail");
     }
 
     @Test

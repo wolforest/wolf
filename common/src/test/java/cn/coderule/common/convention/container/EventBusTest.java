@@ -1,11 +1,14 @@
 package cn.coderule.common.convention.container;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
-public class EventBusTest extends TestCase {
+public class EventBusTest {
+
+    @Test
 
     public void testEmit() {
         EventBus eventBus = new EventBus();
@@ -16,8 +19,10 @@ public class EventBusTest extends TestCase {
         eventBus.on(event, listener::onEvent);
         eventBus.emit(event, arg);
 
-        assertTrue("EventBus emit failed", listener.isCalled());
+        assertTrue(listener.isCalled(), "EventBus emit failed");
     }
+
+    @Test
 
     public void testEmitWithWrongType() {
         EventBus eventBus = new EventBus();
@@ -27,7 +32,7 @@ public class EventBusTest extends TestCase {
         eventBus.on(event, listener::onEvent);
         eventBus.emit(event, event);
 
-        assertFalse("EventBus emit failed", listener.isCalled());
+        assertFalse(listener.isCalled(), "EventBus emit failed");
     }
 
     static class TestArgument {

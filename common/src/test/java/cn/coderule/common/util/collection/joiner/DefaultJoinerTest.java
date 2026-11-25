@@ -4,12 +4,12 @@ import cn.coderule.common.util.lang.collection.joiner.CollectionJoiner;
 import cn.coderule.common.util.lang.collection.joiner.DefaultJoiner;
 import cn.coderule.common.util.lang.collection.joiner.Joiner;
 import lombok.Data;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.util.collection.joiner
@@ -28,19 +28,19 @@ public class DefaultJoinerTest {
         Joiner<Goods, GoodsDetail> joiner = new DefaultJoiner<>(goodsList);
         joiner.on(Goods::setDetail, Goods::getId).join(detailList, GoodsDetail::getGoodsId);
 
-        assertNotNull("DefaultJoiner join fail", goodsList);
-        assertEquals("DefaultJoiner join fail", 20, goodsList.size());
+        assertNotNull(goodsList, "DefaultJoiner join fail");
+        assertEquals(20, goodsList.size(), "DefaultJoiner join fail");
 
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0));
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(10).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(19).getDetail());
+        assertNotNull(goodsList.get(0), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(0).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(10).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(19).getDetail(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid());
+        assertEquals(goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid());
+        assertEquals(goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid(), "DefaultJoiner join fail");
     }
 
     @Test
@@ -53,19 +53,19 @@ public class DefaultJoinerTest {
         joiner.on(Goods::setDetail, Goods::getId, Goods::getCid)
                 .join(detailList, GoodsDetail::getGoodsId, GoodsDetail::getCid);
 
-        assertNotNull("DefaultJoiner join fail", goodsList);
-        assertEquals("DefaultJoiner join fail", 20, goodsList.size());
+        assertNotNull(goodsList, "DefaultJoiner join fail");
+        assertEquals(20, goodsList.size(), "DefaultJoiner join fail");
 
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0));
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(10).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(19).getDetail());
+        assertNotNull(goodsList.get(0), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(0).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(10).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(19).getDetail(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid());
+        assertEquals(goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid());
+        assertEquals(goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid(), "DefaultJoiner join fail");
     }
 
     @Test
@@ -79,19 +79,19 @@ public class DefaultJoinerTest {
                 .join(detailList, GoodsDetail::getGoodsId, GoodsDetail::getCid)
                 ;
 
-        assertNotNull("DefaultJoiner join fail", goodsList);
-        assertEquals("DefaultJoiner join fail", 20, goodsList.size());
+        assertNotNull(goodsList, "DefaultJoiner join fail");
+        assertEquals(20, goodsList.size(), "DefaultJoiner join fail");
 
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0));
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(10).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(19).getDetail());
+        assertNotNull(goodsList.get(0), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(0).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(10).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(19).getDetail(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid());
+        assertEquals(goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid());
+        assertEquals(goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid(), "DefaultJoiner join fail");
     }
 
     @Test
@@ -108,26 +108,26 @@ public class DefaultJoinerTest {
                 .join(skuList, GoodsSku::getGoodsId, GoodsSku::getCid)
                 ;
 
-        assertNotNull("DefaultJoiner join fail", goodsList);
-        assertEquals("DefaultJoiner join fail", 20, goodsList.size());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0));
+        assertNotNull(goodsList, "DefaultJoiner join fail");
+        assertEquals(20, goodsList.size(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(0), "DefaultJoiner join fail");
 
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(10).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(19).getDetail());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(0).getSku());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(10).getSku());
-        assertNotNull("DefaultJoiner join fail", goodsList.get(19).getSku());
+        assertNotNull(goodsList.get(0).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(10).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(19).getDetail(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(0).getSku(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(10).getSku(), "DefaultJoiner join fail");
+        assertNotNull(goodsList.get(19).getSku(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid());
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getId(), goodsList.get(0).getSku().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(0).getCid(), goodsList.get(0).getSku().getCid());
+        assertEquals(goodsList.get(0).getId(), goodsList.get(0).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(0).getCid(), goodsList.get(0).getDetail().getCid(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(0).getId(), goodsList.get(0).getSku().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(0).getCid(), goodsList.get(0).getSku().getCid(), "DefaultJoiner join fail");
 
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid());
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getId(), goodsList.get(10).getSku().getGoodsId());
-        assertEquals("DefaultJoiner join fail", goodsList.get(10).getCid(), goodsList.get(10).getSku().getCid());
+        assertEquals(goodsList.get(10).getId(), goodsList.get(10).getDetail().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(10).getCid(), goodsList.get(10).getDetail().getCid(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(10).getId(), goodsList.get(10).getSku().getGoodsId(), "DefaultJoiner join fail");
+        assertEquals(goodsList.get(10).getCid(), goodsList.get(10).getSku().getCid(), "DefaultJoiner join fail");
     }
 
 

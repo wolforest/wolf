@@ -1,9 +1,9 @@
 package cn.coderule.common.util.io;
 
 import cn.coderule.common.util.lang.string.StringUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DirUtilTest {
 
@@ -13,7 +13,7 @@ public class DirUtilTest {
         String path = tmpDir + StringUtil.uuid();
 
         DirUtil.createIfNotExists(path);
-        assertTrue("createIfNotExists failed: ", FileUtil.exists(path));
+        assertTrue(FileUtil.exists(path), "createIfNotExists failed: ");
 
         FileUtil.delete(path);
 

@@ -2,11 +2,11 @@ package cn.coderule.common.util.lang;
 
 import cn.coderule.common.util.lang.bean.BeanUtil;
 import lombok.Data;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.util.lang
@@ -19,9 +19,9 @@ public class BeanUtilTest {
     @Test
     @SuppressWarnings("all")
     public void testEquals() {
-        assertTrue("ObjectUtil.equals fail", BeanUtil.equals(Integer.valueOf(1), 1));
-        assertTrue("ObjectUtil.equals fail", BeanUtil.equals(Long.valueOf(1), 1L));
-        assertTrue("ObjectUtil.equals fail", BeanUtil.equals(Double.valueOf(1.0), 1.0));
+        assertTrue(BeanUtil.equals(Integer.valueOf(1), 1), "ObjectUtil.equals fail");
+        assertTrue(BeanUtil.equals(Long.valueOf(1), 1L), "ObjectUtil.equals fail");
+        assertTrue(BeanUtil.equals(Double.valueOf(1.0), 1.0), "ObjectUtil.equals fail");
     }
 
     @Test
@@ -72,8 +72,8 @@ public class BeanUtilTest {
     public void testToMap() {
         Map<String, Object> map = BeanUtil.toMap(DemoConst.class);
 
-        assertEquals("BeanUtil.toMap failed", "G_PAY", map.get("GROUP_PAY"));
-        assertEquals("BeanUtil.toMap failed", "PAYMENT", map.get("TOPIC_PAYMENT"));
+        assertEquals("G_PAY", map.get("GROUP_PAY"), "BeanUtil.toMap failed");
+        assertEquals("PAYMENT", map.get("TOPIC_PAYMENT"), "BeanUtil.toMap failed");
     }
 
     @Test

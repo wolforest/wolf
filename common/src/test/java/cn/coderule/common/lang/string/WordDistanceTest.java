@@ -1,9 +1,9 @@
 package cn.coderule.common.lang.string;
 
 import cn.coderule.common.lang.type.string.WordDistance;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.lang.string
@@ -19,7 +19,7 @@ public class WordDistanceTest {
         String second = "mouuse";
         int distance = WordDistance.get(first, second);
 
-        assertEquals("WordDistance calculate fail",1, distance);
+        assertEquals(1, distance, "WordDistance calculate fail");
     }
 
     @Test
@@ -28,7 +28,7 @@ public class WordDistanceTest {
         String second = "add1";
         int distance = WordDistance.get(first, second);
 
-        assertEquals("WordDistance calculate fail",1, distance);
+        assertEquals(1, distance, "WordDistance calculate fail");
     }
 
     @Test
@@ -37,7 +37,7 @@ public class WordDistanceTest {
         String second = "acd";
         int distance = WordDistance.get(first, second);
 
-        assertEquals("WordDistance calculate fail",1, distance);
+        assertEquals(1, distance, "WordDistance calculate fail");
     }
 
     @Test
@@ -46,7 +46,7 @@ public class WordDistanceTest {
         String second = "add";
         int distance = WordDistance.get(first, second);
 
-        assertEquals("WordDistance calculate fail",0, distance);
+        assertEquals(0, distance, "WordDistance calculate fail");
     }
 
     @Test
@@ -55,7 +55,7 @@ public class WordDistanceTest {
         String second = "acc";
         int distance = WordDistance.get(first, second);
 
-        assertEquals("WordDistance calculate fail",2, distance);
+        assertEquals(2, distance, "WordDistance calculate fail");
     }
 
     @Test
@@ -64,7 +64,7 @@ public class WordDistanceTest {
         String second = "ac";
         int distance = WordDistance.get(first, second);
 
-        assertEquals("WordDistance calculate fail",1, distance);
+        assertEquals(1, distance, "WordDistance calculate fail");
     }
 
 }

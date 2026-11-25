@@ -1,11 +1,11 @@
 package cn.coderule.common.util.time;
 
 import cn.coderule.common.util.lang.time.DateUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.util
@@ -331,16 +331,16 @@ public class DateUtilTest {
 
         t1 = LocalDate.of(2021, 10, 27);
         t2 = LocalDate.of(2021, 10, 20);
-        assertTrue("DateUtil.isDaysBefore failed", DateUtil.isDaysBefore(t2, 7, t1));
+        assertTrue(DateUtil.isDaysBefore(t2, 7, t1), "DateUtil.isDaysBefore failed");
 
         t1 = LocalDate.of(2021, 10, 27);
         t2 = LocalDate.of(2021, 10, 19);
-        assertTrue("DateUtil.isDaysBefore failed", DateUtil.isDaysBefore(t2, 7, t1));
+        assertTrue(DateUtil.isDaysBefore(t2, 7, t1), "DateUtil.isDaysBefore failed");
 
 
         t1 = LocalDate.of(2021, 10, 27);
         t2 = LocalDate.of(2021, 10, 21);
-        assertFalse("DateUtil.isDaysBefore failed", DateUtil.isDaysBefore(t2, 7, t1));
+        assertFalse(DateUtil.isDaysBefore(t2, 7, t1), "DateUtil.isDaysBefore failed");
     }
 
     @Test
@@ -353,16 +353,16 @@ public class DateUtilTest {
 
         t1 = LocalDate.of(2021, 10, 27);
         t2 = LocalDate.of(2021, 10, 20);
-        assertTrue("DateUtil.isDaysAfter failed", DateUtil.isDaysAfter(t1, 7, t2));
+        assertTrue(DateUtil.isDaysAfter(t1, 7, t2), "DateUtil.isDaysAfter failed");
 
         t1 = LocalDate.of(2021, 10, 27);
         t2 = LocalDate.of(2021, 10, 19);
-        assertTrue("DateUtil.isDaysAfter failed", DateUtil.isDaysAfter(t1, 7, t2));
+        assertTrue(DateUtil.isDaysAfter(t1, 7, t2), "DateUtil.isDaysAfter failed");
 
 
         t1 = LocalDate.of(2021, 10, 27);
         t2 = LocalDate.of(2021, 10, 21);
-        assertFalse("DateUtil.isDaysAfter failed", DateUtil.isDaysAfter(t1, 7, t2));
+        assertFalse(DateUtil.isDaysAfter(t1, 7, t2), "DateUtil.isDaysAfter failed");
     }
 
     @Test
@@ -372,9 +372,9 @@ public class DateUtilTest {
         t2 = LocalDate.of(2022, 3, 26);
         t3 = LocalDate.of(2022, 3, 27);
 
-        assertFalse("test DateUtil.isWeekDay failed", DateUtil.isWeekend(t1));
-        assertTrue("test DateUtil.isWeekDay failed", DateUtil.isWeekend(t2));
-        assertTrue("test DateUtil.isWeekDay failed", DateUtil.isWeekend(t3));
+        assertFalse(DateUtil.isWeekend(t1), "test DateUtil.isWeekDay failed");
+        assertTrue(DateUtil.isWeekend(t2), "test DateUtil.isWeekDay failed");
+        assertTrue(DateUtil.isWeekend(t3), "test DateUtil.isWeekDay failed");
     }
 
     @Test
@@ -384,9 +384,9 @@ public class DateUtilTest {
         t2 = LocalDateTime.of(2022, 3, 26, 11, 15, 55);
         t3 = LocalDateTime.of(2022, 3, 27, 11, 15, 55);
 
-        assertFalse("test DateUtil.isWeekDay failed", DateUtil.isAtWeekend(t1));
-        assertTrue("test DateUtil.isWeekDay failed", DateUtil.isAtWeekend(t2));
-        assertTrue("test DateUtil.isWeekDay failed", DateUtil.isAtWeekend(t3));
+        assertFalse(DateUtil.isAtWeekend(t1), "test DateUtil.isWeekDay failed");
+        assertTrue(DateUtil.isAtWeekend(t2), "test DateUtil.isWeekDay failed");
+        assertTrue(DateUtil.isAtWeekend(t3), "test DateUtil.isWeekDay failed");
     }
 
     @Test
@@ -399,7 +399,7 @@ public class DateUtilTest {
 
         start = LocalDate.of(2024, 1, 1);
         end = LocalDate.of(2024, 1, 2);
-        assertEquals("test DateUtil.daysBetween failed", 1, DateUtil.daysBetween(start, end));
-        assertEquals("test DateUtil.daysBetween failed", -1, DateUtil.daysBetween(end, start));
+        assertEquals(1, DateUtil.daysBetween(start, end), "test DateUtil.daysBetween failed");
+        assertEquals(-1, DateUtil.daysBetween(end, start), "test DateUtil.daysBetween failed");
     }
 }

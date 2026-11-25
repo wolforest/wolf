@@ -2,7 +2,7 @@ package cn.coderule.common.util.collection;
 
 import cn.coderule.common.util.lang.collection.CollectionUtil;
 import lombok.Data;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,11 +11,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * com.wolf.common.util
@@ -46,8 +46,8 @@ public class CollectionUtilTest {
         }
 
         List<Integer> ids = CollectionUtil.keys(p1, Person::getId);
-        assertEquals("get wrong keys length", 6, ids.size());
-        assertEquals("get wrong keys length", Integer.valueOf(2), ids.get(2));
+        assertEquals(6, ids.size(), "get wrong keys length");
+        assertEquals(Integer.valueOf(2), ids.get(2), "get wrong keys length");
     }
 
     @Test
@@ -70,8 +70,8 @@ public class CollectionUtilTest {
 
         Map<Integer, Person> map = CollectionUtil.map(p1, Person::getId);
 
-        assertEquals("wrong map length", 6, map.size());
-        assertEquals("map setting fail", "s:2", map.get(2).getName());
+        assertEquals(6, map.size(), "wrong map length");
+        assertEquals("s:2", map.get(2).getName(), "map setting fail");
     }
 
     @Test
@@ -93,7 +93,7 @@ public class CollectionUtilTest {
         }
 
         long result = CollectionUtil.sum(p1, Person::getId);
-        assertEquals("sum fail", 3, result);
+        assertEquals(3, result, "sum fail");
     }
 
     @Test
@@ -116,8 +116,8 @@ public class CollectionUtilTest {
         Map<Integer, Long> groupSum = CollectionUtil.groupAndSum(p1, Person::getGender, Person::getId);
         Map<Integer, List<Person>> groups = CollectionUtil.group(p1, Person::getGender);
 
-        assertEquals("group sum fail", 6, groupSum.get(0).longValue());
-        assertEquals("group sum fail", 9, groupSum.get(1).longValue());
+        assertEquals(6, groupSum.get(0).longValue(), "group sum fail");
+        assertEquals(9, groupSum.get(1).longValue(), "group sum fail");
     }
 
     @Test
@@ -139,12 +139,12 @@ public class CollectionUtilTest {
         }
 
         Map<Integer, List<Person>> groups = CollectionUtil.group(p1, Person::getGender);
-        assertEquals("group fail", 3, groups.get(1).size());
-        assertEquals("group fail", 2, groups.get(0).size());
-        assertEquals("group fail", 0, groups.get(0).get(0).getGender());
-        assertEquals("group fail", 0, groups.get(0).get(1).getGender());
-        assertEquals("group fail", 1, groups.get(1).get(0).getGender());
-        assertEquals("group fail", 1, groups.get(1).get(1).getGender());
+        assertEquals(3, groups.get(1).size(), "group fail");
+        assertEquals(2, groups.get(0).size(), "group fail");
+        assertEquals(0, groups.get(0).get(0).getGender(), "group fail");
+        assertEquals(0, groups.get(0).get(1).getGender(), "group fail");
+        assertEquals(1, groups.get(1).get(0).getGender(), "group fail");
+        assertEquals(1, groups.get(1).get(1).getGender(), "group fail");
     }
 
     @Test
@@ -176,12 +176,12 @@ public class CollectionUtilTest {
         }
 
         CollectionUtil.join(p1, Person::getId, Person::setName, nameMap);
-        assertEquals("join map fail", "name_2", p1.get(2).getName());
-        assertNull("join map fail", p1.get(2).getP());
+        assertEquals("name_2", p1.get(2).getName(), "join map fail");
+        assertNull(p1.get(2).getP(), "join map fail");
 
         CollectionUtil.join(p1, Person::getId, Person::setP, p2, Person::getId);
-        assertNotNull("join two collection fail", p1.get(2).getP());
-        assertEquals("join two collection fail", "s2_2", p1.get(2).getP().getName());
+        assertNotNull(p1.get(2).getP(), "join two collection fail");
+        assertEquals("s2_2", p1.get(2).getP().getName(), "join two collection fail");
     }
 
     @Test
@@ -195,8 +195,8 @@ public class CollectionUtilTest {
         }
 
         List<B> bList = CollectionUtil.to(aList, Convert::convert);
-        assertEquals("convert fail", 10, bList.size());
-        assertEquals("convert fail", "name:1", bList.get(1).getName());
+        assertEquals(10, bList.size(), "convert fail");
+        assertEquals("name:1", bList.get(1).getName(), "convert fail");
     }
 
     @Test
@@ -212,8 +212,8 @@ public class CollectionUtilTest {
         Converter converter = new Converter();
         List<B> bList = CollectionUtil.to(aList, converter::convert);
 
-        assertEquals("convert fail", 10, bList.size());
-        assertEquals("convert fail", "name:1", bList.get(1).getName());
+        assertEquals(10, bList.size(), "convert fail");
+        assertEquals("name:1", bList.get(1).getName(), "convert fail");
     }
 
     @Test
@@ -293,7 +293,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3, 4, 5);
         List<Integer> child = List.of(1, 2, 3);
 
-        assertTrue("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertTrue(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -301,7 +301,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3, 4, 5);
         List<Integer> child = List.of(1, 6, 3);
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -309,7 +309,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3);
         List<Integer> child = List.of(1, 6, 3);
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -317,7 +317,7 @@ public class CollectionUtilTest {
         List<Integer> parent = null;
         List<Integer> child = List.of(1, 2, 3);
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -325,7 +325,7 @@ public class CollectionUtilTest {
         List<Integer> parent = null;
         List<Integer> child = null;
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -333,7 +333,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of();
         List<Integer> child = null;
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -341,7 +341,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3);
         List<Integer> child = null;
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -349,7 +349,7 @@ public class CollectionUtilTest {
         List<Integer> parent = null;
         List<Integer> child = List.of();
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -357,7 +357,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of();
         List<Integer> child = List.of();
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -365,7 +365,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3);
         List<Integer> child = List.of();
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
     @Test
@@ -373,7 +373,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of();
         List<Integer> child = List.of(1, 2, 3);
 
-        assertFalse("CollectionUtil.isSub failed", CollectionUtil.isSub(parent, child));
+        assertFalse(CollectionUtil.isSub(parent, child), "CollectionUtil.isSub failed");
     }
 
 
@@ -382,7 +382,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3, 4, 5);
         List<Integer> child = List.of(1, 2, 3);
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -390,7 +390,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3, 4, 5);
         List<Integer> child = List.of(1, 6, 3);
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -398,7 +398,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3);
         List<Integer> child = List.of(1, 6, 3);
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -406,7 +406,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3);
         List<Integer> child = List.of(1, 2, 3);
 
-        assertFalse("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertFalse(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -414,7 +414,7 @@ public class CollectionUtilTest {
         List<Integer> parent = null;
         List<Integer> child = List.of(1, 2, 3);
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -422,7 +422,7 @@ public class CollectionUtilTest {
         List<Integer> parent = null;
         List<Integer> child = null;
 
-        assertFalse("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertFalse(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -430,7 +430,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of();
         List<Integer> child = null;
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -438,7 +438,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3);
         List<Integer> child = null;
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -446,7 +446,7 @@ public class CollectionUtilTest {
         List<Integer> parent = null;
         List<Integer> child = List.of();
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -454,7 +454,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of();
         List<Integer> child = List.of();
 
-        assertFalse("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertFalse(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -462,7 +462,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of(1, 2, 3);
         List<Integer> child = List.of();
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
     @Test
@@ -470,7 +470,7 @@ public class CollectionUtilTest {
         List<Integer> parent = List.of();
         List<Integer> child = List.of(1, 2, 3);
 
-        assertTrue("CollectionUtil.isDifferent failed", CollectionUtil.isDifferent(parent, child));
+        assertTrue(CollectionUtil.isDifferent(parent, child), "CollectionUtil.isDifferent failed");
     }
 
 

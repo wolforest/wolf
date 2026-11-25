@@ -1,12 +1,12 @@
 package cn.coderule.common.util.lang.xml;
 
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import cn.coderule.common.util.lang.string.XMLUtil;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.lang.xml
@@ -28,7 +28,7 @@ public class XMLParseToObjectTest {
                 "<checksum>null</checksum>\n" +
                 "</wallet>";
         XmlSamplePOJO mobiKwikWallet = XMLUtil.toObject(happyXML, XmlSamplePOJO.class);
-        assertNotNull("xml parse to mobiKwikWallet should success", mobiKwikWallet);
+        assertNotNull(mobiKwikWallet, "xml parse to mobiKwikWallet should success");
     }
 
     @Test
@@ -43,7 +43,7 @@ public class XMLParseToObjectTest {
                 "<checksum>null</checksum>\n" +
                 "</wallet>";
         XmlSamplePOJO mobiKwikWallet = XMLUtil.toObject(happyXML, XmlSamplePOJO.class);
-        assertNotNull("xml parse to mobiKwikWallet should success", mobiKwikWallet);
+        assertNotNull(mobiKwikWallet, "xml parse to mobiKwikWallet should success");
         assertEquals(" 22 ", mobiKwikWallet.getStatusCode());
         assertEquals(BigDecimal.valueOf(100.01), mobiKwikWallet.getAmount());
     }
@@ -65,7 +65,7 @@ public class XMLParseToObjectTest {
         } catch (Exception ignored) {
 
         } finally {
-            assertNull("xml parse to mobiKwikWallet should occur error", mobiKwikWallet);
+            assertNull(mobiKwikWallet, "xml parse to mobiKwikWallet should occur error");
         }
 
 
@@ -88,7 +88,7 @@ public class XMLParseToObjectTest {
         } catch (Exception e) {
 
         } finally {
-            assertNull("xml parse to mobiKwikWallet should occur error", mobiKwikWallet);
+            assertNull(mobiKwikWallet, "xml parse to mobiKwikWallet should occur error");
         }
 
     }

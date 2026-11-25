@@ -1,15 +1,16 @@
 package cn.coderule.common.util.lang;
 
 import cn.coderule.common.util.lang.bean.EnumUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import cn.coderule.common.lang.enums.common.GenderEnum;
 import cn.coderule.common.lang.exception.lang.UnsupportedEnumCodeException;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * com.wolf.common.util
@@ -24,25 +25,25 @@ public class EnumUtilTest {
         GenderEnum male = GenderEnum.MALE;
         GenderEnum unknown = EnumUtil.codeOf(1, GenderEnum.class);
 
-        assertTrue("EnumUtil.codeOf() get code fail", male.equals(unknown));
+        assertTrue(male.equals(unknown), "EnumUtil.codeOf() get code fail");
     }
 
     @Test
     public void test_get_name_list_work() {
         List<String> nameList = EnumUtil.getNameList(Color.class);
 
-        assertEquals("EnumUtil.getNameList failed", 2, nameList.size());
-        assertTrue("EnumUtil.getNameList failed", nameList.contains("RED"));
-        assertTrue("EnumUtil.getNameList failed", nameList.contains("BLUE"));
-        assertFalse("EnumUtil.getNameList failed", nameList.contains("WHITE"));
+        assertEquals(2, nameList.size(), "EnumUtil.getNameList failed");
+        assertTrue(nameList.contains("RED"), "EnumUtil.getNameList failed");
+        assertTrue(nameList.contains("BLUE"), "EnumUtil.getNameList failed");
+        assertFalse(nameList.contains("WHITE"), "EnumUtil.getNameList failed");
     }
 
     enum Color {
         RED, BLUE
     }
 
-    @Test(expected = UnsupportedEnumCodeException.class)
+    @Test
     public void test_code_of_throws_exception_work() {
-        GenderEnum unknow = EnumUtil.codeOf(11, GenderEnum.class);
+        assertThrows(UnsupportedEnumCodeException.class, () -> EnumUtil.codeOf(11, GenderEnum.class));
     }
 }

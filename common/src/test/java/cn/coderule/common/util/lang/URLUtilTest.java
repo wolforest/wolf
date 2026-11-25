@@ -1,12 +1,12 @@
 package cn.coderule.common.util.lang;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import cn.coderule.common.util.net.URLUtil;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.util.lang
@@ -22,10 +22,10 @@ public class URLUtilTest {
         Map<String, String> data = URLUtil.parseQuery(url);
 
 
-        assertNotNull("UrlUtil.parseUrl parse fail", data);
-        assertEquals("UrlUtil.parseUrl parse fail", data.size(), 14);
-        assertEquals("UrlUtil.parseUrl parse fail", data.get("merTransNo"), "20200507184602600039899850616235");
-        assertEquals("UrlUtil.parseUrl parse fail", data.get("payerEmail"), "sklds@gmail.com");
+        assertNotNull(data, "UrlUtil.parseUrl parse fail");
+        assertEquals(data.size(), 14, "UrlUtil.parseUrl parse fail");
+        assertEquals(data.get("merTransNo"), "20200507184602600039899850616235", "UrlUtil.parseUrl parse fail");
+        assertEquals(data.get("payerEmail"), "sklds@gmail.com", "UrlUtil.parseUrl parse fail");
 
     }
 }

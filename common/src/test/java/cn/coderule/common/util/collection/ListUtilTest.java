@@ -1,12 +1,12 @@
 package cn.coderule.common.util.collection;
 
 import cn.coderule.common.util.lang.collection.ListUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.util.collection
@@ -42,6 +42,6 @@ public class ListUtilTest {
 
         List<Integer> result = ListUtil.random(list, 2);
 
-        assertEquals("ListUtil.random fail", 2, result.size());
+        assertEquals(2, result.size(), "ListUtil.random fail");
     }
 }

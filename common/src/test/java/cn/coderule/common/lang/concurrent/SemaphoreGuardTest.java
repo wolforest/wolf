@@ -2,9 +2,9 @@ package cn.coderule.common.lang.concurrent;
 
 import cn.coderule.common.lang.concurrent.sync.SemaphoreGuard;
 import java.util.concurrent.Semaphore;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SemaphoreGuardTest {
 
@@ -14,7 +14,7 @@ public class SemaphoreGuardTest {
 
         semaphore.release(5);
 
-        assertEquals("semaphore release failed.", 8, semaphore.availablePermits());
+        assertEquals(8, semaphore.availablePermits(), "semaphore release failed.");
     }
 
     @Test
@@ -22,14 +22,14 @@ public class SemaphoreGuardTest {
         Semaphore semaphore = new Semaphore(3);
         SemaphoreGuard guard = new SemaphoreGuard(semaphore);
 
-        assertTrue("SemaphoreGuard release failed", guard.release());
-        assertFalse("SemaphoreGuard release failed", guard.release());
-        assertFalse("SemaphoreGuard release failed", guard.release());
+        assertTrue(guard.release(), "SemaphoreGuard release failed");
+        assertFalse(guard.release(), "SemaphoreGuard release failed");
+        assertFalse(guard.release(), "SemaphoreGuard release failed");
 
         guard.reset();
-        assertTrue("SemaphoreGuard release failed", guard.release());
-        assertFalse("SemaphoreGuard release failed", guard.release());
-        assertFalse("SemaphoreGuard release failed", guard.release());
+        assertTrue(guard.release(), "SemaphoreGuard release failed");
+        assertFalse(guard.release(), "SemaphoreGuard release failed");
+        assertFalse(guard.release(), "SemaphoreGuard release failed");
     }
 
 }

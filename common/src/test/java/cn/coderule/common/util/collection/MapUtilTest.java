@@ -2,11 +2,11 @@ package cn.coderule.common.util.collection;
 
 import cn.coderule.common.util.lang.collection.MapUtil;
 import lombok.Data;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * com.wolf.common.util.collection
@@ -31,32 +31,32 @@ public class MapUtilTest {
 
     @Test
     public void isEmpty() {
-        assertTrue("null isEmpty failed", MapUtil.isEmpty(null));
-        assertTrue("emptyMap isEmpty failed", MapUtil.isEmpty(MapUtil.empty()));
+        assertTrue(MapUtil.isEmpty(null), "null isEmpty failed");
+        assertTrue(MapUtil.isEmpty(MapUtil.empty()), "emptyMap isEmpty failed");
 
         Map<String, Object> map = new HashMap<>();
-        assertTrue("emptyMap isEmpty failed", MapUtil.isEmpty(map));
+        assertTrue(MapUtil.isEmpty(map), "emptyMap isEmpty failed");
 
         map.put(null, "nullValue");
-        assertTrue("null key isEmpty failed", MapUtil.isEmpty(map, true));
+        assertTrue(MapUtil.isEmpty(map, true), "null key isEmpty failed");
 
         map.put("nullKey", null);
-        assertTrue("null value isEmpty failed", MapUtil.isEmpty(map, true));
+        assertTrue(MapUtil.isEmpty(map, true), "null value isEmpty failed");
 
         map.put("a", "abc");
-        assertFalse("map notEmpty failed", MapUtil.isEmpty(map, true));
+        assertFalse(MapUtil.isEmpty(map, true), "map notEmpty failed");
     }
 
     @Test
     public void containsNull() {
         Map<String, Object> map = new HashMap<>();
-        assertFalse("containsNull failed", MapUtil.containsNull(map));
+        assertFalse(MapUtil.containsNull(map), "containsNull failed");
 
         map.put("nullKey", null);
-        assertTrue("containsNull failed", MapUtil.containsNull(map));
+        assertTrue(MapUtil.containsNull(map), "containsNull failed");
 
         map.put(null, "nullValue");
-        assertTrue("containsNull failed", MapUtil.containsNull(map));
+        assertTrue(MapUtil.containsNull(map), "containsNull failed");
     }
 
     @Test
@@ -64,7 +64,7 @@ public class MapUtilTest {
         Map<String, Object> map = new HashMap<>();
         map.put("nullKey", null);
 
-        assertTrue("containsNullValue failed", map.containsValue(null));
+        assertTrue(map.containsValue(null), "containsNullValue failed");
     }
 
     @Test
@@ -72,7 +72,7 @@ public class MapUtilTest {
         Map<String, Object> map = new HashMap<>();
         map.put(null, "nullValue");
 
-        assertTrue("containsNullKey failed", map.containsKey(null));
+        assertTrue(map.containsKey(null), "containsNullKey failed");
     }
 
     @Test
@@ -86,10 +86,10 @@ public class MapUtilTest {
 
         Map<String, Object> sub = MapUtil.subMap(map, "a", "b", "e");
 
-        assertNotNull("subMap failed", sub);
-        assertEquals("subMap failed", 1, sub.get("a"));
-        assertTrue("subMap failed", sub.containsKey("e"));
-        assertNull("subMap failed", sub.get("e"));
+        assertNotNull(sub, "subMap failed");
+        assertEquals(1, sub.get("a"), "subMap failed");
+        assertTrue(sub.containsKey("e"), "subMap failed");
+        assertNull(sub.get("e"), "subMap failed");
     }
 
     @Test
@@ -103,8 +103,8 @@ public class MapUtilTest {
 
         Map<String, Object> sub = MapUtil.subMap(map);
 
-        assertNotNull("subMap failed", sub);
-        assertTrue("subMap failed", sub.isEmpty());
+        assertNotNull(sub, "subMap failed");
+        assertTrue(sub.isEmpty(), "subMap failed");
     }
 
     @Test
@@ -118,10 +118,10 @@ public class MapUtilTest {
 
         Map<String, Object> sub = MapUtil.subMap(map, true, "a", "b", "e");
 
-        assertNotNull("subMap failed", sub);
-        assertEquals("subMap failed", 1, sub.get("a"));
-        assertFalse("subMap skipNulls failed", sub.containsKey("e"));
-        assertNull("subMap failed", sub.get("e"));
+        assertNotNull(sub, "subMap failed");
+        assertEquals(1, sub.get("a"), "subMap failed");
+        assertFalse(sub.containsKey("e"), "subMap skipNulls failed");
+        assertNull(sub.get("e"), "subMap failed");
     }
 
     @Test
@@ -138,10 +138,10 @@ public class MapUtilTest {
 
         Map<String, Object> sub = MapUtil.subMap(map, keyList);
 
-        assertNotNull("subMap failed", sub);
-        assertEquals("subMap failed", 1, sub.get("a"));
-        assertTrue("subMap failed", sub.containsKey("e"));
-        assertNull("subMap failed", sub.get("e"));
+        assertNotNull(sub, "subMap failed");
+        assertEquals(1, sub.get("a"), "subMap failed");
+        assertTrue(sub.containsKey("e"), "subMap failed");
+        assertNull(sub.get("e"), "subMap failed");
     }
 
     @Test
@@ -159,10 +159,10 @@ public class MapUtilTest {
         Map<String, Object> sub = MapUtil.subMap(map, keyList, true);
 
 
-        assertNotNull("subMap failed", sub);
-        assertEquals("subMap failed", 1, sub.get("a"));
-        assertFalse("subMap skipNulls failed", sub.containsKey("e"));
-        assertNull("subMap failed", sub.get("e"));
+        assertNotNull(sub, "subMap failed");
+        assertEquals(1, sub.get("a"), "subMap failed");
+        assertFalse(sub.containsKey("e"), "subMap skipNulls failed");
+        assertNull(sub.get("e"), "subMap failed");
     }
 
     @Test
@@ -178,9 +178,9 @@ public class MapUtilTest {
         List<String> keyList = Arrays.asList(keys);
 
         MapUtil.remove(map, keyList);
-        assertFalse("MapUtil.remove failed", map.containsKey("a"));
-        assertFalse("MapUtil.remove failed", map.containsKey("b"));
-        assertFalse("MapUtil.remove failed", map.containsKey("e"));
+        assertFalse(map.containsKey("a"), "MapUtil.remove failed");
+        assertFalse(map.containsKey("b"), "MapUtil.remove failed");
+        assertFalse(map.containsKey("e"), "MapUtil.remove failed");
     }
 
     @Test
@@ -193,9 +193,9 @@ public class MapUtilTest {
         map.put("e", null);
 
         MapUtil.remove(map, "a", "b", "e");
-        assertFalse("MapUtil.remove failed", map.containsKey("a"));
-        assertFalse("MapUtil.remove failed", map.containsKey("b"));
-        assertFalse("MapUtil.remove failed", map.containsKey("e"));
+        assertFalse(map.containsKey("a"), "MapUtil.remove failed");
+        assertFalse(map.containsKey("b"), "MapUtil.remove failed");
+        assertFalse(map.containsKey("e"), "MapUtil.remove failed");
     }
 
     @Test
@@ -209,18 +209,18 @@ public class MapUtilTest {
 
         String[] key1 = new String[]{"a", "b", "e"};
         List<String> keyList1 = Arrays.asList(key1);
-        assertFalse("MapUtil.contains failed", MapUtil.contains(map, key1));
-        assertFalse("MapUtil.contains failed", MapUtil.contains(map, keyList1));
+        assertFalse(MapUtil.contains(map, key1), "MapUtil.contains failed");
+        assertFalse(MapUtil.contains(map, keyList1), "MapUtil.contains failed");
 
         String[] key2 = new String[]{"a", "b"};
         List<String> keyList2 = Arrays.asList(key2);
-        assertTrue("MapUtil.contains failed", MapUtil.contains(map, key2));
-        assertTrue("MapUtil.contains failed", MapUtil.contains(map, keyList2));
+        assertTrue(MapUtil.contains(map, key2), "MapUtil.contains failed");
+        assertTrue(MapUtil.contains(map, keyList2), "MapUtil.contains failed");
 
 
-        assertTrue("MapUtil.contains failed", MapUtil.contains(map, "a", "b", "c"));
-        assertFalse("MapUtil.contains failed", MapUtil.contains(map, "a", "b", "f"));
-        assertFalse("MapUtil.contains failed", MapUtil.contains(map, "n", "h", "f"));
+        assertTrue(MapUtil.contains(map, "a", "b", "c"), "MapUtil.contains failed");
+        assertFalse(MapUtil.contains(map, "a", "b", "f"), "MapUtil.contains failed");
+        assertFalse(MapUtil.contains(map, "n", "h", "f"), "MapUtil.contains failed");
     }
 
     @Test
@@ -229,9 +229,9 @@ public class MapUtilTest {
         Map<String, Channel> target = createChannelMap(10);
 
         MapUtil.copy(source, target);
-        assertNotNull("MapUtil.merge fail", target);
-        assertTrue("MapUtil.merge fail", target.get("k:2").isEnable());
-        assertFalse("MapUtil.merge fail", target.get("k:1").isEnable());
+        assertNotNull(target, "MapUtil.merge fail");
+        assertTrue(target.get("k:2").isEnable(), "MapUtil.merge fail");
+        assertFalse(target.get("k:1").isEnable(), "MapUtil.merge fail");
     }
 
     @Test
@@ -241,10 +241,10 @@ public class MapUtilTest {
         Map<String, Object> status = createTree(1, 4, true);
 
         MapUtil.copy(status, base, true);
-        assertFalse("MapUtil.merge failed", (Boolean) base.get("enable"));
+        assertFalse((Boolean) base.get("enable"), "MapUtil.merge failed");
 
         Map<String, Object> children = (Map<String, Object>) base.get("children");
-        assertFalse("MapUtil.merge failed", (Boolean) children.get("enable"));
+        assertFalse((Boolean) children.get("enable"), "MapUtil.merge failed");
     }
 
 
@@ -275,11 +275,11 @@ public class MapUtilTest {
         Map<String, Channel> target = createChannelMap(10);
 
         MapUtil.copy(source, target);
-        assertNotNull("MapUtil.merge fail", target);
-        assertNull("MapUtil.merge fail", source.get("k:9"));
-        assertNull("MapUtil.merge fail", target.get("k:9"));
-        assertTrue("MapUtil.merge fail", target.get("k:2").isEnable());
-        assertFalse("MapUtil.merge fail", target.get("k:1").isEnable());
+        assertNotNull(target, "MapUtil.merge fail");
+        assertNull(source.get("k:9"), "MapUtil.merge fail");
+        assertNull(target.get("k:9"), "MapUtil.merge fail");
+        assertTrue(target.get("k:2").isEnable(), "MapUtil.merge fail");
+        assertFalse(target.get("k:1").isEnable(), "MapUtil.merge fail");
     }
 
     @Test
@@ -290,12 +290,12 @@ public class MapUtilTest {
         Map<String, Channel> target = createChannelMap(10);
 
         MapUtil.copy(source, target, true);
-        assertNotNull("MapUtil.merge fail", target);
-        assertNull("MapUtil.merge fail", source.get("k:9"));
-        assertNotNull("MapUtil.merge fail", target.get("k:9"));
-        assertTrue("MapUtil.merge fail", target.get("k:2").isEnable());
-        assertFalse("MapUtil.merge fail", target.get("k:1").isEnable());
-        assertTrue("MapUtil.merge fail", target.get("k:9").isEnable());
+        assertNotNull(target, "MapUtil.merge fail");
+        assertNull(source.get("k:9"), "MapUtil.merge fail");
+        assertNotNull(target.get("k:9"), "MapUtil.merge fail");
+        assertTrue(target.get("k:2").isEnable(), "MapUtil.merge fail");
+        assertFalse(target.get("k:1").isEnable(), "MapUtil.merge fail");
+        assertTrue(target.get("k:9").isEnable(), "MapUtil.merge fail");
     }
 
     private Map<String, Channel> createChannelMap(int num) {

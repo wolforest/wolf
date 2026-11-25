@@ -1,9 +1,9 @@
 package cn.coderule.common.lang.type.map;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ObjectMapTest {
 
@@ -14,9 +14,9 @@ public class ObjectMapTest {
                 .kv("l1-2", "b")
                 .kv("l1-3", "c");
 
-        assertEquals("ObjectMap build fail", "a", map.getString("l1-1"));
-        assertEquals("ObjectMap build fail", "b", map.getString("l1-2"));
-        assertEquals("ObjectMap build fail", "c", map.getString("l1-3"));
+        assertEquals("a", map.getString("l1-1"), "ObjectMap build fail");
+        assertEquals("b", map.getString("l1-2"), "ObjectMap build fail");
+        assertEquals("c", map.getString("l1-3"), "ObjectMap build fail");
     }
 
     @Test
@@ -24,10 +24,10 @@ public class ObjectMapTest {
         ObjectMap map = ObjectMap.newInstance();
         map.put("l1-1", "a");
 
-        assertEquals("put fail", "a", map.getString("l1-1"));
+        assertEquals("a", map.getString("l1-1"), "put fail");
 
         map.put("l1-1", "b");
-        assertEquals("put override fail", "b", map.getString("l1-1"));
+        assertEquals("b", map.getString("l1-1"), "put override fail");
     }
 
     @Test

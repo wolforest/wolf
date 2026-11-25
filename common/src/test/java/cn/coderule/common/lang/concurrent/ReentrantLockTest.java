@@ -2,7 +2,7 @@ package cn.coderule.common.lang.concurrent;
 
 import cn.coderule.common.lang.concurrent.lock.ReentrantLock;
 import java.util.concurrent.locks.Lock;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class ReentrantLockTest {
 

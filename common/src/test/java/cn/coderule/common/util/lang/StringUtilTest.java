@@ -1,18 +1,18 @@
 package cn.coderule.common.util.lang;
 
 import cn.coderule.common.util.lang.string.StringUtil;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * com.wolf.common.util
@@ -24,10 +24,10 @@ public class StringUtilTest {
 
     @Test
     public void hasValue() {
-        assertTrue("space hasValue", StringUtil.notEmpty(" "));
-        assertFalse("null do not hasValue", StringUtil.notEmpty(null));
-        assertFalse("empty string do not hasValue", StringUtil.notEmpty(""));
-        assertTrue("common string hasValue", StringUtil.notEmpty("abc"));
+        assertTrue(StringUtil.notEmpty(" "), "space hasValue");
+        assertFalse(StringUtil.notEmpty(null), "null do not hasValue");
+        assertFalse(StringUtil.notEmpty(""), "empty string do not hasValue");
+        assertTrue(StringUtil.notEmpty("abc"), "common string hasValue");
     }
 
     @Test
@@ -35,10 +35,10 @@ public class StringUtilTest {
         String s;
 
         s = StringUtil.joinWith(" ", "f", "", "t");
-        assertEquals("StringUtil.join fail", s, "f  t");
+        assertEquals(s, "f  t", "StringUtil.join fail");
 
         s = StringUtil.joinSkipBlank(" ", "f", "", "t");
-        assertEquals("StringUtil.join fail", s, "f t");
+        assertEquals(s, "f t", "StringUtil.join fail");
     }
 
     @Test
@@ -61,7 +61,7 @@ public class StringUtilTest {
         a = StringUtil.ltrim(a, prefix);
         String expected = "def";
 
-        assertEquals("StringUtil.ltrim fail", expected, a);
+        assertEquals(expected, a, "StringUtil.ltrim fail");
     }
 
     @Test
@@ -71,7 +71,7 @@ public class StringUtilTest {
         String expected = "abc";
 
         a = StringUtil.rtrim(a, suffix);
-        assertEquals("StringUtil.rtrim fail", expected, a);
+        assertEquals(expected, a, "StringUtil.rtrim fail");
 
     }
 
@@ -82,7 +82,7 @@ public class StringUtilTest {
         String expected = "abcdefghijk";
 
         a = StringUtil.rtrim(a, suffix);
-        assertEquals("StringUtil.rtrim fail", expected, a);
+        assertEquals(expected, a, "StringUtil.rtrim fail");
 
     }
 
@@ -91,11 +91,11 @@ public class StringUtilTest {
         String s = "trade_order_name";
         String expect = "tradeOrderName";
 
-        assertEquals("StringUtil.lowerCamel fail", expect, StringUtil.lowerCamel(s));
-        assertEquals("StringUtil.lowerCamel fail", expect, StringUtil.camel(s));
+        assertEquals(expect, StringUtil.lowerCamel(s), "StringUtil.lowerCamel fail");
+        assertEquals(expect, StringUtil.camel(s), "StringUtil.lowerCamel fail");
 
-        assertEquals("StringUtil.lowerUnderscore fail", s, StringUtil.lowerUnderscore(expect));
-        assertEquals("StringUtil.lowerUnderscore fail", s, StringUtil.lowerUnderscore(expect));
+        assertEquals(s, StringUtil.lowerUnderscore(expect), "StringUtil.lowerUnderscore fail");
+        assertEquals(s, StringUtil.lowerUnderscore(expect), "StringUtil.lowerUnderscore fail");
     }
 
     @Test
@@ -104,14 +104,14 @@ public class StringUtilTest {
         String s2 = "trade_order_name";
         String expect = "tradeOrderName";
 
-        assertEquals("StringUtil.lowerCamel fail", expect, StringUtil.lowerCamel(s1, "."));
-        assertEquals("StringUtil.lowerCamel fail", expect, StringUtil.camel(s1, "."));
+        assertEquals(expect, StringUtil.lowerCamel(s1, "."), "StringUtil.lowerCamel fail");
+        assertEquals(expect, StringUtil.camel(s1, "."), "StringUtil.lowerCamel fail");
 
-        assertEquals("StringUtil.lowerUnderscore fail", s2, StringUtil.lowerUnderscore(expect));
-        assertEquals("StringUtil.lowerUnderscore fail", s2, StringUtil.lowerUnderscore(expect));
+        assertEquals(s2, StringUtil.lowerUnderscore(expect), "StringUtil.lowerUnderscore fail");
+        assertEquals(s2, StringUtil.lowerUnderscore(expect), "StringUtil.lowerUnderscore fail");
 
-        assertEquals("StringUtil.lowerUnderscore fail", s1, StringUtil.camelTo(expect, "."));
-        assertEquals("StringUtil.lowerUnderscore fail", s1, StringUtil.camelTo(expect, "."));
+        assertEquals(s1, StringUtil.camelTo(expect, "."), "StringUtil.lowerUnderscore fail");
+        assertEquals(s1, StringUtil.camelTo(expect, "."), "StringUtil.lowerUnderscore fail");
     }
 
     @Test
@@ -120,59 +120,59 @@ public class StringUtilTest {
         String s2 = "trade_order_name";
         String expect = "tradeOrderName";
 
-        assertEquals("StringUtil.lowerCamel fail", expect, StringUtil.lowerCamel(s1, "-"));
-        assertEquals("StringUtil.lowerCamel fail", expect, StringUtil.camel(s1, "-"));
+        assertEquals(expect, StringUtil.lowerCamel(s1, "-"), "StringUtil.lowerCamel fail");
+        assertEquals(expect, StringUtil.camel(s1, "-"), "StringUtil.lowerCamel fail");
 
-        assertEquals("StringUtil.lowerUnderscore fail", s2, StringUtil.lowerUnderscore(expect));
-        assertEquals("StringUtil.lowerUnderscore fail", s2, StringUtil.lowerUnderscore(expect));
+        assertEquals(s2, StringUtil.lowerUnderscore(expect), "StringUtil.lowerUnderscore fail");
+        assertEquals(s2, StringUtil.lowerUnderscore(expect), "StringUtil.lowerUnderscore fail");
 
 
-        assertEquals("StringUtil.lowerUnderscore fail", s1, StringUtil.camelTo(expect, "-"));
-        assertEquals("StringUtil.lowerUnderscore fail", s1, StringUtil.camelTo(expect, "-"));
+        assertEquals(s1, StringUtil.camelTo(expect, "-"), "StringUtil.lowerUnderscore fail");
+        assertEquals(s1, StringUtil.camelTo(expect, "-"), "StringUtil.lowerUnderscore fail");
     }
 
     @Test
     public void capitalize() {
-        assertNull("capitalize fail", StringUtil.capitalize(null));
-        assertEquals("capitalize fail", "", StringUtil.capitalize(""));
-        assertEquals("capitalize fail", " ", StringUtil.capitalize(" "));
+        assertNull(StringUtil.capitalize(null), "capitalize fail");
+        assertEquals("", StringUtil.capitalize(""), "capitalize fail");
+        assertEquals(" ", StringUtil.capitalize(" "), "capitalize fail");
 
-        assertEquals("capitalize fail", "Trade", StringUtil.capitalize("trade"));
-        assertEquals("capitalize fail", "Trade", StringUtil.capitalize("Trade"));
-        assertEquals("capitalize fail", "TRADE", StringUtil.capitalize("tRADE"));
+        assertEquals("Trade", StringUtil.capitalize("trade"), "capitalize fail");
+        assertEquals("Trade", StringUtil.capitalize("Trade"), "capitalize fail");
+        assertEquals("TRADE", StringUtil.capitalize("tRADE"), "capitalize fail");
     }
 
     @Test
     public void uncapitalize() {
-        assertNull("capitalize fail", StringUtil.uncapitalize(null));
-        assertEquals("capitalize fail", "", StringUtil.uncapitalize(""));
-        assertEquals("capitalize fail", " ", StringUtil.uncapitalize(" "));
+        assertNull(StringUtil.uncapitalize(null), "capitalize fail");
+        assertEquals("", StringUtil.uncapitalize(""), "capitalize fail");
+        assertEquals(" ", StringUtil.uncapitalize(" "), "capitalize fail");
 
-        assertEquals("capitalize fail", "trade", StringUtil.uncapitalize("trade"));
-        assertEquals("capitalize fail", "trade", StringUtil.uncapitalize("Trade"));
-        assertEquals("capitalize fail", "tRADE", StringUtil.uncapitalize("TRADE"));
+        assertEquals("trade", StringUtil.uncapitalize("trade"), "capitalize fail");
+        assertEquals("trade", StringUtil.uncapitalize("Trade"), "capitalize fail");
+        assertEquals("tRADE", StringUtil.uncapitalize("TRADE"), "capitalize fail");
     }
 
     @Test
     public void ucWords() {
-        assertNull("capitalize fail", StringUtil.ucWords(null));
-        assertEquals("capitalize fail", "", StringUtil.ucWords(""));
-        assertEquals("capitalize fail", " ", StringUtil.ucWords(" "));
+        assertNull(StringUtil.ucWords(null), "capitalize fail");
+        assertEquals("", StringUtil.ucWords(""), "capitalize fail");
+        assertEquals(" ", StringUtil.ucWords(" "), "capitalize fail");
 
-        assertEquals("capitalize fail", "Trade.Order.Line", StringUtil.ucWords("trade.order.line", "."));
-        assertEquals("capitalize fail", "Trade.Order.Line", StringUtil.ucWords("Trade.Order.Line", "."));
-        assertEquals("capitalize fail", "TRAde.Order.Line", StringUtil.ucWords("TRAde.Order.Line", "."));
+        assertEquals("Trade.Order.Line", StringUtil.ucWords("trade.order.line", "."), "capitalize fail");
+        assertEquals("Trade.Order.Line", StringUtil.ucWords("Trade.Order.Line", "."), "capitalize fail");
+        assertEquals("TRAde.Order.Line", StringUtil.ucWords("TRAde.Order.Line", "."), "capitalize fail");
     }
 
     @Test
     public void lcWords() {
-        assertNull("capitalize fail", StringUtil.lcWords(null));
-        assertEquals("capitalize fail", "", StringUtil.lcWords(""));
-        assertEquals("capitalize fail", " ", StringUtil.lcWords(" "));
+        assertNull(StringUtil.lcWords(null), "capitalize fail");
+        assertEquals("", StringUtil.lcWords(""), "capitalize fail");
+        assertEquals(" ", StringUtil.lcWords(" "), "capitalize fail");
 
-        assertEquals("capitalize fail", "trade.order.line", StringUtil.lcWords("Trade.Order.Line", "."));
-        assertEquals("capitalize fail", "trade.order.line", StringUtil.lcWords("Trade.Order.Line", "."));
-        assertEquals("capitalize fail", "tRAde.order.line", StringUtil.lcWords("TRAde.Order.Line", "."));
+        assertEquals("trade.order.line", StringUtil.lcWords("Trade.Order.Line", "."), "capitalize fail");
+        assertEquals("trade.order.line", StringUtil.lcWords("Trade.Order.Line", "."), "capitalize fail");
+        assertEquals("tRAde.order.line", StringUtil.lcWords("TRAde.Order.Line", "."), "capitalize fail");
     }
 
     @Test
@@ -181,25 +181,25 @@ public class StringUtilTest {
 
         s = "hello";
         String[] sArr1 = StringUtil.split(s, "-");
-        assertEquals("StringUtil.split fail", 1, sArr1.length);
-        assertEquals("StringUtil.split fail", s, sArr1[0]);
+        assertEquals(1, sArr1.length, "StringUtil.split fail");
+        assertEquals(s, sArr1[0], "StringUtil.split fail");
 
         s = "hello-world";
         String[] sArr2 = StringUtil.split(s, "-");
-        assertEquals("StringUtil.split fail", 2, sArr2.length);
-        assertEquals("StringUtil.split fail", "hello", sArr2[0]);
-        assertEquals("StringUtil.split fail", "world", sArr2[1]);
+        assertEquals(2, sArr2.length, "StringUtil.split fail");
+        assertEquals("hello", sArr2[0], "StringUtil.split fail");
+        assertEquals("world", sArr2[1], "StringUtil.split fail");
 
         s = "h/e/l/l/o";
         String[] sArr3 = s.split("/", 2);
-        assertEquals("StringUtil.split fail", 2, sArr3.length);
-        assertEquals("StringUtil.split fail", "h", sArr3[0]);
-        assertEquals("StringUtil.split fail", "e/l/l/o", sArr3[1]);
+        assertEquals(2, sArr3.length, "StringUtil.split fail");
+        assertEquals("h", sArr3[0], "StringUtil.split fail");
+        assertEquals("e/l/l/o", sArr3[1], "StringUtil.split fail");
 
         s = "hello";
         String[] sArr4 = s.split("/", 2);
-        assertEquals("StringUtil.split fail", 1, sArr4.length);
-        assertEquals("StringUtil.split fail", "hello", sArr4[0]);
+        assertEquals(1, sArr4.length, "StringUtil.split fail");
+        assertEquals("hello", sArr4[0], "StringUtil.split fail");
     }
 
     @Test
@@ -208,7 +208,7 @@ public class StringUtilTest {
         String s = "I love dlocal DLocal dokypay Dokypay";
         String expected = "I love";
 
-        assertEquals("StringUtil.remove fail", expected, StringUtil.remove(s, subs));
+        assertEquals(expected, StringUtil.remove(s, subs), "StringUtil.remove fail");
     }
 
     @Test
@@ -217,7 +217,7 @@ public class StringUtilTest {
         String s = "I love dlocal DLocal dokypay Dokypay";
         String expected = "I love    ";
 
-        assertEquals("StringUtil.remove fail", expected, StringUtil.remove(s, subs));
+        assertEquals(expected, StringUtil.remove(s, subs), "StringUtil.remove fail");
     }
 
     @Test
@@ -229,7 +229,7 @@ public class StringUtilTest {
 
         String s = "I love dlocal DLocal dokypay Dokypay";
         String expected = "I love dl dl dk dk";
-        assertEquals("StringUtil.replace fail", expected, StringUtil.replace(s, map));
+        assertEquals(expected, StringUtil.replace(s, map), "StringUtil.replace fail");
     }
 
     @Test
@@ -239,22 +239,22 @@ public class StringUtilTest {
         s = "abc";
         sep = ":";
         expected = "";
-        assertEquals("StringUtil.substringTo fail", expected, StringUtil.substringLastTo(s, sep));
+        assertEquals(expected, StringUtil.substringLastTo(s, sep), "StringUtil.substringTo fail");
 
         s = "abc";
         sep = ":";
         expected = "abc";
-        assertEquals("StringUtil.substringTo fail", expected, StringUtil.substringLastTo(s, sep, true));
+        assertEquals(expected, StringUtil.substringLastTo(s, sep, true), "StringUtil.substringTo fail");
 
         s = "abc:d";
         sep = ":";
         expected = "abc";
-        assertEquals("StringUtil.substringTo fail", expected, StringUtil.substringLastTo(s, sep));
+        assertEquals(expected, StringUtil.substringLastTo(s, sep), "StringUtil.substringTo fail");
 
         s = "abc:d:e";
         sep = ":";
         expected = "abc:d";
-        assertEquals("StringUtil.substringTo fail", expected, StringUtil.substringLastTo(s, sep));
+        assertEquals(expected, StringUtil.substringLastTo(s, sep), "StringUtil.substringTo fail");
     }
 
     @Test
@@ -264,22 +264,22 @@ public class StringUtilTest {
         s = "abc";
         sep = ":";
         expected = "";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringLastFrom(s, sep));
+        assertEquals(expected, StringUtil.substringLastFrom(s, sep), "StringUtil.substringFrom fail");
 
         s = "abc";
         sep = ":";
         expected = "abc";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringLastFrom(s, sep, true));
+        assertEquals(expected, StringUtil.substringLastFrom(s, sep, true), "StringUtil.substringFrom fail");
 
         s = "abc:d";
         sep = ":";
         expected = "d";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringLastFrom(s, sep));
+        assertEquals(expected, StringUtil.substringLastFrom(s, sep), "StringUtil.substringFrom fail");
 
         s = "abc:d:e";
         sep = ":";
         expected = "e";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringLastFrom(s, sep));
+        assertEquals(expected, StringUtil.substringLastFrom(s, sep), "StringUtil.substringFrom fail");
     }
 
     @Test
@@ -289,17 +289,17 @@ public class StringUtilTest {
         s = "abc";
         sep = ":";
         expected = "";
-        assertEquals("StringUtil.substringTo fail", expected, StringUtil.substringTo(s, sep));
+        assertEquals(expected, StringUtil.substringTo(s, sep), "StringUtil.substringTo fail");
 
         s = "abc";
         sep = ":";
         expected = "abc";
-        assertEquals("StringUtil.substringTo fail", expected, StringUtil.substringTo(s, sep, true));
+        assertEquals(expected, StringUtil.substringTo(s, sep, true), "StringUtil.substringTo fail");
 
         s = "abc:d";
         sep = ":";
         expected = "abc";
-        assertEquals("StringUtil.substringTo fail", expected, StringUtil.substringTo(s, sep));
+        assertEquals(expected, StringUtil.substringTo(s, sep), "StringUtil.substringTo fail");
     }
 
     @Test
@@ -309,23 +309,23 @@ public class StringUtilTest {
         s = "abc";
         sep = ":";
         expected = "";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringFrom(s, sep));
+        assertEquals(expected, StringUtil.substringFrom(s, sep), "StringUtil.substringFrom fail");
 
         s = "abc";
         sep = ":";
         expected = "abc";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringFrom(s, sep, true));
+        assertEquals(expected, StringUtil.substringFrom(s, sep, true), "StringUtil.substringFrom fail");
 
         s = "abc:d";
         sep = ":";
         expected = "d";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringFrom(s, sep));
+        assertEquals(expected, StringUtil.substringFrom(s, sep), "StringUtil.substringFrom fail");
 
         //分隔符为2个字符的场景
         s="jdbc:mysql://127.0.0.1:3306";
         sep="//";
         expected = "127.0.0.1:3306";
-        assertEquals("StringUtil.substringFrom fail", expected, StringUtil.substringFrom(s, sep));
+        assertEquals(expected, StringUtil.substringFrom(s, sep), "StringUtil.substringFrom fail");
 
     }
 
@@ -336,16 +336,16 @@ public class StringUtilTest {
         String expected = "Failed to invoke the method";
 
         String r2 = StringUtil.substringToBlank(s, 20);
-        assertNotEquals("StringUtil.substringToBlank fail", expected, r2);
+        assertNotEquals(expected, r2, "StringUtil.substringToBlank fail");
 
         String r1 = StringUtil.substringToBlank(s, 22);
-        assertEquals("StringUtil.substringToBlank fail", expected, r1);
+        assertEquals(expected, r1, "StringUtil.substringToBlank fail");
 
         String r3 = StringUtil.substringToBlank(s, 21);
-        assertEquals("StringUtil.substringToBlank fail", expected, r3);
+        assertEquals(expected, r3, "StringUtil.substringToBlank fail");
 
         String r4 = StringUtil.substringToBlank(s, 23);
-        assertEquals("StringUtil.substringToBlank fail", expected, r4);
+        assertEquals(expected, r4, "StringUtil.substringToBlank fail");
     }
 
     @Test
@@ -353,8 +353,8 @@ public class StringUtilTest {
         String s1 = " [";
         String s2 = " {";
 
-        assertTrue("startWith fail", StringUtil.startsWith(s1, "[", true));
-        assertFalse("startWith fail", StringUtil.startsWith(s2, "[", true));
+        assertTrue(StringUtil.startsWith(s1, "[", true), "startWith fail");
+        assertFalse(StringUtil.startsWith(s2, "[", true), "startWith fail");
     }
 
     @Test
@@ -362,8 +362,8 @@ public class StringUtilTest {
         String s1 = "a_no ";
         String s2 = "b_id";
 
-        assertTrue("endsWith fail", StringUtil.endsWith(s1, "_no", true));
-        assertTrue("endsWith fail", StringUtil.endsWith(s2, "_id", true));
+        assertTrue(StringUtil.endsWith(s1, "_no", true), "endsWith fail");
+        assertTrue(StringUtil.endsWith(s2, "_id", true), "endsWith fail");
     }
 
 
@@ -397,16 +397,16 @@ public class StringUtilTest {
 
     @Test
     public void isZero() {
-        assertFalse("StringUtil.isZero failed", StringUtil.isZero(null));
-        assertFalse("StringUtil.isZero failed", StringUtil.isZero(""));
+        assertFalse(StringUtil.isZero(null), "StringUtil.isZero failed");
+        assertFalse(StringUtil.isZero(""), "StringUtil.isZero failed");
 
-        assertTrue("StringUtil.isZero failed", StringUtil.isZero("0"));
-        assertTrue("StringUtil.isZero failed", StringUtil.isZero("000"));
-        assertTrue("StringUtil.isZero failed", StringUtil.isZero("00000000"));
+        assertTrue(StringUtil.isZero("0"), "StringUtil.isZero failed");
+        assertTrue(StringUtil.isZero("000"), "StringUtil.isZero failed");
+        assertTrue(StringUtil.isZero("00000000"), "StringUtil.isZero failed");
 
-        assertFalse("StringUtil.isZero failed", StringUtil.isZero("0101"));
-        assertFalse("StringUtil.isZero failed", StringUtil.isZero("101"));
-        assertFalse("StringUtil.isZero failed", StringUtil.isZero("abc"));
+        assertFalse(StringUtil.isZero("0101"), "StringUtil.isZero failed");
+        assertFalse(StringUtil.isZero("101"), "StringUtil.isZero failed");
+        assertFalse(StringUtil.isZero("abc"), "StringUtil.isZero failed");
     }
 
     @Test
@@ -487,14 +487,14 @@ public class StringUtilTest {
 
     @Test
     public void contains() {
-        assertFalse("StringUtil.contains failed", StringUtil.contains(null, "a"));
-        assertFalse("StringUtil.contains failed", StringUtil.contains("", "a"));
-        assertFalse("StringUtil.contains failed", StringUtil.contains(" ", "a"));
+        assertFalse(StringUtil.contains(null, "a"), "StringUtil.contains failed");
+        assertFalse(StringUtil.contains("", "a"), "StringUtil.contains failed");
+        assertFalse(StringUtil.contains(" ", "a"), "StringUtil.contains failed");
 
-        assertTrue("StringUtil.contains failed", StringUtil.contains("abc", "a"));
-        assertTrue("StringUtil.contains failed", StringUtil.contains("cabc", "ab"));
+        assertTrue(StringUtil.contains("abc", "a"), "StringUtil.contains failed");
+        assertTrue(StringUtil.contains("cabc", "ab"), "StringUtil.contains failed");
 
-        assertFalse("StringUtil.contains failed", StringUtil.contains("cabc", "ac"));
+        assertFalse(StringUtil.contains("cabc", "ac"), "StringUtil.contains failed");
     }
 
     @Test

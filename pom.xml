@@ -198,6 +198,7 @@
                 <configuration>
                     <doclint>none</doclint>
                     <failOnError>false</failOnError>
+                    <additionalJOption>--enable-preview</additionalJOption>
                 </configuration>
                 <executions>
                     <execution>

@@ -17,11 +17,11 @@
     <dependencies>
         <dependency>
             <groupId>cn.coderule</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>wolf-common</artifactId>
         </dependency>
         <dependency>
             <groupId>cn.coderule</groupId>
-            <artifactId>framework</artifactId>
+            <artifactId>wolf-framework</artifactId>
         </dependency>
 
     </dependencies>

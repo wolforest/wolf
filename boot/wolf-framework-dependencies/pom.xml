@@ -25,9 +25,9 @@
         <wolf-id.version>${revision}</wolf-id.version>
         <wolf-framework.version>${revision}</wolf-framework.version>
 
-        <wolf-dbclient.version>${revision}</wolf-dbclient.version>
-        <wolf-mqclient.version>${revision}</wolf-mqclient.version>
-        <wolf-httpclient.version>${revision}</wolf-httpclient.version>
+        <wolf-db-client.version>${revision}</wolf-db-client.version>
+        <wolf-mq-client.version>${revision}</wolf-mq-client.version>
+        <wolf-http-client.version>${revision}</wolf-http-client.version>
         <wolf-dts.version>${revision}</wolf-dts.version>
     </properties>
 
@@ -42,12 +42,12 @@
 
             <dependency>
                 <groupId>cn.coderule</groupId>
-                <artifactId>common</artifactId>
+                <artifactId>wolf-common</artifactId>
                 <version>${wolf-common.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.coderule</groupId>
-                <artifactId>framework</artifactId>
+                <artifactId>wolf-framework</artifactId>
                 <version>${wolf-framework.version}</version>
             </dependency>
             <dependency>
@@ -63,18 +63,18 @@
 
             <dependency>
                 <groupId>cn.coderule</groupId>
-                <artifactId>mqclient</artifactId>
-                <version>${wolf-mqclient.version}</version>
+                <artifactId>wolf-mq-client</artifactId>
+                <version>${wolf-mq-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.coderule</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>${wolf-httpclient.version}</version>
+                <artifactId>wolf-http-client</artifactId>
+                <version>${wolf-http-client.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.coderule</groupId>
-                <artifactId>dbclient</artifactId>
-                <version>${wolf-dbclient.version}</version>
+                <artifactId>wolf-db-client</artifactId>
+                <version>${wolf-db-client.version}</version>
             </dependency>
 
 

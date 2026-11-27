@@ -27,7 +27,7 @@
 
         <dependency>
             <groupId>cn.coderule</groupId>
-            <artifactId>httpclient</artifactId>
+            <artifactId>wolf-http-client</artifactId>
         </dependency>
 
         <dependency>

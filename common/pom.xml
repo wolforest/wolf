@@ -8,8 +8,8 @@
         <relativePath>../boot/pom.xml</relativePath>
     </parent>
 
-    <artifactId>common</artifactId>
-    <name>common</name>
+    <artifactId>wolf-common</artifactId>
+    <name>wolf-common</name>
     <description>common</description>
 
     <properties>

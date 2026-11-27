@@ -22,7 +22,7 @@
 
         <dependency>
             <groupId>cn.coderule</groupId>
-            <artifactId>wolfno</artifactId>
+            <artifactId>wolf-id</artifactId>
         </dependency>
 
         <dependency>

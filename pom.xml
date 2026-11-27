@@ -59,7 +59,7 @@
         <module>principle</module>
         <module>framework</module>
         <module>mqclient</module>
-        <module>wolfno</module>
+        <module>wolfid</module>
         <module>dbclient</module>
         <module>httpclient</module>
         <module>starter/wolf-boot-starter</module>

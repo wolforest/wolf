@@ -22,7 +22,7 @@
         <wolf-boot.version>${revision}</wolf-boot.version>
         <wolf-framework-boot.version>${revision}</wolf-framework-boot.version>
         <wolf-common.version>${revision}</wolf-common.version>
-        <wolf-wolfno.version>${revision}</wolf-wolfno.version>
+        <wolf-id.version>${revision}</wolf-id.version>
         <wolf-framework.version>${revision}</wolf-framework.version>
 
         <wolf-dbclient.version>${revision}</wolf-dbclient.version>
@@ -52,8 +52,8 @@
             </dependency>
             <dependency>
                 <groupId>cn.coderule</groupId>
-                <artifactId>wolfno</artifactId>
-                <version>${wolf-wolfno.version}</version>
+                <artifactId>wolf-id</artifactId>
+                <version>${wolf-id.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.coderule</groupId>

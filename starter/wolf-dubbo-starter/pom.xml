@@ -12,6 +12,7 @@
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-dubbo-starter</artifactId>
+    <name>wolf-dubbo-starter</name>
     <version>${revision}</version>
     <packaging>jar</packaging>
 

@@ -12,6 +12,7 @@
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-cache-starter</artifactId>
+    <name>wolf-cache-starter</name>
     <version>${revision}</version>
     <packaging>jar</packaging>
 

@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>wolf-maven-dependencies</artifactId>
+    <name>wolf-maven-dependencies</name>
     <packaging>pom</packaging>
     <version>${revision}</version>
 

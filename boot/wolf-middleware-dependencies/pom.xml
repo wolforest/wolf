@@ -13,6 +13,7 @@
     </parent>
 
     <artifactId>wolf-middleware-dependencies</artifactId>
+    <name>wolf-middleware-dependencies</name>
     <packaging>pom</packaging>
 
     <properties>

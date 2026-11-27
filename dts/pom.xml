@@ -11,7 +11,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>dts</artifactId>
-
+    <name>dts</name>
     <properties>
     </properties>
 

@@ -12,6 +12,7 @@
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-mq-starter</artifactId>
+    <name>wolf-mq-starter</name>
     <version>${revision}</version>
     <packaging>jar</packaging>
 

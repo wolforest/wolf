@@ -13,6 +13,7 @@
     </parent>
 
     <artifactId>wolf-sdk-dependencies</artifactId>
+    <name>wolf-sdk-dependencies</name>
     <packaging>pom</packaging>
     <version>${revision}</version>
 

@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>ddd</artifactId>
+    <name>ddd</name>
     <version>${revision}</version>
 
     <properties>

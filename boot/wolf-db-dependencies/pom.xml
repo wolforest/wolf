@@ -13,6 +13,7 @@
     </parent>
 
     <artifactId>wolf-db-dependencies</artifactId>
+    <name>wolf-db-dependencies</name>
     <packaging>pom</packaging>
     <version>${revision}</version>
 

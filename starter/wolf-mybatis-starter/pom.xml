@@ -12,6 +12,7 @@
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-mybatis-starter</artifactId>
+    <name>wolf-mybatis-starter</name>
     <version>${revision}</version>
     <packaging>jar</packaging>
 

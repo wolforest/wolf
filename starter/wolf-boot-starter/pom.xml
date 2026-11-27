@@ -12,6 +12,7 @@
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-boot-starter</artifactId>
+    <name>wolf-boot-starter</name>
     <version>${revision}</version>
 
     <dependencies>

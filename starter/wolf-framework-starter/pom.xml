@@ -12,6 +12,7 @@
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-framework-starter</artifactId>
+    <name>wolf-framework-starter</name>
     <version>${revision}</version>
 
     <dependencies>

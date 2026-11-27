@@ -13,6 +13,7 @@
     </parent>
 
     <artifactId>wolf-dubbo-dependencies</artifactId>
+    <name>wolf-dubbo-dependencies</name>
     <packaging>pom</packaging>
     <version>${revision}</version>
 

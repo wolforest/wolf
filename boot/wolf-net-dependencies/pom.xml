@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>wolf-net-dependencies</artifactId>
+    <name>wolf-net-dependencies</name>
     <packaging>pom</packaging>
     <version>${revision}</version>
 

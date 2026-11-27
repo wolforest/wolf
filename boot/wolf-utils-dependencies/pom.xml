@@ -13,6 +13,7 @@
     </parent>
 
     <artifactId>wolf-utils-dependencies</artifactId>
+    <name>wolf-utils-dependencies</name>
     <packaging>pom</packaging>
 
     <properties>

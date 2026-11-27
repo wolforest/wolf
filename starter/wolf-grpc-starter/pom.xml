@@ -12,6 +12,7 @@
 
     <groupId>cn.coderule.starter</groupId>
     <artifactId>wolf-grpc-starter</artifactId>
+    <name>wolf-grpc-starter</name>
     <version>${revision}</version>
 
     <properties>
